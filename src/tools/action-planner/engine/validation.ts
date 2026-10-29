@@ -3,6 +3,7 @@ import { anchorKey, countdownParticipantId, HARD_LIMITS, spawnedParticipantId } 
 import { targetIds, validTargetSelection, validSpeedDurationForTargets } from './targeting'
 import type {
   Diagnostic,
+  ActionSkill,
   EffectOperation,
   EventAnchor,
   ParticipantDefinition,
@@ -56,12 +57,14 @@ export function validAnchor(value: unknown): value is EventAnchor {
 export function validateOperations(
   operations: readonly EffectOperation[],
   anchor: EventAnchor,
+  skill?: ActionSkill,
 ): Diagnostic[] {
   const invalid = (operationId?: string): Diagnostic[] => [
     { code: 'invalid-input', severity: 'error', anchor, operationId },
   ]
   if (!Array.isArray(operations)) return invalid()
   const ids = new Set<string>()
+  let conditionalSeen = false
   for (const op of operations) {
     if (!object(op) || !identity(op.id) || ids.has(op.id)) return invalid()
     ids.add(op.id)
@@ -71,6 +74,44 @@ export function validateOperations(
         : op.phase !== undefined
     )
       return invalid(op.id)
+    if (op.type === 'conditionalRestore') {
+      if (
+        conditionalSeen ||
+        anchor.kind !== 'action' ||
+        op.phase !== 'postAction' ||
+        skill?.kind !== 'skill' ||
+        !identity(op.sourceParticipantId) ||
+        op.sourceParticipantId !== anchor.participantId ||
+        !count(op.amount) ||
+        typeof op.chance !== 'number' ||
+        !Number.isFinite(op.chance) ||
+        op.chance < 0 ||
+        op.chance > 1 ||
+        typeof op.cooldownTurns !== 'number' ||
+        !Number.isSafeInteger(op.cooldownTurns) ||
+        op.cooldownTurns < 0 ||
+        !oneOf(op.outcome, ['proc', 'no-proc']) ||
+        !identity(op.source) ||
+        op.source.length > 256 ||
+        Object.keys(op).some(
+          (k) =>
+            ![
+              'id',
+              'type',
+              'phase',
+              'amount',
+              'chance',
+              'cooldownTurns',
+              'outcome',
+              'sourceParticipantId',
+              'source',
+            ].includes(k),
+        )
+      )
+        return invalid(op.id)
+      conditionalSeen = true
+      continue
+    }
     if (op.type === 'restoreSkillPoints') {
       if (
         (anchor.kind !== 'start' && anchor.kind !== 'action') ||
@@ -200,6 +241,16 @@ export function validatePlan(plan: SimulationPlan): Diagnostic[] {
     positions.add(position)
   }
   if (
+    plan.skillPoints?.maxModifiers?.some(
+      (m) =>
+        m.sourceParticipantId !== undefined &&
+        !plan.actors.some(
+          (a) => a.id === m.sourceParticipantId && a.kind === 'actor' && a.camp === 'ally',
+        ),
+    )
+  )
+    return invalid()
+  if (
     plan.aha.contributorIds.some((id) => !plan.actors.some((a) => a.id === id && a.camp === 'ally'))
   )
     return invalid()
@@ -214,7 +265,7 @@ export function validatePlan(plan: SimulationPlan): Diagnostic[] {
     )
       return invalid()
     anchors.add(anchorKey(event.anchor))
-    const errors = validateOperations(event.operations, event.anchor)
+    const errors = validateOperations(event.operations, event.anchor, event.skill)
     if (errors.length) return errors
     for (const op of event.operations) {
       if (operationIds.has(op.id)) return invalid()
@@ -236,6 +287,11 @@ export function validatePlan(plan: SimulationPlan): Diagnostic[] {
         return invalid()
     }
     for (const op of event.operations) {
+      if (op.type === 'conditionalRestore') {
+        const source = participants.get(op.sourceParticipantId)
+        if (!source || source.kind !== 'actor' || source.camp !== 'ally') return invalid()
+        continue
+      }
       if (op.type === 'restoreSkillPoints') {
         const source =
           event.anchor.kind === 'action' ? participants.get(event.anchor.participantId) : undefined

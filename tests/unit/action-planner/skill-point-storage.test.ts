@@ -262,7 +262,7 @@ describe('generic Skill Point overflow storage and turn-end refill', () => {
     current.plan.skillPoints!.storedMax = 10
     current.plan.events[0]!.operations = [recovery('store', true)]
     const source = serializePlannerDocument(current)
-    expect(JSON.parse(source).version).toBe(7)
+    expect(JSON.parse(source).version).toBe(9)
     expect(parsePlannerDocument(source).document).toEqual(current)
     expect(source).not.toContain('storedAfter')
     expect(source).not.toContain('"stored":')

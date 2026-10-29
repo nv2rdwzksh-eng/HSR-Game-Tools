@@ -248,7 +248,7 @@ describe('cycle planner projection and document compatibility', () => {
       doc.metadata.customNames.pull = 'Custom'
       expect(parsePlannerDocument(serializePlannerDocument(doc)).document).toEqual(doc)
       const file = { format: PLANNER_FORMAT, version: 3, document: doc }
-      expect(() => validatePlannerFile({ ...file, version: 8 })).toThrow('version')
+      expect(() => validatePlannerFile({ ...file, version: 10 })).toThrow('version')
       expect(() =>
         validatePlannerFile({
           ...file,
@@ -294,7 +294,7 @@ describe('cycle planner projection and document compatibility', () => {
     p.applySetup(p.plan.value.actors, 60, 600, initial.document.metadata.characterIds, 'aa')
     expect(persistence.save(p.document.value)).toBe(true)
     expect(JSON.parse(store.raw)).toMatchObject({
-      version: 7,
+      version: 9,
       document: { plan: { cycleMode: 'aa' } },
     })
     expect(createPlannerPersistence(() => store).initialize().document.plan.cycleMode).toBe('aa')

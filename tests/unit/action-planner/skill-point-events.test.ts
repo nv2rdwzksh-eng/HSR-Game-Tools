@@ -175,7 +175,7 @@ describe('positive Skill Point operations', () => {
       validatePlannerFile({ format: PLANNER_FORMAT, version: 4, document: document() }),
     ).toThrow()
     const source = serializePlannerDocument(document())
-    expect(JSON.parse(source).version).toBe(7)
+    expect(JSON.parse(source).version).toBe(9)
     expect(parsePlannerDocument(source).document).toEqual(document())
     expect(source).not.toContain('skillPointEvents')
   })

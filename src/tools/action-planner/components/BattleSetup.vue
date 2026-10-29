@@ -6,6 +6,7 @@ import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog'
 import SelectButton from 'primevue/selectbutton'
+import Select from 'primevue/select'
 import ToggleSwitch from 'primevue/toggleswitch'
 import { validSkillPoints } from '../engine/skill-points'
 import { elationContribution } from '../engine/queue'
@@ -59,6 +60,12 @@ const spEnabled = ref(false)
 const spInitial = ref<number | undefined>(3)
 const spMax = ref<number | undefined>(5)
 const spStoredMax = ref<number | undefined>(10)
+const spModifiers = ref<{ amount: number | undefined; sourceParticipantId: string }[]>([])
+const modifierConfig = () =>
+  spModifiers.value.map((m) => ({
+    amount: m.amount,
+    ...(m.sourceParticipantId ? { sourceParticipantId: m.sourceParticipantId } : {}),
+  }))
 const ahaBaseSpeed = ref<number | undefined>()
 const cycleModes = computed(() =>
   (['none', 'moc', 'aa'] as const).map((value) => ({ value, label: t(`planner.cycle.${value}`) })),
@@ -81,6 +88,10 @@ function load() {
   spInitial.value = props.plan.skillPoints?.initial ?? 3
   spMax.value = props.plan.skillPoints?.max ?? 5
   spStoredMax.value = props.plan.skillPoints?.storedMax ?? 10
+  spModifiers.value = (props.plan.skillPoints?.maxModifiers ?? []).map((m) => ({
+    amount: m.amount,
+    sourceParticipantId: m.sourceParticipantId ?? '',
+  }))
   errors.value = []
   dirty.value = false
 }
@@ -127,6 +138,42 @@ const choiceName = (c: CharacterRecord) =>
         gender: t(c.form.gender === 'male' ? 'planner.genderMale' : 'planner.genderFemale'),
       })
     : characterName(c, locale.value as ToolLocale)
+const spSources = computed(() => {
+  const known = slots.value
+    .filter((s) => s.id && s.original)
+    .map((s) => ({ value: s.id, label: slotLabel(s) }))
+  const missing = spModifiers.value
+    .map((m) => m.sourceParticipantId)
+    .filter((id) => id && !known.some((p) => p.value === id))
+  return [
+    { value: '', label: t('planner.sp.always') },
+    ...known,
+    ...[...new Set(missing)].map((id) => ({
+      value: id,
+      label: t('planner.sp.missingSource', { id }),
+    })),
+  ]
+})
+const spEffectivePreview = computed(() => {
+  const sum = spModifiers.value.reduce((n, m) => n + (m.amount ?? NaN), 0)
+  const max = (spMax.value ?? NaN) + sum
+  const valid =
+    Number.isSafeInteger(max) &&
+    max >= 0 &&
+    spModifiers.value.every(
+      (m) =>
+        Number.isSafeInteger(m.amount) &&
+        m.amount !== 0 &&
+        (!m.sourceParticipantId || slots.value.some((s) => s.id === m.sourceParticipantId)),
+    )
+  return valid
+    ? t('planner.sp.maxFormula', {
+        base: spMax.value,
+        modifier: sum >= 0 ? `+${sum}` : String(sum),
+        max,
+      })
+    : t('planner.sp.unknownValue')
+})
 const occupied = (id: string) =>
   slots.value.some((s, i) => i !== choosing.value && s.characterId === id)
 function choose(index: number) {
@@ -200,9 +247,22 @@ function apply() {
     spInitial.value == null ||
     spMax.value == null ||
     spStoredMax.value == null ||
-    !validSkillPoints({ initial: spInitial.value, max: spMax.value, storedMax: spStoredMax.value })
+    !validSkillPoints({
+      initial: spInitial.value,
+      max: spMax.value,
+      storedMax: spStoredMax.value,
+      maxModifiers: modifierConfig(),
+    })
   )
     errors.value.push('sp')
+  spModifiers.value.forEach((m, i) => {
+    if (!Number.isSafeInteger(m.amount) || m.amount === 0) errors.value.push(`sp-mod-${i}`)
+    if (
+      m.sourceParticipantId &&
+      !setup.actors.some((a) => a.id === m.sourceParticipantId && a.camp === 'ally')
+    )
+      errors.value.push(`sp-source-${i}`)
+  })
   if (errors.value.length) return
   emit(
     'apply',
@@ -221,6 +281,7 @@ function apply() {
       initial: spInitial.value,
       max: spMax.value,
       storedMax: spStoredMax.value,
+      maxModifiers: modifierConfig() as NonNullable<SkillPointsConfig['maxModifiers']>,
       onInsufficient: spOnInsufficient.value,
     },
   )
@@ -519,6 +580,76 @@ function apply() {
           }"
           @update:model-value="dirty = true"
         />
+      </div>
+      <div class="section-title">
+        <h3>{{ t('planner.sp.maxModifiers') }}</h3>
+        <Button
+          size="small"
+          :label="t('planner.sp.addModifier')"
+          @click="
+            spModifiers.push({ amount: 2, sourceParticipantId: '' })
+            dirty = true
+          "
+        />
+      </div>
+      <p class="fine-print">{{ spEffectivePreview }}</p>
+      <div v-for="(modifier, index) in spModifiers" :key="index" class="form-grid">
+        <div class="field">
+          <label :for="`sp-mod-${index}`">{{ t('planner.sp.modifierAmount') }}</label>
+          <InputNumber
+            v-model="modifier.amount"
+            :input-id="`sp-mod-${index}`"
+            :use-grouping="false"
+            :max-fraction-digits="20"
+            :invalid="errors.includes(`sp-mod-${index}`)"
+            :pt="{
+              pcInputText: {
+                root: {
+                  'aria-describedby': errors.includes(`sp-mod-${index}`)
+                    ? `sp-mod-error-${index}`
+                    : undefined,
+                },
+              },
+            }"
+            @update:model-value="dirty = true"
+          />
+          <small
+            v-if="errors.includes(`sp-mod-${index}`)"
+            :id="`sp-mod-error-${index}`"
+            class="field-error"
+            >{{ t('planner.sp.modifierInvalid') }}</small
+          >
+        </div>
+        <div class="field">
+          <label :for="`sp-source-${index}`">{{ t('planner.sp.onlyPresent') }}</label>
+          <Select
+            v-model="modifier.sourceParticipantId"
+            :input-id="`sp-source-${index}`"
+            :options="spSources"
+            option-label="label"
+            option-value="value"
+            :invalid="errors.includes(`sp-source-${index}`)"
+            :aria-describedby="
+              errors.includes(`sp-source-${index}`) ? `sp-source-error-${index}` : undefined
+            "
+            @update:model-value="dirty = true"
+          />
+          <small
+            v-if="errors.includes(`sp-source-${index}`)"
+            :id="`sp-source-error-${index}`"
+            class="field-error"
+            >{{ t('planner.sp.sourceInvalid') }}</small
+          >
+          <Button
+            text
+            size="small"
+            :label="t('planner.sp.removeModifier')"
+            @click="
+              spModifiers.splice(index, 1)
+              dirty = true
+            "
+          />
+        </div>
       </div>
       <small v-if="errors.includes('sp')" id="sp-config-error" class="field-error">{{
         t('planner.sp.invalid')

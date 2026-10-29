@@ -64,7 +64,7 @@ describe('Aha document, identity and editor integration', () => {
       const prepared = preparePlannerDocument(parsed.document, parsed.issues, parsed.migration)
       expect(prepared.migration).toEqual(parsed.migration)
       expect(prepared.result.records.some((r) => r.kind === 'aha')).toBe(true)
-      expect(JSON.parse(serializePlannerDocument(parsed.document)).version).toBe(7)
+      expect(JSON.parse(serializePlannerDocument(parsed.document)).version).toBe(9)
       expect(() =>
         validatePlannerFile({
           ...input,
@@ -261,7 +261,7 @@ describe('Aha document, identity and editor integration', () => {
     expect(store.writes).toBe(0)
     expect(store.raw).toBe(source)
     expect(persistence.save(restored.document)).toBe(true)
-    expect(JSON.parse(store.raw).version).toBe(7)
+    expect(JSON.parse(store.raw).version).toBe(9)
     expect(persistence.save(restored.document)).toBe(true)
     store.raw = 'external change'
     expect(persistence.save(restored.document)).toBe(false)

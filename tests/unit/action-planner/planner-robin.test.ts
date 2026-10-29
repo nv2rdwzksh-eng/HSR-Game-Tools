@@ -85,6 +85,7 @@ describe('Robin ordinary-operation batch preset', () => {
           (op) =>
             op.type !== 'spawnParticipant' &&
             op.type !== 'restoreSkillPoints' &&
+            op.type !== 'conditionalRestore' &&
             op.target.kind === 'participants' &&
             op.target.participantIds[0] === 'r',
         ),
@@ -458,7 +459,7 @@ describe('Robin ordinary-operation batch preset', () => {
         (op) => !['editor-1', 'editor-2', 'editor-3', 'editor-4', 'editor-5'].includes(op.id),
       ),
     ).toBe(true)
-    expect(JSON.parse(storage.raw).version).toBe(7)
+    expect(JSON.parse(storage.raw).version).toBe(9)
     const restored = createPlannerPersistence(() => storage).initialize().document
     expect(restored).toEqual(p.document.value)
     expect(parsePlannerDocument(serializePlannerDocument(restored)).document).toEqual(restored)

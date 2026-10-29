@@ -18,16 +18,21 @@ import {
   validTargetSelection,
   validSpeedDurationForTargets,
 } from './targeting'
+import { conditionalRestore } from './conditional-restore'
+import { recomputeSkillPointMax } from './skill-point-max'
 import { storeSkillPointOverflow } from './skill-points'
 import { validateOperations } from './validation'
 import type {
   Diagnostic,
+  ActionSkill,
+  ConditionalRestoreRecord,
   ActionChangeTrace,
   EffectOperation,
   EventAnchor,
   ParticipantDefinition,
   SimulationState,
   SkillPointEventRecord,
+  SkillPointMaxChange,
 } from './types'
 
 /** The single creation path, also used by speed-duration countdowns. */
@@ -58,20 +63,36 @@ export function applyOperations(
   input: SimulationState,
   operations: readonly EffectOperation[],
   anchor: EventAnchor,
+  context?: { skill?: ActionSkill },
 ): {
   state: SimulationState
   diagnostics: Diagnostic[]
   skillPointEvents?: SkillPointEventRecord[]
+  maxChanges?: SkillPointMaxChange[]
+  conditionalRestores?: ConditionalRestoreRecord[]
 } {
-  const errors = validateOperations(operations, anchor)
+  const errors = validateOperations(operations, anchor, context?.skill)
   if (errors.length) throw new SimulationError(errors[0])
   let state = cloneState(input)
   const diagnostics: Diagnostic[] = []
   const skillPointEvents: SkillPointEventRecord[] = []
+  const maxChanges: SkillPointMaxChange[] = []
+  const conditionalRestores: ConditionalRestoreRecord[] = []
   for (const op of operations) {
     const next = cloneState(state)
     try {
-      if (op.type === 'restoreSkillPoints') {
+      if (op.type === 'conditionalRestore') {
+        const source = next.participants.find(
+          (p) => p.id === op.sourceParticipantId && p.kind === 'actor' && p.camp === 'ally',
+        )
+        if (!source || source.kind !== 'actor') fail('invalid-input')
+        if (next.skillPoints) {
+          const record = conditionalRestore(next.skillPoints, op, source.turns)
+          conditionalRestores.push(record)
+          if (record.overflow)
+            diagnostics.push({ code: 'sp-overflow', severity: 'info', anchor, operationId: op.id })
+        }
+      } else if (op.type === 'restoreSkillPoints') {
         if (
           anchor.kind !== 'start' &&
           (anchor.kind !== 'action' ||
@@ -132,6 +153,17 @@ export function applyOperations(
         }
         if (op.type === 'depart' || op.type === 'returnToField') {
           for (const participant of targets) participant.departed = op.type === 'depart'
+          const change = recomputeSkillPointMax(next, 'presence', op.id)
+          if (change) {
+            maxChanges.push(change)
+            if (change.loss)
+              diagnostics.push({
+                code: 'sp-cap-loss',
+                severity: 'warning',
+                anchor,
+                operationId: op.id,
+              })
+          }
         } else if (op.type === 'addSpeedModifier') {
           const countdownId = countdownParticipantId(op.id)
           for (const actor of targets) {
@@ -227,5 +259,11 @@ export function applyOperations(
       throw error
     }
   }
-  return { state, diagnostics, ...(skillPointEvents.length ? { skillPointEvents } : {}) }
+  return {
+    state,
+    diagnostics,
+    ...(skillPointEvents.length ? { skillPointEvents } : {}),
+    ...(maxChanges.length ? { maxChanges } : {}),
+    ...(conditionalRestores.length ? { conditionalRestores } : {}),
+  }
 }

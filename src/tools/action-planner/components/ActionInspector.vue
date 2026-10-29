@@ -29,6 +29,7 @@ import type {
   ActionSkill,
   NodeRecord,
   SkillPointEventRecord,
+  SkillPointMaxChange,
   EffectOperation,
   EventAnchor,
   SimulationState,
@@ -45,6 +46,7 @@ const props = defineProps<{
   skill?: ActionSkill
   spRecord?: NodeRecord
   resourceRecords?: SkillPointEventRecord[]
+  maxChanges?: SkillPointMaxChange[]
   uncommittedResources?: boolean
   anchor: EventAnchor
   inactive?: boolean
@@ -116,7 +118,7 @@ const icon = (o: EffectOperation) =>
         ? Zap
         : o.type === 'addSpeedModifier'
           ? Gauge
-          : o.type === 'restoreSkillPoints'
+          : o.type === 'restoreSkillPoints' || o.type === 'conditionalRestore'
             ? Zap
             : o.type === 'depart'
               ? LogOut
@@ -173,6 +175,15 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
         })
       }}
     </p>
+    <p v-for="(change, index) in maxChanges" :key="index" class="fine-print">
+      {{ t('planner.sp.maxChange', { beforeMax: change.beforeMax, afterMax: change.afterMax })
+      }}<span v-if="change.loss">
+        ·
+        {{
+          t('planner.sp.clamp', { before: change.before, after: change.after, loss: change.loss })
+        }}</span
+      >
+    </p>
     <OperationEditor
       v-if="draft"
       v-model="draft"
@@ -191,6 +202,7 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
       :participants="targets"
       :preview="preview"
       :invalid="invalid"
+      :skill="skill"
       :robin-preset-issue="robinPresetIssue"
       :label="label"
       :image="image"
@@ -316,7 +328,11 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
               </div>
             </div>
             <OperationTargets
-              v-if="op.type !== 'spawnParticipant' && op.type !== 'restoreSkillPoints'"
+              v-if="
+                op.type !== 'spawnParticipant' &&
+                op.type !== 'restoreSkillPoints' &&
+                op.type !== 'conditionalRestore'
+              "
               :ids="metadataOf(op).targetIds"
               :fallback="renderMessage(metadataOf(op).target!, locale as ToolLocale, t)"
               :participants="metadataOf(op).participants"
@@ -351,6 +367,31 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
               class="fine-print"
               role="status"
             >
+              {{ t('planner.sp.uncommitted') }}
+            </p>
+            <p
+              v-for="entry in spRecord?.conditionalRestores?.filter((r) => r.operationId === op.id)"
+              :key="entry.operationId"
+              class="fine-print"
+              role="status"
+            >
+              {{
+                entry.status === 'proc'
+                  ? t('planner.sp.procResult', { turn: entry.availableFromTurn })
+                  : t(`planner.sp.conditionalStatus.${entry.status}`)
+              }}
+              ·
+              {{
+                t('planner.sp.eventResult', {
+                  restored: entry.restored,
+                  overflow: entry.overflow,
+                  stored: entry.stored,
+                  wasted: entry.wasted,
+                  storedAfter: entry.storedAfter ?? t('planner.sp.unknownValue'),
+                })
+              }}
+            </p>
+            <p v-if="uncommittedResources && op.type === 'conditionalRestore'" class="fine-print">
               {{ t('planner.sp.uncommitted') }}
             </p>
             <div class="operation-metadata">

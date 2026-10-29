@@ -12,7 +12,7 @@ import type { PlannerDocument } from './editor'
 import { simulatePlan } from '../engine/engine'
 
 export const PLANNER_FORMAT = 'hsr-game-tools/action-planner'
-export const PLANNER_VERSION = 7
+export const PLANNER_VERSION = 9
 export const FILE_LIMITS = {
   bytes: 2 * 1024 * 1024,
   events: 1000,
@@ -37,7 +37,7 @@ export type ResourceIssue = {
   id: string
 }
 export interface MigrationNotice {
-  fromVersion: 1 | 2 | 3 | 4 | 5 | 6
+  fromVersion: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
   ahaAdded: boolean
 }
 export const emptyDocument = (): PlannerDocument => ({
@@ -123,7 +123,7 @@ export function safeImagePath(value?: string): string | undefined {
   return value && imagePaths.has(value) ? value : undefined
 }
 
-/** Strict versioned boundary. Migration returns an independently owned Version 7 document. */
+/** Strict versioned boundary. Migration returns an independently owned Version 9 document. */
 export function validatePlannerFile(value: unknown): {
   document: PlannerDocument
   issues: ResourceIssue[]
@@ -139,6 +139,8 @@ export function validatePlannerFile(value: unknown): {
     file.version !== 4 &&
     file.version !== 5 &&
     file.version !== 6 &&
+    file.version !== 7 &&
+    file.version !== 8 &&
     file.version !== PLANNER_VERSION
   )
     fail('version')
@@ -172,10 +174,17 @@ export function validatePlannerFile(value: unknown): {
         'initial',
         'max',
         ...(Number(file.version) >= 6 ? ['onInsufficient'] : []),
-        ...(file.version === 7 ? ['storedMax'] : []),
+        ...(Number(file.version) >= 7 ? ['storedMax'] : []),
+        ...(Number(file.version) >= 8 ? ['maxModifiers'] : []),
       ],
       [],
     )
+  if (
+    p.skillPoints !== undefined &&
+    object(p.skillPoints).maxModifiers !== undefined &&
+    Number(file.version) < 8
+  )
+    fail('structure')
   const actors = list(p.actors)
   const events = list(p.events)
   if (events.length > FILE_LIMITS.events || actors.length > 9) fail('limit')
@@ -218,23 +227,30 @@ export function validatePlannerFile(value: unknown): {
     for (const value of ops) {
       const op = object(value)
       if (op.type === 'restoreSkillPoints' && Number(file.version) < 5) fail('structure')
+      if (op.type === 'conditionalRestore' && file.version !== 9) fail('structure')
       const common = ['id', 'type', 'phase']
       const specific =
-        op.type === 'restoreSkillPoints'
-          ? ['amount', 'source']
-          : op.type === 'spawnParticipant'
-            ? ['participant']
-            : op.type === 'addSpeedModifier'
-              ? ['target', 'mode', 'amount', 'duration']
-              : op.type === 'immediatelyAct' || op.type === 'depart' || op.type === 'returnToField'
-                ? ['target']
-                : ['target', 'percent']
+        op.type === 'conditionalRestore'
+          ? ['amount', 'chance', 'cooldownTurns', 'outcome', 'sourceParticipantId', 'source']
+          : op.type === 'restoreSkillPoints'
+            ? ['amount', 'source']
+            : op.type === 'spawnParticipant'
+              ? ['participant']
+              : op.type === 'addSpeedModifier'
+                ? ['target', 'mode', 'amount', 'duration']
+                : op.type === 'immediatelyAct' ||
+                    op.type === 'depart' ||
+                    op.type === 'returnToField'
+                  ? ['target']
+                  : ['target', 'percent']
       fields(
         op,
         [
           ...common,
           ...specific,
-          ...(op.type === 'restoreSkillPoints' && file.version === 7 ? ['storeOverflow'] : []),
+          ...(op.type === 'restoreSkillPoints' && Number(file.version) >= 7
+            ? ['storeOverflow']
+            : []),
         ],
         ['id', 'type', ...specific],
       )
@@ -242,7 +258,8 @@ export function validatePlannerFile(value: unknown): {
       if (forbidden.has(id) || opIds.has(id) || declaredIds.has(id)) fail('identity')
       opIds.add(id)
       if (op.type === 'spawnParticipant') checkDefinition(op.participant)
-      else if (op.type === 'restoreSkillPoints') text(op.source, FILE_LIMITS.displayName)
+      else if (op.type === 'restoreSkillPoints' || op.type === 'conditionalRestore')
+        text(op.source, FILE_LIMITS.displayName)
       else {
         const target = object(op.target)
         fields(target, target.kind === 'participants' ? ['kind', 'participantIds'] : ['kind'])
@@ -300,6 +317,7 @@ export function validatePlannerFile(value: unknown): {
         if (
           op.type !== 'spawnParticipant' &&
           op.type !== 'restoreSkillPoints' &&
+          op.type !== 'conditionalRestore' &&
           op.target.kind === 'participants'
         )
           list(op.target.participantIds).forEach((id) => occupied.add(text(id)))
@@ -314,7 +332,14 @@ export function validatePlannerFile(value: unknown): {
     resolved.unresolvedIds.forEach((id) => issues.push({ kind: 'unknownElation', id }))
     migration = { fromVersion: file.version as 1 | 2, ahaAdded: aha.contributorIds.length > 0 }
   }
-  if (file.version === 3 || file.version === 4 || file.version === 5 || file.version === 6)
+  if (
+    file.version === 3 ||
+    file.version === 4 ||
+    file.version === 5 ||
+    file.version === 6 ||
+    file.version === 7 ||
+    file.version === 8
+  )
     migration = { fromVersion: file.version, ahaAdded: false }
   if (validatePlan(plan).length) fail('structure')
   const participants = participantCatalog(plan)
@@ -441,6 +466,7 @@ export function referencedIds(plan: SimulationPlan): Set<string> {
       if (
         op.type !== 'spawnParticipant' &&
         op.type !== 'restoreSkillPoints' &&
+        op.type !== 'conditionalRestore' &&
         op.target.kind === 'participants'
       )
         op.target.participantIds.forEach((id) => ids.add(id))

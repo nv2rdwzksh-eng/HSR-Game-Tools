@@ -20,6 +20,18 @@ export function operationMetadata(
   const fields: MetadataField[] = []
   const add = (kind: MetadataField['kind'], key: string, params?: MessageDescriptor['params']) =>
     fields.push({ kind, message: { key, params } })
+  if (operation.type === 'conditionalRestore') {
+    add('effect', 'planner.sp.conditionalLabel', {
+      amount: operation.amount,
+      source: operation.source,
+    })
+    add('identity', 'planner.sp.conditionalParameters', {
+      chance: operation.chance * 100,
+      cooldown: operation.cooldownTurns,
+    })
+    add('identity', `planner.sp.outcome.${operation.outcome}`)
+    return { fields }
+  }
   if (operation.type === 'restoreSkillPoints') {
     add('effect', 'planner.sp.eventLabel', { amount: operation.amount, source: operation.source })
     if (operation.storeOverflow) add('effect', 'planner.sp.storeOverflow')

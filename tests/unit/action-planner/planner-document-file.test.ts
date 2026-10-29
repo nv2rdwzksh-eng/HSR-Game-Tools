@@ -90,7 +90,7 @@ describe('Version 3 planner files', () => {
   })
   it('rejects invalid JSON, future versions, runtime fields, prototypes and broken metadata', () => {
     expect(() => parsePlannerDocument('{')).toThrow('json')
-    expect(() => validatePlannerFile({ ...file(), version: 8 })).toThrow('version')
+    expect(() => validatePlannerFile({ ...file(), version: 10 })).toThrow('version')
     expect(() => validatePlannerFile({ ...file(), format: 'other' })).toThrow('format')
     expect(() => validatePlannerFile({ ...file(), runtime: {} })).toThrow('structure')
     const prototype = serializePlannerDocument(syntheticDocument()).replace(

@@ -29,7 +29,10 @@ export function participantLabels(
   return labels
 }
 export function namingTargets(
-  operation: Exclude<EffectOperation, { type: 'spawnParticipant' | 'restoreSkillPoints' }>,
+  operation: Exclude<
+    EffectOperation,
+    { type: 'spawnParticipant' | 'restoreSkillPoints' | 'conditionalRestore' }
+  >,
   state?: SimulationState,
 ): string[] | undefined {
   if (!state) return undefined
@@ -61,6 +64,11 @@ export function operationNameDescriptor(
   name: (id: string) => string,
   state?: SimulationState,
 ): MessageDescriptor {
+  if (operation.type === 'conditionalRestore')
+    return {
+      key: 'planner.sp.conditionalLabel',
+      params: { amount: operation.amount, source: operation.source },
+    }
   if (operation.type === 'restoreSkillPoints')
     return {
       key: 'planner.sp.eventLabel',

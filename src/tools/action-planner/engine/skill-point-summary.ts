@@ -12,7 +12,7 @@ export function summarizeSkillPoints(
   )
   const events = [...(result.startSkillPointEvents ?? [])]
   for (const record of result.records) {
-    events.push(...(record.skillPointEvents ?? []))
+    events.push(...(record.skillPointEvents ?? []), ...(record.conditionalRestores ?? []))
     if (record.refill && totalRecovery !== null) totalRecovery += record.refill.amount
     if (record.kind === 'cycleBoundary' || !record.skillPoints) continue
     const skill = record.skillPoints
@@ -35,6 +35,12 @@ export function summarizeSkillPoints(
     totalRecovery,
     endingBalance: state.current,
     storedBalance: state.stored,
+    baseMax: state.baseMax,
+    effectiveMax: state.max,
+    capLoss: [
+      ...(result.startMaxChanges ?? []),
+      ...result.records.flatMap((r) => r.maxChanges ?? []),
+    ].reduce((total, c) => total + c.loss, 0),
     status: result.blockedAction
       ? 'insufficient'
       : state.current === null

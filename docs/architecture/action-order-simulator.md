@@ -54,6 +54,7 @@ UI 展示见[设计规范](../design-notes.md)，文案见[Site Messages](../sit
 | depart             | 将在场参与者设为离场，冻结其 AG，保留身份、排序元数据与效果                    |
 | returnToField      | 将离场参与者重新入场，以当前速度计算剩余 AV                                    |
 | addSpeedModifier   | 添加固定值或基础速度百分比修正，使用有限 / 无限回合或共享倒计时生命周期        |
+| conditionalRestore | 我方战技行动的 postAction 条件返还，按用户选择结果与来源自身回合冷却结算       |
 | restoreSkillPoints | 队伍级正向战技点恢复，无目标；只允许战斗开始及我方 Actor action                |
 | spawnParticipant   | 以操作 ID 派生稳定 ID，创建 Actor 或单次 Scheduled Event                       |
 
@@ -136,7 +137,7 @@ Trace、Tag、目标头像与数值展示约定见 UI 设计规范，不改变�
 
 ```text
 format: "hsr-game-tools/action-planner"
-version: 7
+version: 9
 document: { name, plan, metadata }
 ```
 
@@ -146,7 +147,7 @@ document: { name, plan, metadata }
 Version 4 保留 Version 3 的身份事实与原操作格式，支持 Presence Operation 和 Scheduled Event 可选 baseSpeed；departed 与运行时 Modifier 不持久化，由普通操作重放恢复。旧事件省略 baseSpeed 时以 speed 为基数，不补写字段；旧参与者默认在场。Version 1 / 2 迁移、身份保护、未知字段拒绝及存档保护机制继续沿用。
 
 Version 1 严格迁移时补 `cycleMode: none`；Version 1/2 均补冲突安全的 Aha ID 与可确认的初始贡献者，保留原单位 / 操作 ID、锚点和孤立引用。
-新增 Aha 可能改变排序和预算内可达节点，UI 提供升级提示；不支持未来版本，导出统一为 Version 7。
+新增 Aha 可能改变排序和预算内可达节点，UI 提供升级提示；不支持未来版本，导出统一为 Version 9。
 导入中的未知 Character ID 保留，非法图片路径移除并报告；图片仅允许资源目录已登记的相对路径。初始敌人以 baseSpeed 统一两项 SPD，保留其他合法字段。
 
 [usePlannerSession](../../src/tools/action-planner/composables/usePlannerSession.ts)先恢复存档，再注册浅提交 watcher；[持久化模块](../../src/tools/action-planner/model/persistence.ts)使用 localStorage 键 `hsr-game-tools/action-planner/current`。
@@ -162,8 +163,8 @@ Version 1 严格迁移时补 `cycleMode: none`；Version 1/2 均补冲突安全�
 
 **正式配队模板必须由用户审阅，不得根据截图或角色技能描述自动生成。**当前[正式目录](../../src/tools/action-planner/templates/catalog.ts)为空；测试方案不进入生产目录。
 
-1. 在工具中配置完整方案，导出 Version 7 JSON 并人工审阅。
-2. 将文件放入 [templates/plans/](../../src/tools/action-planner/templates/plans/)。既有 Version 1/2/3/4/5/6 模板由统一解析器兼容，不手工省略当前字段。
+1. 在工具中配置完整方案，导出 Version 9 JSON 并人工审阅。
+2. 将文件放入 [templates/plans/](../../src/tools/action-planner/templates/plans/)。既有 Version 1/2/3/4/5/6/7/8 模板由统一解析器兼容，不手工省略当前字段。
 3. 在 catalog.ts 显式导入 JSON，登记唯一 id、order、nameKey、descriptionKey、file，以及可选 conditionKey / gameVersion。
 4. 在两份 Site Messages 添加同路径的名称、简介和可选条件介绍；头像读取方案角色映射，不另外构造队伍身份。
 5. 按[开发指南](../development.md#验证策略)运行模板与 i18n 校验，以及方案文件相关测试。
@@ -178,7 +179,7 @@ Version 1 严格迁移时补 `cycleMode: none`；Version 1/2 均补冲突安全�
 
 ## 战技点最小校验
 
-Version 4 增加可选的 `plan.skillPoints: { enabled?, initial?, max? }`，缺省关闭；启用时初始值默认 3、上限默认 5。初始值和上限必须是非负安全整数，且初始值不超过上限。上限在推演期间固定。
+Version 4 增加可选的 `plan.skillPoints: { enabled?, initial?, max? }`，缺省关闭；启用时初始值默认 3、上限默认 5。初始值和上限必须是非负安全整数，且初始值不超过初始有效上限。基础 max 固定，有效上限按下文在场修正派生。
 自然行动的 PlanEvent 可保存 `skill`：`{ kind: 'basic' }`（恢复 1）、`{ kind: 'skill' }`（消耗 1）或 `{ kind: 'custom', cost, recovery }`（两项均为非负安全整数）。标注与原行动 Anchor 绑定，独立于 operations；删除最后一条操作仍保留技能标注。未标注代表未知。
 
 共享余额仅由我方 Actor 的 action 节点结算，包括按普通 action 调度的召唤物和忆灵；不自动推断它们的资源规则，需要用户显式标注。敌方、Aha、Scheduled Event 和轮次边界不影响队伍余额。动态我方 Actor 使用相同规则。
@@ -189,7 +190,7 @@ Version 4 增加可选的 `plan.skillPoints: { enabled?, initial?, max? }`，缺
 
 Version 1/2/3 经严格旧字段校验后迁移；不添加启用配置，战技点默认关闭，Version 3 的身份事实及既有时间轴保持不变。Version 4 同样拒绝未知字段、非法金额及在非 action Anchor 上放置技能。运行时余额、战技点记录与 blockedAction 不写入方案文件。存档、模板和文件共用版本边界，旧存档恢复不立即回写。
 
-本轮不自动执行技能的拉条或变速，不实现角色特例、概率返还、能量、额外回合、多技能、动态上限或任意时点的独立资源事件。反事实推演仅由下文 mark 策略启用。
+本轮不自动执行技能的拉条或变速，不实现角色特例、随机返还、能量、额外回合、多技能、任意时点上限事件或任意时点的独立资源事件。反事实推演仅由下文 mark 策略启用。
 
 本轮本地人工验收建议：
 
@@ -216,7 +217,7 @@ Version 5 的文件、存档与模板共用严格边界；Version 1–4 均可�
 
 手工验收：在开场新增 +2；在初始 0 点的战技行动新增 preAction +1，确认可行动；切到 postAction 确认仍不足。在 5/5 的开场增加 +2，检查实际 0 / 溢出 2。核对中英文、来源长文本、无目标表单、修改／排序／删除、文件重载与窄屏布局。
 
-本轮仅实现手动正向事件，不实现概率、冷却、角色特例、能量、上限变化或事件负向消耗；不自动执行终结技，也不自动判断条件是否成立。
+本轮仅实现手动正向事件，不实现随机判定、其他冷却机制、角色特例、能量、任意上限事件或事件负向消耗；不自动执行终结技，也不自动判断条件是否成立。
 
 ## 不足策略与失败摘要（Version 6）
 
@@ -236,7 +237,7 @@ UI 在战斗配置中使用“不足时：停止／标记并继续”，通过 A
 
 人工验收：将初始值设为 0、首行动标战技，先确认 stop 产生可编辑不足节点；切到 mark 并应用，确认 −1、后续未验证、时间轴继续。添加回点检查余额恢复但验证状态不恢复；清除技能标注检查未知传播。给 stop 的失败行动添加不足以支付的 preAction 回点，确认详情“未提交”且摘要不计入。核对文件往返、中英文和窄屏。
 
-仍未实现概率、冷却、角色特例、能量、动态上限或负向资源事件。未勾选存储的恢复操作仍为“上限截断、溢出浪费”；可选存储与补充规则见下文 Version 7。
+仍未实现随机判定、其他冷却机制、角色特例、能量、任意时点上限事件或负向资源事件。未勾选存储的恢复操作仍为“上限截断、溢出浪费”；可选存储与补充规则见下文 Version 7。
 
 ## 溢出存储与回合结束补充（Version 7）
 
@@ -254,8 +255,58 @@ stop 不足节点在补充前停止，不能预借缓冲支付，也不提交候
 
 摘要增加 storedBalance；总恢复只计算直接进入当前余额的恢复和实际 refill，不把存入缓冲算一次、取出再算一次。存储余额可独立于当前余额显示已知或未知。UI 提供存储上限及“溢出可存储”Checkbox，未来节点显示“+6（存储 1）”与“回合结束 +1”，操作详情显示实际恢复、总溢出、存入、浪费和存储余额。
 
-本轮机制依据工作区 `data/nanoka/1306.json` 的 enhanced['1'].skills['1130603']：终结技描述给出溢出记录与我方角色回合结束补充，等级参数第 2 项为 6、第 5 项为 10。数据只用于人工核对，不成为引擎依赖。要表达该资源机制，用户填写队伍实际固定 SP 上限、存储上限 10，并在合适的 Anchor 手动加入 amount 6、storeOverflow true 的恢复操作；来源仅是展示标签。该配置不自动判断终结技能量、角色存在、天赋／星魂、释放条件或其他技能效果。
+本轮机制依据工作区 `data/nanoka/1306.json` 的 enhanced['1'].skills['1130603']：终结技描述给出溢出记录与我方角色回合结束补充，等级参数第 2 项为 6、第 5 项为 10。数据只用于人工核对，不成为引擎依赖。要表达该资源机制，用户填写基础 SP 上限及所需的在场修正、存储上限 10，并在合适的 Anchor 手动加入 amount 6、storeOverflow true 的恢复操作；来源仅是展示标签。该配置不自动判断终结技能量、角色存在、天赋／星魂、释放条件或其他技能效果。
 
-本轮不做存储过期、跨波次、动态上限、负向事件、概率、冷却或角色专属逻辑。
+本轮不做存储过期、跨波次、任意时点上限事件、负向事件、随机判定、其他冷却机制或角色专属逻辑。
 
 人工验收：先配置 0/5，在开始处恢复 6 并勾选存储，核对存储 1；再让我方角色使用战技，核对回合结束 +1。初始 5/5 连续恢复两次 6，核对存储 10、浪费 2。取消勾选、设置容量 0、切换 stop／mark、清除技能标注，检查失败、未验证和未知状态。核对 Version 7 文件往返、中英文和窄屏表单。
+
+## 基础上限与在场修正（Version 8）
+
+可选 `plan.skillPoints.maxModifiers` 保存 `{ amount, sourceParticipantId? }[]`。amount 为非零安全整数，允许正负；sourceParticipantId 必须引用当前方案初始队伍中的我方 Actor，不接受敌方、动态生成单位、Aha 或缺失身份。省略 source 时始终生效；有 source 时仅在该 ID 的单位仍存在且未离场时生效。修改来源角色身份不会按槽位自动重绑；配置中出现旧来源时要求用户修复或移除。
+
+`state.skillPoints.baseMax` 保存基础 max，运行时 max 为基础值加所有生效修正之和。初始队伍在开始操作前全部在场，校验初始值不超过初始有效上限，而非基础 max。有效上限必须为非负安全整数；初始非法配置拒绝，运行中因离场／退出变成非法上限时以 invalid-sp-max 诊断停止，不允许后续操作掩盖错误。
+
+重算时机是全部初始单位创建完成、每条 depart / returnToField 整体提交候选状态后，以及参与者因 actionLimit 退出后。群体 Presence 操作同时变更多个目标再重算，保留原子的目标语义。创建动态单位不能激活修正来源。执行和预览均调用相同 Presence 实现，因此支付、技能恢复、资源事件和 refill 总是使用其发生时的有效 max。既有 preAction 资源优先于技能支付、其余 preAction 的顺序不改变；配置中的回场不会跨阶段提前执行。
+
+上限升高只修改 max，不增加 current 或 stored。上限降低时，已知 current 超过新上限才截断到新上限；记录 beforeMax、afterMax、before、after、loss、触发原因及可选 operationId／participantId。损失不进入 stored，不算资源恢复的 overflow / wasted。未知 current 不截断，仍记录上限变化且 loss 为 0。stored 始终不受上限变化影响。回场本身不补点，但其后正常回合结束 refill 可按新的上限执行。
+
+Presence 操作的记录保存在 applyOperations.maxChanges，随后归入 NodeRecord.maxChanges 或 SimulationResult.startMaxChanges。actionLimit 的移除发生在 postAction、refill、效果到期之后，其降限及截断归入当前节点。该节点若因非法上限失败，保留最后完整提交状态，不提交部分回点、离场或损失。
+
+摘要增加 baseMax、effectiveMax 和累计 capLoss。总消耗仅计技能支付，累计截断损失单列；初始值 + 总恢复 − 总消耗 − capLoss 对应已知的当前余额，缓冲存入仍只影响存储余额。未来节点、开始节点和 Inspector 显示上限变化及具体截断；不从未来记录补写当前队列状态。
+
+战斗配置提供上限修正列表、非零整数输入和“仅当此角色在场”选择，始终生效使用独立选项。角色候选来自初始队伍草稿，错误来源保留可见的缺失 ID；Apply 一次提交编队与修正。初始预览显示例如“基础 5 +2 = 7”，运行摘要显示当前实际生效值。所有新增文案进入中英文消息。
+
+Version 8 文件严格接受 maxModifiers；Version 1–7 迁移不添加修正、保留原基础上限与默认行为，旧文件不能夹带新字段。运行时有效 max、baseMax、损失记录及摘要均不持久化；只导出基础 max 和用户配置的修正。
+
+通用表达方式：基础 max 5，添加 amount +2 并选择对应的初始我方 Actor。该单位在场时有效 max 7；离场或退出后回到 5；回场后恢复 7。引擎不识别角色 ID、名称、天赋文字或角色资源快照。
+
+本轮不新增动作中途的任意上限操作、持续时间、跨波次、能量、随机判定、其他冷却机制或其他角色逻辑。存储过期仍未实现。
+
+人工验收：设置基础 5、初始 7、来源在场 +2 并 Apply；在开始或行动节点添加离场，确认上限降到 5、截断损失 2、存储不变。添加回场确认上限 7 且回场瞬间不回点。核对始终生效、负修正、来源替换／移除错误、actionLimit 退出、恢复／补充使用新上限，以及文件重载、中英文和窄屏。
+
+## 条件返还与来源自身回合冷却（Version 9）
+
+`conditionalRestore` 是队伍级无目标操作，字段为 amount（正安全整数）、chance（0–1 有限数）、cooldownTurns（非负安全整数）、outcome（proc / no-proc）、sourceParticipantId、source，以及普通 id / phase。chance 只用于展示与记录；不抽随机数、不计算期望值，也不据此覆盖用户所选 outcome。
+
+仅接受我方 Actor 的 action.postAction，sourceParticipantId 必须等于该 Anchor 的 participantId，且该 PlanEvent 的 skill.kind 必须为 skill。开始、preAction、事件／轮次、敌方、普攻、自定义和未标注行动均拒绝。动态创建的我方 Actor 沿用相同规则。为维持本轮单一条件返还范围，同一行动最多一条，不能用多个操作叠加触发。
+
+冷却运行状态为 `skillPoints.conditionalCooldowns: Map<sourceParticipantId, availableFromTurn>`，初始为空，状态克隆独立复制；不按 operationId 分开计时。行动先完成技能支付、技能恢复，再依 postAction 列表顺序执行条件返还和其他操作，最后执行回合结束补充、到期与退出。进入 postAction 时，source.turns 已递增为当前自身回合数。
+
+判定顺序为：当前余额未知 → unknown，跳过返还且保留原冷却；否则当前自身回合小于 availableFromTurn → cooldown，跳过且不重置；否则 outcome 为 no-proc → 不返还、不新建冷却；否则 proc → 恢复 min(amount, max-current)，记录 overflow / wasted，并设置 availableFromTurn = source.turns + cooldownTurns + 1。即使实际恢复为 0、全部溢出，成功触发也进入冷却。条件返还不支持溢出存储字段。
+
+1 回合冷却的明确口径：第 1 次自身行动触发，availableFromTurn=3；第 2 次自身行动不可触发，第 3 次恢复。cooldownTurns=0 时下一个自身行动即可再次触发。队友、敌方、单次事件和轮次不会推进该计数，离场不产生自身回合，也不重置冷却。来源已经在当前自然行动中离场不取消其已执行战技的 postAction 结算。
+
+stop 支付失败时不执行条件返还，也不进入冷却。mark 按反事实负余额继续结算，返还与冷却照常记录，但 insufficient / unverified 标记不解除。未知优先于冷却／用户结果；先遇到未知时不利用后续 proc 恢复已知余额。
+
+`NodeRecord.conditionalRestores` 保存来源 ID、标签、amount、chance、cooldownTurns、用户结果、实际 status、before / after、restored、overflow、wasted 及可选 availableFromTurn。unknown 是明确跳过，因此实际恢复／溢出为 0，余额仍为 null。节点存储汇总与摘要总恢复包含条件返还的实际量；不会重复计数，也不会把溢出算作恢复。运行时冷却、记录及摘要不写入方案文件。
+
+编辑器提供数量、展示概率、冷却、自选本次结果和来源标签；来源行动单位只读，自动采用当前 Anchor 身份。详情显示触发并注明再次可用的自身回合、未触发、冷却中或未知。余额不足的 stop 节点中该操作标为未提交。普通目标预览继续使用相同执行函数并接收当前技能上下文，避免预览重置或绕过冷却。
+
+Version 9 文件／存档／模板接受新操作；Version 1–8 迁移不添加条件操作，冷却从运行时空状态重放。旧版本文件不能夹带新类型，当前文件严格拒绝非法字段、目标、阶段或技能上下文。
+
+数据核对来源是工作区 data/nanoka/1101.json 的 ranks.1：描述为施放战技后 50% 固定概率恢复 1 点，1 回合冷却。本轮按用户明确的自身回合口径实现通用字段，不按角色 ID／名称分支，也不在运行时读取该数据文件。
+
+本轮不实现随机种子、随机数、期望值、多触发叠加、其他角色机制、能量或跨波次；chance 与 outcome 不做概率一致性约束，outcome 是用户显式选择的本次结果。
+
+人工验收：启用 SP，为同一单位三个自身战技行动各添加 amount=1、chance=0.5、cooldownTurns=1、outcome=proc；确认第 1 回合触发、第 2 回合冷却、第 3 回合恢复。改成 no-proc / cooldown=0，核对冷却记录；切换 stop／mark、清除更早行动的技能标注，核对未提交、反事实和未知。检查文件重载、中英文、表单错误与窄屏。

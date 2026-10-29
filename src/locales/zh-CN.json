@@ -177,7 +177,7 @@
       "name": "阿哈时刻",
       "invalidPreview": "请填写有效速度",
       "migratedWithAha": "Version {version} 方案已升级，自动加入阿哈时刻。行动顺序可能变化，请检查不可达操作。",
-      "migrated": "Version {version} 方案已升级至 Version 7，保留原战技点设置；未配置时默认关闭。"
+      "migrated": "Version {version} 方案已升级至 Version 9，保留原战技点设置；未配置时默认关闭。"
     },
     "eventBaseSpeed": "百分比速度基数（留空使用初始速度）",
     "eventUnlimitedOnly": "战斗事件的速度效果只支持无限持续。",
@@ -219,7 +219,7 @@
       "enabled": "战技点校验",
       "initial": "初始战技点",
       "max": "战技点上限",
-      "invalid": "请输入非负整数，初始值不能超过上限。",
+      "invalid": "请输入非负整数，初始值不能超过初始有效上限。",
       "skillLabel": "本次行动技能",
       "unknown": "SP 未知",
       "insufficient": "SP 不足",
@@ -256,7 +256,39 @@
       "storeOverflow": "溢出可存储",
       "storedEventLabel": "+{amount}（存储 {stored}） · {source}",
       "refill": "回合结束 +{amount}",
-      "refillDetail": "回合结束 +{amount}：SP {before}→{after} · 存储 {storedBefore}→{storedAfter}"
+      "refillDetail": "回合结束 +{amount}：SP {before}→{after} · 存储 {storedBefore}→{storedAfter}",
+      "maxModifiers": "上限修正",
+      "addModifier": "添加修正",
+      "removeModifier": "移除修正",
+      "modifierAmount": "修正数值",
+      "onlyPresent": "仅当此角色在场",
+      "always": "始终生效",
+      "missingSource": "缺失来源：{id}",
+      "modifierInvalid": "请输入非零整数。",
+      "sourceInvalid": "来源必须是当前初始队伍中的我方单位。",
+      "maxFormula": "基础 {base} {modifier} = {max}",
+      "maxChange": "上限 {beforeMax}→{afterMax}",
+      "capLoss": "上限截断总损失 {amount}",
+      "clamp": "上限截断 {before}→{after} · 损失 {loss}",
+      "conditionalLabel": "条件返还 +{amount} · {source}",
+      "conditionalParameters": "展示概率 {chance}% · 冷却 {cooldown} 个自身回合",
+      "conditionalActor": "来源行动单位",
+      "chance": "概率（0–1，仅展示与记录）",
+      "chanceInvalid": "请输入 0 到 1 的有限数值。",
+      "cooldownTurns": "冷却自身回合数",
+      "cooldownInvalid": "请输入非负整数。",
+      "selectedOutcome": "本次结果",
+      "outcome": {
+        "proc": "触发",
+        "no-proc": "未触发"
+      },
+      "conditionalStatus": {
+        "no-proc": "未触发",
+        "cooldown": "冷却中",
+        "unknown": "未知：未返还，冷却不变"
+      },
+      "procResult": "触发（第 {turn} 回合起可再次触发）",
+      "conditionalHint": "仅用于本行动单位施放战技后的阶段。结果由本次选择决定；概率不参与随机判定。1 回合冷却表示下一个自身回合跳过，再下一个恢复。"
     }
   },
   "ui": {
@@ -381,7 +413,9 @@
       "sp-insufficient": "战技点不足，已在行动前停止。",
       "sp-unknown": "技能未标注，后续战技点未知；时间轴继续推演。",
       "sp-overflow": "恢复超过上限，溢出数量见行动记录。",
-      "sp-marked": "战技点不足，已按反事实继续执行；后续结果未验证。"
+      "sp-marked": "战技点不足，已按反事实继续执行；后续结果未验证。",
+      "invalid-sp-max": "有效战技点上限非法（负数或超出安全整数范围），已停止推演。",
+      "sp-cap-loss": "战技点上限降低，超出部分已截断；损失见节点详情。"
     },
     "path": {
       "Elation": "欢愉",
@@ -394,7 +428,8 @@
       "Warlock": "虚无",
       "Warrior": "毁灭"
     },
-    "restoreSkillPoints": "战技点恢复"
+    "restoreSkillPoints": "战技点恢复",
+    "conditionalRestore": "条件返还"
   },
   "missing": {
     "title": "页面不存在",

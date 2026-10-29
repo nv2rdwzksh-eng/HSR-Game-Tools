@@ -96,7 +96,15 @@ function cloneModifiers(modifiers: readonly SpeedModifierInstance[]): SpeedModif
 export function cloneState(state: SimulationState): SimulationState {
   return {
     ...state,
-    ...(state.skillPoints ? { skillPoints: { ...state.skillPoints } } : {}),
+    ...(state.skillPoints
+      ? {
+          skillPoints: {
+            ...state.skillPoints,
+            conditionalCooldowns: new Map(state.skillPoints.conditionalCooldowns),
+            maxModifiers: state.skillPoints.maxModifiers.map((m) => ({ ...m })),
+          },
+        }
+      : {}),
     ...(state.cycle ? { cycle: { ...state.cycle } } : {}),
     issuedParticipantIds: new Set(state.issuedParticipantIds),
     participants: state.participants.map((participant) => ({

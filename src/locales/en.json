@@ -177,7 +177,7 @@
       "name": "Aha Instant",
       "invalidPreview": "Enter valid speeds",
       "migratedWithAha": "Version {version} plan upgraded with Aha Instant. Action order may change; review unreachable operations.",
-      "migrated": "Version {version} plan upgraded to Version 7. Existing Skill Point settings are preserved; validation defaults to off when not configured."
+      "migrated": "Version {version} plan upgraded to Version 9. Existing Skill Point settings are preserved; validation defaults to off when not configured."
     },
     "eventBaseSpeed": "Percentage speed base (blank uses initial speed)",
     "eventUnlimitedOnly": "Speed modifiers on events only support unlimited duration.",
@@ -219,7 +219,7 @@
       "enabled": "Skill Point validation",
       "initial": "Initial Skill Points",
       "max": "Skill Point cap",
-      "invalid": "Enter non-negative integers; initial points cannot exceed the cap.",
+      "invalid": "Enter non-negative integers; initial points cannot exceed the initial effective cap.",
       "skillLabel": "Action skill",
       "unknown": "SP unknown",
       "insufficient": "Insufficient SP",
@@ -256,7 +256,39 @@
       "storeOverflow": "Store overflow",
       "storedEventLabel": "+{amount} (stored {stored}) · {source}",
       "refill": "Turn-end +{amount}",
-      "refillDetail": "Turn-end +{amount}: SP {before}→{after} · Stored {storedBefore}→{storedAfter}"
+      "refillDetail": "Turn-end +{amount}: SP {before}→{after} · Stored {storedBefore}→{storedAfter}",
+      "maxModifiers": "Cap modifiers",
+      "addModifier": "Add modifier",
+      "removeModifier": "Remove modifier",
+      "modifierAmount": "Modifier amount",
+      "onlyPresent": "Only while this ally is present",
+      "always": "Always active",
+      "missingSource": "Missing source: {id}",
+      "modifierInvalid": "Enter a nonzero integer.",
+      "sourceInvalid": "The source must be an ally in the current initial roster.",
+      "maxFormula": "Base {base} {modifier} = {max}",
+      "maxChange": "Cap {beforeMax}→{afterMax}",
+      "capLoss": "Total cap-clamp loss {amount}",
+      "clamp": "Cap clamp {before}→{after} · Lost {loss}",
+      "conditionalLabel": "Conditional refund +{amount} · {source}",
+      "conditionalParameters": "Displayed chance {chance}% · Cooldown {cooldown} own turns",
+      "conditionalActor": "Source acting unit",
+      "chance": "Chance (0–1; display and record only)",
+      "chanceInvalid": "Enter a finite value from 0 to 1.",
+      "cooldownTurns": "Cooldown in own turns",
+      "cooldownInvalid": "Enter a non-negative integer.",
+      "selectedOutcome": "Selected outcome",
+      "outcome": {
+        "proc": "Proc",
+        "no-proc": "No proc"
+      },
+      "conditionalStatus": {
+        "no-proc": "No proc",
+        "cooldown": "On cooldown",
+        "unknown": "Unknown: no refund; cooldown unchanged"
+      },
+      "procResult": "Proc (available again from turn {turn})",
+      "conditionalHint": "Only after this unit uses Skill. The selected outcome decides the result; chance is never sampled. A 1-turn cooldown skips the next own turn and becomes available on the following one."
     }
   },
   "ui": {
@@ -381,7 +413,9 @@
       "sp-insufficient": "Insufficient Skill Points. Stopped before the action.",
       "sp-unknown": "Unannotated skill: subsequent Skill Points are unknown. The timeline continues.",
       "sp-overflow": "Restoration exceeds the cap. See the action record for overflow.",
-      "sp-marked": "Insufficient Skill Points. Counterfactual execution continues; subsequent results are unverified."
+      "sp-marked": "Insufficient Skill Points. Counterfactual execution continues; subsequent results are unverified.",
+      "invalid-sp-max": "The effective Skill Point cap is negative or outside the safe integer range. Simulation stopped.",
+      "sp-cap-loss": "The Skill Point cap decreased. Excess points were clamped; see node details for the loss."
     },
     "path": {
       "Elation": "Elation",
@@ -394,7 +428,8 @@
       "Warlock": "Nihility",
       "Warrior": "Destruction"
     },
-    "restoreSkillPoints": "Restore Skill Points"
+    "restoreSkillPoints": "Restore Skill Points",
+    "conditionalRestore": "Conditional refund"
   },
   "missing": {
     "title": "Page not found",

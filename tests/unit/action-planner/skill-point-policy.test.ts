@@ -218,6 +218,9 @@ describe('Skill Point insufficiency policies', () => {
       totalRecovery: null,
       endingBalance: null,
       storedBalance: 0,
+      baseMax: 5,
+      effectiveMax: 5,
+      capLoss: 0,
       status: 'unknown',
     })
     expect(result.blockedAction).toBeUndefined()
@@ -237,6 +240,9 @@ describe('Skill Point insufficiency policies', () => {
       totalRecovery: null,
       endingBalance: null,
       storedBalance: 0,
+      baseMax: 5,
+      effectiveMax: 5,
+      capLoss: 0,
       status: 'unknown',
     })
   })
@@ -281,7 +287,7 @@ describe('Skill Point insufficiency policies', () => {
     expect(planner.result.value.records).toHaveLength(3)
     expect(planner.result.value.blockedAction).toBeUndefined()
     const source = serializePlannerDocument(planner.document.value)
-    expect(JSON.parse(source).version).toBe(7)
+    expect(JSON.parse(source).version).toBe(9)
     expect(parsePlannerDocument(source).document).toEqual(planner.document.value)
     expect(source).not.toContain('skillPointsSummary')
     expect(source).not.toContain('unverified')

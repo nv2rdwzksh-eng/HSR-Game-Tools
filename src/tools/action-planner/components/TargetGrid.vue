@@ -19,7 +19,9 @@ const modes = computed(() =>
   ['participants', 'allies', 'enemies'].map((value) => ({ value, label: t(`ui.${value}`) })),
 )
 const allowed = computed(() =>
-  draft.value.type === 'spawnParticipant' || draft.value.type === 'restoreSkillPoints'
+  draft.value.type === 'spawnParticipant' ||
+  draft.value.type === 'restoreSkillPoints' ||
+  draft.value.type === 'conditionalRestore'
     ? []
     : selectableTargets(draft.value.type, props.participants, draft.value.selectedIds).map(
         (p) => p.id,

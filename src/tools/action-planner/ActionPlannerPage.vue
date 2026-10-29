@@ -81,6 +81,7 @@ const navigatorProps = computed(() => ({
   countdownSources: modifierSources.value,
   records: result.value.records,
   startSkillPointEvents: result.value.startSkillPointEvents,
+  startMaxChanges: result.value.startMaxChanges,
   blockedAction: result.value.blockedAction,
   selected: selected.value,
   plan: plan.value,
@@ -104,6 +105,11 @@ const inspectorProps = computed(() => ({
   uncommittedResources:
     !!result.value.blockedAction &&
     anchorKey(result.value.blockedAction.anchor) === anchorKey(selected.value),
+  maxChanges:
+    selected.value.kind === 'start'
+      ? result.value.startMaxChanges
+      : result.value.records.find((r) => anchorKey(r.anchor) === anchorKey(selected.value))
+          ?.maxChanges,
   resourceRecords:
     selected.value.kind === 'start'
       ? result.value.startSkillPointEvents
@@ -228,6 +234,22 @@ onBeforeUnmount(() => {
               class="fine-print"
             >
               {{ t('planner.sp.counterfactual') }}
+            </p>
+            <p>
+              {{
+                t('planner.sp.maxFormula', {
+                  base: result.skillPointsSummary.baseMax,
+                  modifier:
+                    result.skillPointsSummary.effectiveMax - result.skillPointsSummary.baseMax >= 0
+                      ? `+${result.skillPointsSummary.effectiveMax - result.skillPointsSummary.baseMax}`
+                      : String(
+                          result.skillPointsSummary.effectiveMax -
+                            result.skillPointsSummary.baseMax,
+                        ),
+                  max: result.skillPointsSummary.effectiveMax,
+                })
+              }}
+              · {{ t('planner.sp.capLoss', { amount: result.skillPointsSummary.capLoss }) }}
             </p>
             <p class="fine-print">{{ t('planner.sp.summaryScope') }}</p>
           </section>

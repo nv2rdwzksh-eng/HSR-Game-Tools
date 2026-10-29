@@ -43,6 +43,9 @@ watch(
   },
   { immediate: true },
 )
+const outcomes = computed(() =>
+  ['proc', 'no-proc'].map((value) => ({ value, label: t(`planner.sp.outcome.${value}`) })),
+)
 const bad = (key: string) => props.invalid.includes(key)
 const pt = (key: string) => ({
   pcInputText: {
@@ -74,8 +77,8 @@ const pt = (key: string) => ({
       t('ui.nonnegative')
     }}</small>
   </div>
-  <template v-if="draft.type === 'restoreSkillPoints'">
-    <div class="field">
+  <template v-if="draft.type === 'restoreSkillPoints' || draft.type === 'conditionalRestore'">
+    <div v-if="draft.type === 'restoreSkillPoints'" class="field">
       <label for="sp-store-overflow">{{ t('planner.sp.storeOverflow') }}</label
       ><Checkbox v-model="draft.storeOverflow" input-id="sp-store-overflow" binary />
     </div>
@@ -107,6 +110,49 @@ const pt = (key: string) => ({
       <small v-if="bad('spSource')" id="error-spSource" class="field-error">{{
         t('planner.sp.sourceRequired')
       }}</small>
+    </div>
+  </template>
+  <template v-if="draft.type === 'conditionalRestore'">
+    <p class="fine-print">{{ t('planner.sp.conditionalHint') }}</p>
+    <div class="field">
+      <label for="conditional-chance">{{ t('planner.sp.chance') }}</label
+      ><InputNumber
+        v-model="draft.chance"
+        input-id="conditional-chance"
+        :locale="locale"
+        :use-grouping="false"
+        :max-fraction-digits="20"
+        :invalid="bad('chance')"
+        :pt="pt('chance')"
+        fluid
+      /><small v-if="bad('chance')" id="error-chance" class="field-error">{{
+        t('planner.sp.chanceInvalid')
+      }}</small>
+    </div>
+    <div class="field">
+      <label for="conditional-cooldown">{{ t('planner.sp.cooldownTurns') }}</label
+      ><InputNumber
+        v-model="draft.cooldownTurns"
+        input-id="conditional-cooldown"
+        :use-grouping="false"
+        :max-fraction-digits="20"
+        :invalid="bad('cooldownTurns')"
+        :pt="pt('cooldownTurns')"
+        fluid
+      /><small v-if="bad('cooldownTurns')" id="error-cooldownTurns" class="field-error">{{
+        t('planner.sp.cooldownInvalid')
+      }}</small>
+    </div>
+    <div class="field">
+      <span id="conditional-outcome" class="field-label">{{ t('planner.sp.selectedOutcome') }}</span
+      ><SelectButton
+        v-model="draft.outcome"
+        :options="outcomes"
+        option-label="label"
+        option-value="value"
+        :allow-empty="false"
+        aria-labelledby="conditional-outcome"
+      />
     </div>
   </template>
   <template v-if="draft.type === 'addSpeedModifier'">

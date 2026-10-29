@@ -1,3 +1,4 @@
+import { recomputeSkillPointMax } from './skill-point-max'
 import { summarizeSkillPoints } from './skill-point-summary'
 import {
   paySkillPoints,
@@ -39,6 +40,7 @@ import type {
   ParticipantState,
   ParticipantAnchor,
   PendingCycleBoundary,
+  SkillPointMaxChange,
 } from './types'
 
 export { applyOperations } from './operations'
@@ -71,9 +73,12 @@ export function createInitialState(plan: SimulationPlan): SimulationState {
           skillPoints: {
             onInsufficient: plan.skillPoints.onInsufficient ?? 'stop',
             stored: 0,
+            conditionalCooldowns: new Map(),
             storedMax: plan.skillPoints.storedMax ?? 10,
             current: plan.skillPoints.initial ?? 3,
             max: plan.skillPoints.max ?? 5,
+            baseMax: plan.skillPoints.max ?? 5,
+            maxModifiers: (plan.skillPoints.maxModifiers ?? []).map((m) => ({ ...m })),
           },
         }
       : {}),
@@ -109,6 +114,7 @@ export function createInitialState(plan: SimulationPlan): SimulationState {
       zeroOrder: 0,
       pendingActionChanges: [],
     })
+  recomputeSkillPointMax(state, 'initial')
   return state
 }
 /** Shared by execution and post-action previews; expiry follows the complete post-action phase. */
@@ -123,7 +129,7 @@ function settleNaturalParticipant(
   state: SimulationState,
   id: string,
   oldModifiers: ReadonlySet<string>,
-): void {
+): SkillPointMaxChange | undefined {
   const natural = state.participants.find(
     (participant): participant is NaturalParticipantState =>
       participant.id === id && isNaturalParticipant(participant),
@@ -143,6 +149,7 @@ function settleNaturalParticipant(
     state.participants = state.participants.filter((participant) => participant.id !== id)
   assertState(state)
   state.completedActions++
+  return recomputeSkillPointMax(state, 'removal', undefined, id)
 }
 function expireCountdown(state: SimulationState, id: string): void {
   for (const participant of state.participants)
@@ -186,7 +193,7 @@ export function stepSimulation(
   const anchor = event.anchor
   if (skill !== undefined && (anchor.kind !== 'action' || !validActionSkill(skill)))
     fail('invalid-input')
-  const errors = validateOperations(operations, anchor)
+  const errors = validateOperations(operations, anchor, skill)
   if (errors.length) throw new SimulationError(errors[0])
   if (event.kind === 'cycleBoundary') {
     try {
@@ -214,6 +221,7 @@ export function stepSimulation(
       }
       const applied = applyOperations(state, operations, anchor)
       state = applied.state
+      if (applied.maxChanges) record.maxChanges = applied.maxChanges
       state.cycle!.nextOrdinal++
       state.completedNodes++
       return { state, record, diagnostics: applied.diagnostics }
@@ -306,8 +314,11 @@ export function stepSimulation(
       finishNaturalTurn(state, actor)
       if (record.skillPoints && state.skillPoints)
         restoreSkillPoints(state.skillPoints, record.skillPoints)
-      const after = applyOperations(state, phaseOperations(operations, 'postAction'), anchor)
+      const after = applyOperations(state, phaseOperations(operations, 'postAction'), anchor, {
+        skill,
+      })
       state = after.state
+      if (after.conditionalRestores) record.conditionalRestores = after.conditionalRestores
       if (
         state.skillPoints &&
         active.kind === 'actor' &&
@@ -318,13 +329,27 @@ export function stepSimulation(
         const refill = refillSkillPoints(state.skillPoints)
         if (refill) record.refill = refill
       }
-      settleNaturalParticipant(state, active.id, oldModifiers)
+      const removalChange = settleNaturalParticipant(state, active.id, oldModifiers)
+      const maxChanges = [
+        ...(before.maxChanges ?? []),
+        ...(after.maxChanges ?? []),
+        ...(removalChange ? [removalChange] : []),
+      ]
+      if (maxChanges.length) record.maxChanges = maxChanges
       diagnostics = [...preResources.diagnostics, ...before.diagnostics, ...after.diagnostics]
+      if (removalChange?.loss)
+        diagnostics.push({
+          code: 'sp-cap-loss',
+          severity: 'warning',
+          anchor,
+          participantId: active.id,
+        })
       if (after.skillPointEvents)
         record.skillPointEvents = [...(record.skillPointEvents ?? []), ...after.skillPointEvents]
     } else {
       const triggered = applyOperations(state, operations, anchor)
       state = triggered.state
+      if (triggered.maxChanges) record.maxChanges = triggered.maxChanges
       state.participants = state.participants.filter((participant) => participant.id !== active.id)
       delete state.activeParticipantId
       diagnostics = triggered.diagnostics
@@ -340,7 +365,7 @@ export function stepSimulation(
     if (state.skillPoints)
       record.skillPointStorage = skillPointStorageRecord(
         state.skillPoints,
-        record.skillPointEvents ?? [],
+        [...(record.skillPointEvents ?? []), ...(record.conditionalRestores ?? [])],
         record.skillPoints ? (record.skillPoints.overflow ?? null) : 0,
       )
     state.completedNodes++
@@ -373,6 +398,7 @@ export function simulatePlan(plan: SimulationPlan): SimulationResult {
     finalState = state
     result.diagnostics.push(...initial.diagnostics)
     if (initial.skillPointEvents) result.startSkillPointEvents = initial.skillPointEvents
+    if (initial.maxChanges) result.startMaxChanges = initial.maxChanges
     result.snapshots.push(queueSnapshot(state))
     result.stopReason = 'nodes'
     if (!state.participants.length)
@@ -476,7 +502,9 @@ export function previewOperationState(
     const group = anchor.kind === 'action' ? phaseOperations(operations, phase) : [...operations]
     const index =
       beforeId === undefined ? group.length : group.findIndex((op) => op.id === beforeId)
-    return applyOperations(state, group.slice(0, index < 0 ? group.length : index), anchor).state
+    return applyOperations(state, group.slice(0, index < 0 ? group.length : index), anchor, {
+      skill,
+    }).state
   } catch (error) {
     if (error instanceof SimulationError) return undefined
     throw error

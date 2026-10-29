@@ -131,7 +131,7 @@ describe('shared Skill Point validation', () => {
     expect(parsed.migration?.fromVersion).toBe(3)
     const current = document(2, 5, [{ kind: 'custom', cost: 1, recovery: 3 }])
     expect(parsePlannerDocument(serializePlannerDocument(current)).document).toEqual(current)
-    expect(JSON.parse(serializePlannerDocument(current)).version).toBe(7)
+    expect(JSON.parse(serializePlannerDocument(current)).version).toBe(9)
     expect(() =>
       validatePlannerFile({ format: PLANNER_FORMAT, version: 3, document: current }),
     ).toThrow()

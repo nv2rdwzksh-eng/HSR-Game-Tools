@@ -52,6 +52,10 @@ export interface OperationDraft {
   type: EffectOperation['type']
   customName: string
   source: string
+  chance: number | undefined
+  cooldownTurns: number | undefined
+  outcome: 'proc' | 'no-proc'
+  conditionalSourceParticipantId: string
   storeOverflow: boolean
   phase: EffectPhase
   targetKind: Target['kind']
@@ -67,26 +71,40 @@ export function operationDraft(operation?: EffectOperation, customName = ''): Op
     id: operation?.id || undefined,
     original: operation?.id ? operation : undefined,
     customName,
-    source: operation?.type === 'restoreSkillPoints' ? operation.source : '',
+    source:
+      operation?.type === 'restoreSkillPoints' || operation?.type === 'conditionalRestore'
+        ? operation.source
+        : '',
+    chance: operation?.type === 'conditionalRestore' ? operation.chance : 0.5,
+    cooldownTurns: operation?.type === 'conditionalRestore' ? operation.cooldownTurns : 1,
+    outcome: operation?.type === 'conditionalRestore' ? operation.outcome : 'no-proc',
+    conditionalSourceParticipantId:
+      operation?.type === 'conditionalRestore' ? operation.sourceParticipantId : '',
     storeOverflow:
       operation?.type === 'restoreSkillPoints' ? (operation.storeOverflow ?? false) : false,
     type: operation?.type ?? 'advance',
     phase: operation?.phase ?? (operation?.id ? 'preAction' : 'postAction'),
     targetKind:
-      operation && operation.type !== 'spawnParticipant' && operation.type !== 'restoreSkillPoints'
+      operation &&
+      operation.type !== 'spawnParticipant' &&
+      operation.type !== 'restoreSkillPoints' &&
+      operation.type !== 'conditionalRestore'
         ? operation.target.kind
         : 'participants',
     selectedIds:
       operation &&
       operation.type !== 'spawnParticipant' &&
       operation.type !== 'restoreSkillPoints' &&
+      operation.type !== 'conditionalRestore' &&
       operation.target.kind === 'participants'
         ? [...operation.target.participantIds]
         : [],
     percent: operation?.type === 'advance' || operation?.type === 'delay' ? operation.percent : 50,
     mode: operation?.type === 'addSpeedModifier' ? operation.mode : 'flat',
     amount:
-      operation?.type === 'addSpeedModifier' || operation?.type === 'restoreSkillPoints'
+      operation?.type === 'addSpeedModifier' ||
+      operation?.type === 'restoreSkillPoints' ||
+      operation?.type === 'conditionalRestore'
         ? operation.amount
         : 10,
     duration: speedDurationDraft(
@@ -161,6 +179,19 @@ export function provisionalOperation(
       ? { kind: 'participants', participantIds: [...draft.selectedIds] }
       : { kind: draft.targetKind }
   switch (draft.type) {
+    case 'conditionalRestore':
+      return {
+        ...common,
+        type: 'conditionalRestore',
+        amount: draft.amount ?? 0,
+        chance: draft.chance ?? -1,
+        cooldownTurns: draft.cooldownTurns ?? -1,
+        outcome: draft.outcome,
+        source: draft.source,
+        sourceParticipantId:
+          draft.conditionalSourceParticipantId ||
+          (anchor.kind === 'action' ? anchor.participantId : ''),
+      }
     case 'restoreSkillPoints':
       return {
         ...common,
@@ -203,6 +234,7 @@ export function buildOperation(
   id: string,
   anchor: EventAnchor,
   preview: SimulationState | undefined,
+  skill?: ActionSkill,
 ): { operation?: EffectOperation; invalid: string[] } {
   if (!preview) return { invalid: ['context'] }
   if (draft.original?.type === 'spawnParticipant' && draft.type !== 'spawnParticipant')
@@ -217,6 +249,27 @@ export function buildOperation(
   const invalid: string[] = []
   const operation = provisionalOperation({ ...draft, id }, anchor)!
   if (operation.type === 'spawnParticipant') return { invalid: ['form'] }
+  if (operation.type === 'conditionalRestore') {
+    if (!Number.isSafeInteger(draft.amount) || (draft.amount ?? 0) <= 0) invalid.push('spAmount')
+    if (
+      draft.chance === undefined ||
+      !Number.isFinite(draft.chance) ||
+      draft.chance < 0 ||
+      draft.chance > 1
+    )
+      invalid.push('chance')
+    if (!Number.isSafeInteger(draft.cooldownTurns) || (draft.cooldownTurns ?? -1) < 0)
+      invalid.push('cooldownTurns')
+    if (!draft.source.trim() || draft.source.length > 256) invalid.push('spSource')
+    if (
+      validateOperations([operation], anchor, skill).length ||
+      !preview.participants.some(
+        (p) => p.id === operation.sourceParticipantId && p.kind === 'actor' && p.camp === 'ally',
+      )
+    )
+      invalid.push('form')
+    return invalid.length ? { invalid } : { operation, invalid: [] }
+  }
   if (operation.type === 'restoreSkillPoints') {
     if (!Number.isSafeInteger(draft.amount) || (draft.amount ?? 0) <= 0) invalid.push('spAmount')
     if (!draft.source.trim() || draft.source.length > 256) invalid.push('spSource')

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
@@ -14,6 +14,7 @@ import ParticipantFields from './ParticipantFields.vue'
 import { gameData } from '../data/adapters/game-data'
 import type {
   EffectOperation,
+  ActionSkill,
   EventAnchor,
   ParticipantInfo,
   SimulationState,
@@ -38,6 +39,7 @@ const props = defineProps<{
   preview?: SimulationState
   invalid: string[]
   resourceAllowed?: boolean
+  skill?: ActionSkill
   robinPresetIssue?: RobinPresetIssue
   label: (id: string) => string
   image: (id: string) => string | undefined
@@ -63,10 +65,25 @@ const types = computed(() =>
     ...(props.resourceAllowed || draft.value.original?.type === 'restoreSkillPoints'
       ? ['restoreSkillPoints']
       : []),
+    ...((props.resourceAllowed &&
+      props.anchor.kind === 'action' &&
+      props.skill?.kind === 'skill') ||
+    draft.value.original?.type === 'conditionalRestore'
+      ? ['conditionalRestore']
+      : []),
   ].map((value) => ({
     value,
     label: t(`ui.${value}`),
   })),
+)
+watch(
+  () => draft.value.type,
+  (type) => {
+    if (type === 'conditionalRestore' && draft.value.original?.type !== 'conditionalRestore') {
+      draft.value.amount = 1
+      draft.value.phase = 'postAction'
+    }
+  },
 )
 const phases = computed(() =>
   ['preAction', 'postAction'].map((value) => ({ value, label: t(`ui.${value}`) })),
@@ -191,6 +208,20 @@ function preset(kind: PresetKind) {
         aria-labelledby="phase-label"
       />
     </div>
+    <div v-if="draft.type === 'conditionalRestore' && !khaslana" class="field">
+      <label for="conditional-actor">{{ t('planner.sp.conditionalActor') }}</label
+      ><InputText
+        id="conditional-actor"
+        :model-value="
+          label(
+            draft.conditionalSourceParticipantId ||
+              (anchor.kind === 'action' ? anchor.participantId : ''),
+          )
+        "
+        readonly
+        fluid
+      />
+    </div>
     <template v-if="khaslana">
       <div class="field">
         <label for="khaslana-base">{{ t('planner.khaslana.baseSpeed') }}</label>
@@ -269,7 +300,7 @@ function preset(kind: PresetKind) {
     />
     <template v-else
       ><TargetGrid
-        v-if="draft.type !== 'restoreSkillPoints'"
+        v-if="draft.type !== 'restoreSkillPoints' && draft.type !== 'conditionalRestore'"
         v-model="draft"
         :participants="participants"
         :label="label"

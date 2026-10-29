@@ -13,19 +13,43 @@ const object = (v: unknown): v is Record<string, unknown> =>
 const count = (v: unknown): v is number =>
   typeof v === 'number' && Number.isSafeInteger(v) && v >= 0
 export function validSkillPoints(v: unknown): v is SkillPointsConfig {
+  if (
+    !object(v) ||
+    Object.keys(v).some(
+      (k) =>
+        !['enabled', 'initial', 'max', 'onInsufficient', 'storedMax', 'maxModifiers'].includes(k),
+    ) ||
+    (v.onInsufficient !== undefined &&
+      v.onInsufficient !== 'stop' &&
+      v.onInsufficient !== 'mark') ||
+    (v.enabled !== undefined && typeof v.enabled !== 'boolean') ||
+    (v.initial !== undefined && !count(v.initial)) ||
+    (v.max !== undefined && !count(v.max)) ||
+    (v.storedMax !== undefined && !count(v.storedMax))
+  )
+    return false
+  const modifiers = v.maxModifiers ?? []
+  if (
+    !Array.isArray(modifiers) ||
+    !modifiers.every(
+      (m) =>
+        object(m) &&
+        Object.keys(m).every((k) => ['amount', 'sourceParticipantId'].includes(k)) &&
+        typeof m.amount === 'number' &&
+        Number.isSafeInteger(m.amount) &&
+        m.amount !== 0 &&
+        (m.sourceParticipantId === undefined ||
+          (typeof m.sourceParticipantId === 'string' && m.sourceParticipantId.trim().length > 0)),
+    )
+  )
+    return false
+  // All initial actors are present before start operations. Source membership is checked by validatePlan.
+  const effectiveMax = (v.max ?? 5) as number
+  const initialMax = modifiers.reduce((max, modifier) => max + modifier.amount, effectiveMax)
   return (
-    object(v) &&
-    Object.keys(v).every((k) =>
-      ['enabled', 'initial', 'max', 'onInsufficient', 'storedMax'].includes(k),
-    ) &&
-    (v.onInsufficient === undefined ||
-      v.onInsufficient === 'stop' ||
-      v.onInsufficient === 'mark') &&
-    (v.enabled === undefined || typeof v.enabled === 'boolean') &&
-    (v.initial === undefined || count(v.initial)) &&
-    (v.max === undefined || count(v.max)) &&
-    (v.storedMax === undefined || count(v.storedMax)) &&
-    ((v.initial ?? 3) as number) <= ((v.max ?? 5) as number)
+    Number.isSafeInteger(initialMax) &&
+    initialMax >= 0 &&
+    ((v.initial ?? 3) as number) <= initialMax
   )
 }
 export function validActionSkill(v: unknown): v is ActionSkill {

@@ -62,12 +62,21 @@ export type EffectOperation = { id: string; phase?: EffectPhase } & (
       amount: number
       duration: SpeedDuration
     }
+  | {
+      type: 'conditionalRestore'
+      amount: number
+      chance: number
+      cooldownTurns: number
+      outcome: 'proc' | 'no-proc'
+      sourceParticipantId: string
+      source: string
+    }
   | { type: 'restoreSkillPoints'; amount: number; source: string; storeOverflow?: boolean }
   | { type: 'spawnParticipant'; participant: ParticipantDefinition }
 )
 export type TargetedOperation = Exclude<
   EffectOperation,
-  { type: 'spawnParticipant' | 'restoreSkillPoints' }
+  { type: 'spawnParticipant' | 'restoreSkillPoints' | 'conditionalRestore' }
 >
 export interface PlanEvent {
   anchor: EventAnchor
@@ -76,7 +85,22 @@ export interface PlanEvent {
 }
 export type ActionSkill =
   { kind: 'basic' | 'skill' } | { kind: 'custom'; cost: number; recovery: number }
+export interface SkillPointMaxModifier {
+  amount: number
+  sourceParticipantId?: string
+}
+export interface SkillPointMaxChange {
+  reason: 'initial' | 'presence' | 'removal'
+  operationId?: string
+  participantId?: string
+  beforeMax: number
+  afterMax: number
+  before: number | null
+  after: number | null
+  loss: number
+}
 export interface SkillPointsConfig {
+  maxModifiers?: SkillPointMaxModifier[]
   storedMax?: number
   onInsufficient?: 'stop' | 'mark'
   enabled?: boolean
@@ -96,7 +120,19 @@ export interface SkillPointEventRecord {
   restored: number | null
   overflow: number | null
 }
+export type ConditionalRestoreOperation = Extract<EffectOperation, { type: 'conditionalRestore' }>
+export interface ConditionalRestoreRecord extends SkillPointEventRecord {
+  sourceParticipantId: string
+  chance: number
+  cooldownTurns: number
+  outcome: 'proc' | 'no-proc'
+  status: 'proc' | 'no-proc' | 'cooldown' | 'unknown'
+  availableFromTurn?: number
+}
 export interface SkillPointsState {
+  conditionalCooldowns: Map<string, number>
+  baseMax: number
+  maxModifiers: SkillPointMaxModifier[]
   stored: number | null
   storedMax: number
   onInsufficient?: 'stop' | 'mark'
@@ -188,6 +224,8 @@ export interface SimulationState {
   activeParticipantId?: string
 }
 export type DiagnosticCode =
+  | 'sp-cap-loss'
+  | 'invalid-sp-max'
   | 'sp-marked'
   | 'sp-insufficient'
   | 'sp-unknown'
@@ -231,6 +269,9 @@ export interface PendingCycleBoundary {
 }
 export type SkillPointValidation = 'known' | 'unknown' | 'insufficient' | 'unverified'
 export interface SkillPointsSummary {
+  baseMax: number
+  effectiveMax: number
+  capLoss: number
   storedBalance: number | null
   firstInsufficient?: ParticipantAnchor
   totalCost: number | null
@@ -252,6 +293,8 @@ export interface SkillPointStorageRecord {
   storedAfter: number | null
 }
 interface RecordBase {
+  conditionalRestores?: ConditionalRestoreRecord[]
+  maxChanges?: SkillPointMaxChange[]
   refill?: SkillPointRefillRecord
   skillPointStorage?: SkillPointStorageRecord
   spValidation?: SkillPointValidation
@@ -272,6 +315,7 @@ export interface CycleNodeRecord extends RecordBase {
 }
 export type NodeRecord = ParticipantNodeRecord | CycleNodeRecord
 export interface SimulationResult {
+  startMaxChanges?: SkillPointMaxChange[]
   skillPointsSummary?: SkillPointsSummary
   startSkillPointEvents?: SkillPointEventRecord[]
   blockedAction?: ParticipantNodeRecord

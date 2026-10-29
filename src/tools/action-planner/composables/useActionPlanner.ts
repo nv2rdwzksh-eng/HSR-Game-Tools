@@ -120,7 +120,9 @@ export function useActionPlanner(
   const targets = computed(() =>
     operationTargets(
       preview.value,
-      draft.value?.type === 'spawnParticipant' || draft.value?.type === 'restoreSkillPoints'
+      draft.value?.type === 'spawnParticipant' ||
+        draft.value?.type === 'restoreSkillPoints' ||
+        draft.value?.type === 'conditionalRestore'
         ? 'advance'
         : draft.value?.type,
     ),
@@ -294,6 +296,7 @@ export function useActionPlanner(
       draft.value.id ?? nextId(),
       selected.value,
       preview.value,
+      plan.value.events.find((e) => anchorKey(e.anchor) === anchorKey(selected.value))?.skill,
     )
     invalid.value = parsed.invalid
     if (!parsed.operation) return false

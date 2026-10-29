@@ -40,7 +40,7 @@ describe('reviewed template registry', () => {
     expect(() => validatePlannerTemplates([template(), template()], [messages])).toThrow()
     expect(() => validatePlannerTemplates([template()], [{}])).toThrow()
     expect(() =>
-      loadPlannerTemplate({ ...template(), file: { ...(template().file as object), version: 8 } }),
+      loadPlannerTemplate({ ...template(), file: { ...(template().file as object), version: 10 } }),
     ).toThrow('version')
   })
   it('loads independently, replaces rather than merges, and keeps invalid templates atomic', () => {

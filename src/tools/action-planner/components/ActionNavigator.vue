@@ -35,6 +35,7 @@ const props = defineProps<{
   countdownSources: CountdownSources
   records: NodeRecord[]
   startSkillPointEvents?: SkillPointEventRecord[]
+  startMaxChanges?: import('../engine/types').SkillPointMaxChange[]
   blockedAction?: NodeRecord
   selected: EventAnchor
   plan: SimulationPlan
@@ -97,6 +98,14 @@ const resourceLabels = (anchor: EventAnchor) => {
       }) ?? []
   )
 }
+const capLabels = (anchor: EventAnchor) =>
+  (anchor.kind === 'start' ? props.startMaxChanges : recordAt(anchor)?.maxChanges)?.map(
+    (c) =>
+      t('planner.sp.maxChange', { beforeMax: c.beforeMax, afterMax: c.afterMax }) +
+      (c.loss
+        ? ` · ${t('planner.sp.clamp', { before: c.before, after: c.after, loss: c.loss })}`
+        : ''),
+  ) ?? []
 const refillLabel = (anchor: EventAnchor) => {
   const refill = recordAt(anchor)?.refill
   return refill ? t('planner.sp.refill', { amount: refill.amount }) : ''
@@ -259,12 +268,23 @@ const cardLabel = (card: {
           :enemy="card.camp === 'enemy'"
         />
         <span class="node-body">
-          <span class="node-name" :title="cardName(card)">{{ cardName(card) }}</span>
+          <span class="node-name" :title="cardName(card)">{{ cardName(card) }}</span
+          ><template v-if="view === 'future'"
+            ><small
+              v-for="(text, i) in capLabels({ kind: 'start' })"
+              :key="`cap-${i}`"
+              class="fine-print"
+              >{{ text }}</small
+            ></template
+          >
           <small v-if="view === 'future'" class="node-delta" :title="t('planner.navigator.deltaAV')"
             >+{{ formatAV(card.delta, locale as ToolLocale) }}</small
           >
           <span v-else class="node-delta" aria-hidden="true"></span>
           <span class="node-meta">
+            <span v-if="view === 'future' && capLabels(card.anchor).length" class="fine-print"
+              ><span v-for="(text, i) in capLabels(card.anchor)" :key="i">{{ text }}</span></span
+            >
             <span v-if="view === 'future' && refillLabel(card.anchor)" class="quiet-tag">{{
               refillLabel(card.anchor)
             }}</span>
