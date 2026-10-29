@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "4.6.0",
+  "source": {
+    "repository": "https://github.com/Mar-7th/StarRailRes.git",
+    "commit": "dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487"
+  },
+  "generatedAt": "2026-10-13T00:43:01.895Z",
+  "transform": {
+    "version": 2,
+    "maxSize": 256,
+    "quality": 85,
+    "alphaQuality": 100,
+    "sharpVersion": "0.35.3"
+  },
+  "overlaySha256": "7c8c28e78f3ba94522265dc8f69f88f0b90f5513fee88a1eccd8fe7b3195f20f",
+  "files": {
+    "public/game-assets/character/1001.webp": {
+      "sha256": "1ea5adad7002b9fe429a40f58d94c537d773e4befcd95221fde666ee32b46a2d",
+      "bytes": 30738
+    },
+    "public/game-assets/character/1002.webp": {
+      "sha256": "90f76796a2f20847ac80cfec8d847d2eb360474e79ec7df65c5513291457d021",
+      "bytes": 21566
+    },
+    "public/game-assets/character/1003.webp": {
+      "sha256": "133a0140dc0dcfffbd3e57e7c14dcf3561e2ebeaa2564456d813853e728810ff",
+      "bytes": 26582
+    },
+    "public/game-assets/character/1004.webp": {
+      "sha256": "0801a94b156bf46bacef3648f0f968e060ff7122026aa1e735853dfdbde12ee8",
+      "bytes": 20980
+    },
+    "public/game-assets/character/1005.webp": {
+      "sha256": "30a1435f44a5b78504ed36d909e0641a5c4b45beb6eafa24259198330966f7b5",
+      "bytes": 19522
+    },
+    "public/game-assets/character/1006.webp": {
+      "sha256": "44591483806c7dff30d401ba9fc8478f20c999e9fa1ed3dacd0f1cde50493e69",
+      "bytes": 33360
+    },
+    "public/game-assets/character/1008.webp": {
+      "sha256": "6decd8c71efd6c485177c629ede244b8f5d0b87e57000b1e3ff423833773d350",
+      "bytes": 22122
+    },
+    "public/game-assets/character/1009.webp": {
+      "sha256": "4f5fa203bee4ee0e203e8194db95486144615885d38e77e08981ba2fff8c78ac",
+      "bytes": 20690
+    },
+    "public/game-assets/character/1013.webp": {
+      "sha256": "2dab787ca9d2acafe1533de7712ecda8e466888853e455c8dc4a16ebb1fd1af2",
+      "bytes": 28126
+    },
+    "public/game-assets/character/1014.webp": {
+      "sha256": "27c39eb2b8db619ae7c60417ce0186caf68781cb6c534a9ef3b134224aacf2a4",
+      "bytes": 28980
+    },
+    "public/game-assets/character/1015.webp": {
+      "sha256": "43599e10f94364d32c3f7a01b4356b38799fb1133e1084d304abab0482ed6d57",
+      "bytes": 24586
+    },
+    "public/game-assets/character/1101.webp": {
+      "sha256": "4ab07a3aba47c67a0ef11c701be64c99a79b4054d3d5d6b73def7fac8328559a",
+      "bytes": 26948
+    },
+    "public/game-assets/character/1102.webp": {
+      "sha256": "05deb5e8d883ae3066ce32a5b9e66dd5ba7d9cad72e5dfc7abe524f9bc94a491",
+      "bytes": 21940
+    },
+    "public/game-assets/character/1103.webp": {
+      "sha256": "7fc2bca7dba640852c76f2eb6671850f60a4c6a1d67dd3b3d39581def1a53918",
+      "bytes": 25300
+    },
+    "public/game-assets/character/1104.webp": {
+      "sha256": "bda97663eae06f14c31ad6cb909cdc4e42093b12fa7ead6d2bf0aa7d6c6bc794",
+      "bytes": 24012
+    },
+    "public/game-assets/character/1105.webp": {
+      "sha256": "92739637c6eea594d63a856ced85fdc6f82bbcd4d8f3da3cf7cd67fbedb13aa2",
+      "bytes": 23422
+    },
+    "public/game-assets/character/1106.webp": {
+      "sha256": "55ea7c0a74c16d353cc7d29e7993465d8f7c8b6782931d1f373b3ea59792cc66",
+      "bytes": 28844
+    },
+    "public/game-assets/character/1107.webp": {
+      "sha256": "f8b7cc550de0482a3963825a7f08de3b716b1656cc9b0af4f27ba4b8402832b1",
+      "bytes": 22774
+    },
+    "public/game-assets/character/1108.webp": {
+      "sha256": "33a6167ecab137549536a1097c216735102f4f98fa227b94c7d2aea8ca99ab98",
+      "bytes": 26500
+    },
+    "public/game-assets/character/1109.webp": {
+      "sha256": "cf496381e52fbc8864f0368c18f27dcaec1bee652367c0a0cbd83f679da2ad3d",
+      "bytes": 27040
+    },
+    "public/game-assets/character/1110.webp": {
+      "sha256": "87d8babb2ea4af69bf41f549354219319974820823904147e00e5ed795b75f1b",
+      "bytes": 25474
+    },
+    "public/game-assets/character/1111.webp": {
+      "sha256": "0d1974eaae3541c27b7221915e7c64253bd157f2d386513b61aa0be38775f7ba",
+      "bytes": 26508
+    },
+    "public/game-assets/character/1112.webp": {
+      "sha256": "b512b3c7d13ebde728189c629d6434eecb76a03e1c3c9f4369f4407d73061098",
+      "bytes": 31368
+    },
+    "public/game-assets/character/1201.webp": {
+      "sha256": "900338b0d256b7bac0489ded6617773f0b9a626594e572b3835d68a01bfe75a3",
+      "bytes": 24814
+    },
+    "public/game-assets/character/1202.webp": {
+      "sha256": "c2dae7500e5630f9df50a475e5c7ec18356f95d3689351c073f59e314d7c6c5d",
+      "bytes": 26136
+    },
+    "public/game-assets/character/1203.webp": {
+      "sha256": "28aa6bba9c5e9c877ad383c475aa7f286c11df67284e6dc299a7d26175609b29",
+      "bytes": 23856
+    },
+    "public/game-assets/character/1204.webp": {
+      "sha256": "54557f68db652869d9e0013984be0e9cf988862b742fba932040777ababde77d",
+      "bytes": 32588
+    },
+    "public/game-assets/character/1205.webp": {
+      "sha256": "ab0bbc20acc26cee73c2f1c76ae3c40df889b38043faae4a4987a19269fb9635",
+      "bytes": 23158
+    },
+    "public/game-assets/character/1206.webp": {
+      "sha256": "3a4344c2c29b8039ff4dc02eed9919c99f6c523ebf3e1138c21dd13108a7865a",
+      "bytes": 28762
+    },
+    "public/game-assets/character/1207.webp": {
+      "sha256": "a4a58235f7ef057672a2a054b50977effea0eeb6176914209ac359ee41c7c6b5",
+      "bytes": 23698
+    },
+    "public/game-assets/character/1208.webp": {
+      "sha256": "55a42d1557feb060c82a94750569d69f653ebbdb5fefd3ca7f9c5cc456eddc75",
+      "bytes": 33176
+    },
+    "public/game-assets/character/1209.webp": {
+      "sha256": "63cd559522a93610914f0c0878096b81b1d01d95822ee19e224c74d4eedb0c5f",
+      "bytes": 25756
+    },
+    "public/game-assets/character/1210.webp": {
+      "sha256": "924e2cea0dfdbe95c8a2208391702aaf83e5a0bcb5822222ec05df78a66cc752",
+      "bytes": 30842
+    },
+    "public/game-assets/character/1211.webp": {
+      "sha256": "5b6b428ee85eb3b7079ed94944e3297d875420fa6cd9ba7a76df439fe4878357",
+      "bytes": 24938
+    },
+    "public/game-assets/character/1212.webp": {
+      "sha256": "87b42866b1fa0746d1f267a237ed6018ba4f461fd061ef1fdd00ef459e355ed7",
+      "bytes": 29658
+    },
+    "public/game-assets/character/1213.webp": {
+      "sha256": "0bc3a1e4f899bd692ef5c44a20520d55b418db9a287d9dcdc98ec1303ee4ae24",
+      "bytes": 23048
+    },
+    "public/game-assets/character/1214.webp": {
+      "sha256": "7446dbfb4dfec9fa4169b992fe385d40a9a25996c04b3e306d347c957b631300",
+      "bytes": 25660
+    },
+    "public/game-assets/character/1215.webp": {
+      "sha256": "681659ca544c68a02269d0086b540dfaf27e10a07c64f128d2339c5bd0cff671",
+      "bytes": 24084
+    },
+    "public/game-assets/character/1217.webp": {
+      "sha256": "f705254975cf5845e894afea2059cc6fb2bd0d5336c97a0f685f3d9a3dd64a45",
+      "bytes": 29390
+    },
+    "public/game-assets/character/1218.webp": {
+      "sha256": "7cf6d5fa39b023b15b61454c66b468e7cda7136fd1b4bf7de90287eb51aaa604",
+      "bytes": 29492
+    },
+    "public/game-assets/character/1220.webp": {
+      "sha256": "2b33861633bba44f24c298b8f9a2f9c20b644215e5c93f3ff3e0d3bedffe78d2",
+      "bytes": 40680
+    },
+    "public/game-assets/character/1221.webp": {
+      "sha256": "4e0f24d082c318a0dd80ac14d91fcf98612872428dec4271d002097f2737ee55",
+      "bytes": 33908
+    },
+    "public/game-assets/character/1222.webp": {
+      "sha256": "a7bac2493e7741158e107ae9ac50548e0bd167e0cf2cef579918aaa95ad5f014",
+      "bytes": 26580
+    },
+    "public/game-assets/character/1223.webp": {
+      "sha256": "fa068e46f7467f67c49c738994dd88a1721882197a267900c9978fcf49fc9bd6",
+      "bytes": 26878
+    },
+    "public/game-assets/character/1224.webp": {
+      "sha256": "ad15a4643e16a54115936103298b399a2b23ea0c9f0872029743bc5dfef0618b",
+      "bytes": 34516
+    },
+    "public/game-assets/character/1225.webp": {
+      "sha256": "5b94cca9dcabe5e4a66aa3fdf66ced9666a5e5703aef6ad199759f22d64bcf82",
+      "bytes": 31852
+    },
+    "public/game-assets/character/1301.webp": {
+      "sha256": "f48e91ec7b5b90bfb7bee384f9af441605ee76441859c47549939acb6be7abe4",
+      "bytes": 24840
+    },
+    "public/game-assets/character/1302.webp": {
+      "sha256": "64742d86e92785f3c035ef4a19d5d15748c1948035fdc0115eacda8e57ca4581",
+      "bytes": 26952
+    },
+    "public/game-assets/character/1303.webp": {
+      "sha256": "4e88944916f60ff6e8137fcccc498ab81cb228773a74b92cf14d71b49e79d28c",
+      "bytes": 25632
+    },
+    "public/game-assets/character/1304.webp": {
+      "sha256": "1dee881e9a0fecb3d58e297a45d1851af7b0785b9764ed431f97bb4aedf8e6f5",
+      "bytes": 26336
+    },
+    "public/game-assets/character/1305.webp": {
+      "sha256": "dbd00fe88f659d1ccaa0fd345fd2014d67e5ec0f322decaaec10eaa787f845d5",
+      "bytes": 24078
+    },
+    "public/game-assets/character/1306.webp": {
+      "sha256": "982fb14ae649597a3891db3c1428e7ae2ce120a7227280f18f97e5ba18203ff2",
+      "bytes": 31778
+    },
+    "public/game-assets/character/1307.webp": {
+      "sha256": "94242b40b6dc01059c351486148fc06ecb491c889af8a80d85002087f31cab5c",
+      "bytes": 29708
+    },
+    "public/game-assets/character/1308.webp": {
+      "sha256": "7609de69c910800fe3ae83ef16ba1f85829fffe8e092a7d4179bc59352a6afb6",
+      "bytes": 31468
+    },
+    "public/game-assets/character/1309.webp": {
+      "sha256": "517a33839631bbe05ce6a583c6095b1fbb05de76006d708c527fe0c604aabd55",
+      "bytes": 29926
+    },
+    "public/game-assets/character/1310.webp": {
+      "sha256": "e2558f463140ed6cc642439ee1607eefc56ca82d72d03c563eee6e1a7a233c1b",
+      "bytes": 36048
+    },
+    "public/game-assets/character/1312.webp": {
+      "sha256": "55c1e0bd53904c9872a7b68705a9a62fc37e20c336c4937fb3b0494d373de3af",
+      "bytes": 26450
+    },
+    "public/game-assets/character/1313.webp": {
+      "sha256": "b67ac776bd75f62afa28221bf8b9edf09a24c193a9cf07e81c460793a1dc14df",
+      "bytes": 37510
+    },
+    "public/game-assets/character/1314.webp": {
+      "sha256": "7b75c4d93ed867c763185db0d3f2ba4071ea681f0902ae4ca0c2e1db8213ce60",
+      "bytes": 35044
+    },
+    "public/game-assets/character/1315.webp": {
+      "sha256": "3587be3fe514c27b74d1956fbafbb9ffffa8c999c653c924ec47cf2472a4d2bb",
+      "bytes": 29868
+    },
+    "public/game-assets/character/1317.webp": {
+      "sha256": "dd009b5ee644f7409058f47a0f3ef1735fb74b367df8aa81ca780291472ab86b",
+      "bytes": 38516
+    },
+    "public/game-assets/character/1321.webp": {
+      "sha256": "99d4c1915dee43df62cedd81e23631d45f15d825bdc97323c914793cbd1f4b07",
+      "bytes": 30590
+    },
+    "public/game-assets/character/1401.webp": {
+      "sha256": "2d2b781f259bf7bf0dba9fb0a6b3ebf746b718a4bdc9e96628398349a562392d",
+      "bytes": 32156
+    },
+    "public/game-assets/character/1402.webp": {
+      "sha256": "58da30327c8231cb6a5be27bd22b3f2e1f3bc84dc2d2bf50141d681659df9a1a",
+      "bytes": 32452
+    },
+    "public/game-assets/character/1403.webp": {
+      "sha256": "12759b1f2290a436c12d78e5d42ec4a22f35be8c2c37cf08003cb8efaa3a75bc",
+      "bytes": 33256
+    },
+    "public/game-assets/character/1404.webp": {
+      "sha256": "d6600a74fe6f0ab7a5dd1ae736a50b3e61d5731b3b169acbcf421ab3324d10a1",
+      "bytes": 30814
+    },
+    "public/game-assets/character/1405.webp": {
+      "sha256": "68604a76fe7f1995af11f172d9e39fd7486c594e1df986745b9f9ae89a00fc4b",
+      "bytes": 33992
+    },
+    "public/game-assets/character/1406.webp": {
+      "sha256": "e1830e18796278117cf2f0ecf44204d6287c7375365918f195406701fac664a4",
+      "bytes": 37082
+    },
+    "public/game-assets/character/1407.webp": {
+      "sha256": "3a0c7110c9382c7817bec74e580d714ff24092b83fb2ae9189413ae2cb32edd1",
+      "bytes": 26468
+    },
+    "public/game-assets/character/1408.webp": {
+      "sha256": "7276c2f0d18f052b3f6df1535017b2c5e6cefe453391ec6c70a231a7c55dbc2e",
+      "bytes": 26944
+    },
+    "public/game-assets/character/1409.webp": {
+      "sha256": "4ed6de4cda3bcaf71ddd3463c0f7b0b00f37048303462560ded58c61004bb59e",
+      "bytes": 36652
+    },
+    "public/game-assets/character/1410.webp": {
+      "sha256": "d13b595ebda8d668f6896bfc1dcde9d19017835f561ccab3828a8aac6cb35561",
+      "bytes": 29148
+    },
+    "public/game-assets/character/1412.webp": {
+      "sha256": "7c1b2d877eddc7d1ae52e5ba1454eef274b7de4976cb4f4205d936eab89d89c0",
+      "bytes": 34094
+    },
+    "public/game-assets/character/1413.webp": {
+      "sha256": "9676d3b82047e92a772e9cea8ce31a2cfd33ecf54c9b35936aa8209d58a1fec1",
+      "bytes": 29950
+    },
+    "public/game-assets/character/1414.webp": {
+      "sha256": "e4ac5a79e57e3da4882c2002f3fe7dec65920059f6df60339f9e3060465b607e",
+      "bytes": 24242
+    },
+    "public/game-assets/character/1415.webp": {
+      "sha256": "4d6fbf56ca78ec8b3a71e0fc66a82c081875dd735098c77aa89a4b5c6af611f4",
+      "bytes": 38114
+    },
+    "public/game-assets/character/1501.webp": {
+      "sha256": "52201b779013abd139d21a66e074a2143d207823f0ff73d910fd95905529ee38",
+      "bytes": 32456
+    },
+    "public/game-assets/character/1502.webp": {
+      "sha256": "8b18c06f926772ef7d7391e410f9e6c2812384e43e7205bc4da60675ddfab28a",
+      "bytes": 32848
+    },
+    "public/game-assets/character/1503.webp": {
+      "sha256": "c0f04ce3922d9b7cefb0aba1f64b424b7d964535e6997c63f8f2d73b18e3739e",
+      "bytes": 37842
+    },
+    "public/game-assets/character/1504.webp": {
+      "sha256": "956b331feb1b0a58d671bf061d0749e41e5d4b63f868f78457d817888991025f",
+      "bytes": 28910
+    },
+    "public/game-assets/character/1505.webp": {
+      "sha256": "be8fca63147011681c9aadf4dc08ea2249eb4c237d82eb49d66a0f16b09a4da9",
+      "bytes": 32902
+    },
+    "public/game-assets/character/1506.webp": {
+      "sha256": "f4240b0e5aa819c38243416187944c0ac4f3eaaf2750fe12f36d69ace657ee63",
+      "bytes": 35416
+    },
+    "public/game-assets/character/1507.webp": {
+      "sha256": "7a8a7d4058cc0e79238e4fee416fb7b1fdb0040c2ac66fc8b95499e9318939f5",
+      "bytes": 31256
+    },
+    "public/game-assets/character/1508.webp": {
+      "sha256": "ed869d9ea421c951900aca2d5f7e0a4d5f98f029e26a17b9c0355542f19a8b63",
+      "bytes": 29826
+    },
+    "public/game-assets/character/1509.webp": {
+      "sha256": "6077a5569b17e4d583e50a8cd86a2bb43bdc4318cd6d035fee3be3cca69e680e",
+      "bytes": 25376
+    },
+    "public/game-assets/character/1510.webp": {
+      "sha256": "404f1d3cd44276f5c9e7ee489b71af12ed2eb1de6534397746ca41f042ba982d",
+      "bytes": 32440
+    },
+    "public/game-assets/character/1512.webp": {
+      "sha256": "ba5e115fe3d167682a8fea95212ab872580b9f4adfbe7ab77e4965b20209a6ba",
+      "bytes": 35384
+    },
+    "public/game-assets/character/1513.webp": {
+      "sha256": "a9462c2116fc944239a2e261be2dfdf5f0e9025b931e9c26d5d92909e60a6e05",
+      "bytes": 26344
+    },
+    "public/game-assets/character/8001.webp": {
+      "sha256": "bfc8ebf00bb5a93cf91ad52f5fa5b4122dda2a5963819aea4b7d06c14eb057ba",
+      "bytes": 22112
+    },
+    "public/game-assets/character/8002.webp": {
+      "sha256": "33a15309cd18f4f017bdca4c0796e3f27de3b5cf7eb6227b52260d943228966d",
+      "bytes": 24500
+    },
+    "public/game-assets/character/8003.webp": {
+      "sha256": "b629b62dd78d1374c9c96c7792ed21d7bc949fe1088c46125fd87c42d9a51c34",
+      "bytes": 15562
+    },
+    "public/game-assets/character/8004.webp": {
+      "sha256": "734434faf81c9639794d221e6a18d81661f393714e771f57ad9b6edfa91ff630",
+      "bytes": 27282
+    },
+    "public/game-assets/character/8005.webp": {
+      "sha256": "26b18eb672d35948c89a7447e261f536371eb2968a04a67b72f7b78ad028657e",
+      "bytes": 25134
+    },
+    "public/game-assets/character/8006.webp": {
+      "sha256": "8f1fce2b390495c049df0a01f87188ef4e38b79ef035acc96d530b8523a0245e",
+      "bytes": 28094
+    },
+    "public/game-assets/character/8007.webp": {
+      "sha256": "ed49f8ad60f1ef71b22c8ac5d9dc30d0f5f771ddb27f0e793340388a0074615b",
+      "bytes": 27066
+    },
+    "public/game-assets/character/8008.webp": {
+      "sha256": "986c01ab9c28b28af815c9e92bf2ae2292099f2ae71d8ca551018141d313d950",
+      "bytes": 30054
+    },
+    "public/game-assets/character/8009.webp": {
+      "sha256": "c425bac5f56d1751a2738c71fcf46e3bef3332566a7859762d3f11f3712c2900",
+      "bytes": 25164
+    },
+    "public/game-assets/character/8010.webp": {
+      "sha256": "7b4e220f7b1bfe817073da85a809b362f0b9ca853de555b4659aa622ba704f38",
+      "bytes": 25298
+    },
+    "public/game-assets/relic/308.webp": {
+      "sha256": "fdfe93c9273d851f62bbf8a59ff763f5dc5a8833c871f1a0ebf43b08a86ab68b",
+      "bytes": 7734
+    },
+    "public/game-assets/relic/110.webp": {
+      "sha256": "fa938a9c7f3dddd2601e9e942273fbe53a62a22959751a3a1168ca1b5d3f9a82",
+      "bytes": 8584
+    },
+    "public/game-assets/light_cone/21018.webp": {
+      "sha256": "e090067b5feb57d4211ee25d21d6b01c3aecb83db4d2248d7349f251c1924f4e",
+      "bytes": 10782
+    },
+    "src/tools/action-planner/data/game/catalog.json": {
+      "sha256": "921853d55ce60a03b928edaa85cd7f61ba9840cfbc83f226211550e1a226e828",
+      "bytes": 63169
+    }
+  },
+  "missingAssets": [],
+  "diagnostics": []
+}

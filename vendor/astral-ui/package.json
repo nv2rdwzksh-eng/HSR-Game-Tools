@@ -1,0 +1,14 @@
+{
+  "name": "astral-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/lib/index.ts",
+    "./components": "./src/lib/components.ts",
+    "./scoped-theme.css": "./src/lib/scoped-theme.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.22"
+  }
+}

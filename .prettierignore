@@ -1,0 +1,26 @@
+node_modules/
+dist/
+dist-subpath/
+.cache/
+.game-data-staging/
+.game-data-backup/
+.warp-data-staging/
+.warp-data-backup/
+public/game-assets/
+src/tools/action-planner/data/game/
+src/tools/warp-simulator/data/runtime/
+scripts/warp-data/generated/
+scripts/warp-data/schema/
+data/currency-wars/snapshot.json
+data/currency-wars/manifest.json
+data/currency-wars/visuals.json
+data/currency-wars/visuals-manifest.json
+data/currency-wars/crafts.json
+data/currency-wars/crafts-manifest.json
+tests/fixtures/action-planner/action-planner-expected.json
+docs/third-party/
+docs/investigations/phase-0-migration-architecture.md
+package-lock.json
+
+# Preserve the fork's own formatting; verified by its check command.
+vendor/astral-ui/

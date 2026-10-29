@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/Mar-7th/StarRailRes.git",
+  "commit": "dbe8cdfcfb0bf657b9fe1cf92d5537f118ccb487",
+  "transform": {
+    "version": 5,
+    "resultPortraitSize": "source",
+    "resultPortraitQuality": 88,
+    "lightConePreviewSize": 408,
+    "avatarSize": 768,
+    "lightConeSize": 640,
+    "iconSize": 64,
+    "starSize": 160,
+    "quality": 82,
+    "iconQuality": 90,
+    "alphaQuality": 100,
+    "revealArtworkSize": 2048,
+    "revealIconSize": 512,
+    "revealStarSize": 640,
+    "revealStarBigSize": 279,
+    "revealQuality": 88,
+    "cardStars": {
+      "method": "alpha-trim",
+      "threshold": 0,
+      "contentHeight": 64,
+      "padding": 2,
+      "quality": 90
+    }
+  }
+}

@@ -1,0 +1,1076 @@
+diff --git a/.gitignore b/.gitignore
+index 83a1a62..43ca755 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,7 +1,6 @@
+ node_modules/
+ dist/
+ reference/
+-tests/
+ .vscode/
+ 
+ .env
+diff --git a/.prettierignore b/.prettierignore
+index 48b821d..351b217 100644
+--- a/.prettierignore
++++ b/.prettierignore
+@@ -1,5 +1,4 @@
+ node_modules/
+ dist/
+ reference/
+-tests/
+ package-lock.json
+diff --git a/docs/getting-started.md b/docs/getting-started.md
+index 0edada1..484752a 100644
+--- a/docs/getting-started.md
++++ b/docs/getting-started.md
+@@ -33,3 +33,22 @@ const name = ref('')
+ | `npm run build:example` | 构建示例页至 `dist/` |
+ | `npm run preview`       | 预览构建结果         |
+ | `npm run check`         | 检查代码、格式与构建 |
++
++## 局部接入已有应用
++
++从 `astral-ui/components` 导入组件，不会加载全局主题。另行导入
++`astral-ui/scoped-theme.css`，并为面板根元素添加 `h-theme`：
++
++```vue
++<script setup lang="ts">
++import { HPanel, HButton } from 'astral-ui/components'
++import 'astral-ui/scoped-theme.css'
++</script>
++<template>
++    <HPanel class="h-theme" title="Workspace"><HButton>Continue</HButton></HPanel>
++</template>
++```
++
++局部主题不会修改 body、页面根变量或其他工具。Teleport 的浮层根元素也需
++显式添加 `h-theme`。未提供字体文件时使用系统字体，不请求缺失的 font.ttf。
++原有默认入口仍加载全局主题。`npm test` 执行无浏览器的组件交互测试。
+diff --git a/docs/theming.md b/docs/theming.md
+index 737ffe5..f9dbb15 100644
+--- a/docs/theming.md
++++ b/docs/theming.md
+@@ -23,3 +23,9 @@
+ | `--h-scrollbar-gap`   | 滚动条间距 |
+ 
+ 动画遵循系统的减少动态效果设置。设置 `document.documentElement.dataset.hMotion = 'reduced'` 可关闭动画。
++
++## 隔离主题
++
++`scoped-theme.css` 仅影响 `.h-theme` 根及其后代，选择器使用 `:where`
++保持低优先级，避免覆盖组件样式。不要同时导入默认入口的全局 `theme.css`。
++局部主题不附带字体文件；可在有授权字体时自行加载 Astral 字体。
+diff --git a/eslint.config.mjs b/eslint.config.mjs
+index 447e052..d4d5ea2 100644
+--- a/eslint.config.mjs
++++ b/eslint.config.mjs
+@@ -6,7 +6,7 @@ import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+ 
+ export default withVueTs(
+     {
+-        ignores: ['dist/**', 'reference/**', 'tests/**', 'node_modules/**'],
++        ignores: ['dist/**', 'reference/**', 'node_modules/**'],
+     },
+     {
+         files: ['**/*.{js,mjs,ts,vue}'],
+diff --git a/package-lock.json b/package-lock.json
+index 485828d..74372e1 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -21,6 +21,7 @@
+                 "prettier": "^3.9.10",
+                 "typescript": "~5.9.3",
+                 "vite": "^7.1.10",
++                "vitest": "4.1.11",
+                 "vue-tsc": "^3.1.1"
+             }
+         },
+@@ -1226,6 +1227,31 @@
+                 "win32"
+             ]
+         },
++        "node_modules/@standard-schema/spec": {
++            "version": "1.1.0",
++            "resolved": "https://registry.npmjs.org/@standard-schema/spec/-/spec-1.1.0.tgz",
++            "integrity": "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==",
++            "dev": true,
++            "license": "MIT"
++        },
++        "node_modules/@types/chai": {
++            "version": "5.2.3",
++            "resolved": "https://registry.npmjs.org/@types/chai/-/chai-5.2.3.tgz",
++            "integrity": "sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@types/deep-eql": "*",
++                "assertion-error": "^2.0.1"
++            }
++        },
++        "node_modules/@types/deep-eql": {
++            "version": "4.0.2",
++            "resolved": "https://registry.npmjs.org/@types/deep-eql/-/deep-eql-4.0.2.tgz",
++            "integrity": "sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==",
++            "dev": true,
++            "license": "MIT"
++        },
+         "node_modules/@types/estree": {
+             "version": "1.0.9",
+             "resolved": "https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz",
+@@ -1500,6 +1526,129 @@
+                 "vue": "^3.2.25 || ^3.6.0-rc.10"
+             }
+         },
++        "node_modules/@vitest/expect": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/expect/-/expect-4.1.11.tgz",
++            "integrity": "sha512-VX2x5vNJXET47KAFzwERI+KRMtTTCSWTfSMKsW7JsUsXV4psq++e3DvZpuTDOpHcxytiDs6p2nhVb2tVDiiUYw==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@standard-schema/spec": "^1.1.0",
++                "@types/chai": "^5.2.2",
++                "@vitest/spy": "4.1.11",
++                "@vitest/utils": "4.1.11",
++                "chai": "^6.2.2",
++                "tinyrainbow": "^3.1.0"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            }
++        },
++        "node_modules/@vitest/mocker": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/mocker/-/mocker-4.1.11.tgz",
++            "integrity": "sha512-2XJVD55d1o5AZous5CCGKS74g/riOj9odEt2bQpCVZeblHyHdnMeFl4jl0XjU21stf4mbjUkew2eXQZt65g5CQ==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@vitest/spy": "4.1.11",
++                "estree-walker": "^3.0.3",
++                "magic-string": "^0.30.21"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            },
++            "peerDependencies": {
++                "msw": "^2.4.9",
++                "vite": "^6.0.0 || ^7.0.0 || ^8.0.0"
++            },
++            "peerDependenciesMeta": {
++                "msw": {
++                    "optional": true
++                },
++                "vite": {
++                    "optional": true
++                }
++            }
++        },
++        "node_modules/@vitest/mocker/node_modules/estree-walker": {
++            "version": "3.0.3",
++            "resolved": "https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz",
++            "integrity": "sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@types/estree": "^1.0.0"
++            }
++        },
++        "node_modules/@vitest/pretty-format": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/pretty-format/-/pretty-format-4.1.11.tgz",
++            "integrity": "sha512-yiZzPbGTS9Sr/JpFl8zHrcIkAofNbFV6k21vIgQN/cY/oxZeXhJv5sc/MBJ5jFKWmWs+oJHw0UXLZjmf931+Vw==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "tinyrainbow": "^3.1.0"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            }
++        },
++        "node_modules/@vitest/runner": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/runner/-/runner-4.1.11.tgz",
++            "integrity": "sha512-LztvUgdwMNJMIkj3hQnnxiC2Xy1zNxq928W/xhjCLaNCzqTZOudjwbQf6v9IntZGPw132i2Lq2rgTRZHD3JHNw==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@vitest/utils": "4.1.11",
++                "pathe": "^2.0.3"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            }
++        },
++        "node_modules/@vitest/snapshot": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/snapshot/-/snapshot-4.1.11.tgz",
++            "integrity": "sha512-pN7ikn1ON7h8ee4gIAp4AzyK+zBtJPzVbqOgu5LCEh4VaJVbPQcgYQYJIMGQPXVeJJq1fnfazis7a5pFNPahog==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@vitest/pretty-format": "4.1.11",
++                "@vitest/utils": "4.1.11",
++                "magic-string": "^0.30.21",
++                "pathe": "^2.0.3"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            }
++        },
++        "node_modules/@vitest/spy": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/spy/-/spy-4.1.11.tgz",
++            "integrity": "sha512-apNa/prQy2qCeywhnixOHPRCgGNhvg7T4Dapfl1GahLp/R+uhBm5cPyFoNVyqsNd2h1nJxL6BqqdIjiABL60YA==",
++            "dev": true,
++            "license": "MIT",
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            }
++        },
++        "node_modules/@vitest/utils": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/@vitest/utils/-/utils-4.1.11.tgz",
++            "integrity": "sha512-zTCVGpyFsGWBhllOyKlTw/vnr6D9qxsfSDyfbyZmTyjHw5N/VuvzHpHoQjm2ZJzn4RJgx5w4r7V0er69CmLgPQ==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@vitest/pretty-format": "4.1.11",
++                "convert-source-map": "^2.0.0",
++                "tinyrainbow": "^3.1.0"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            }
++        },
+         "node_modules/@volar/language-core": {
+             "version": "2.4.28",
+             "resolved": "https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.28.tgz",
+@@ -1757,6 +1906,16 @@
+             "dev": true,
+             "license": "Python-2.0"
+         },
++        "node_modules/assertion-error": {
++            "version": "2.0.1",
++            "resolved": "https://registry.npmjs.org/assertion-error/-/assertion-error-2.0.1.tgz",
++            "integrity": "sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==",
++            "dev": true,
++            "license": "MIT",
++            "engines": {
++                "node": ">=12"
++            }
++        },
+         "node_modules/balanced-match": {
+             "version": "4.0.4",
+             "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.4.tgz",
+@@ -1810,6 +1969,16 @@
+                 "node": ">=6"
+             }
+         },
++        "node_modules/chai": {
++            "version": "6.3.0",
++            "resolved": "https://registry.npmjs.org/chai/-/chai-6.3.0.tgz",
++            "integrity": "sha512-XWAtwJ6OHO+tj0EKCs0Y2UamnyOxseZWltU4x2U2wh8g4AigdjwvtUjvLP2tqkA/avxHEtzxNaqGq/YGNwckKg==",
++            "dev": true,
++            "license": "MIT",
++            "engines": {
++                "node": ">=18"
++            }
++        },
+         "node_modules/chalk": {
+             "version": "4.1.2",
+             "resolved": "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz",
+@@ -1854,6 +2023,13 @@
+             "dev": true,
+             "license": "MIT"
+         },
++        "node_modules/convert-source-map": {
++            "version": "2.0.0",
++            "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz",
++            "integrity": "sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==",
++            "dev": true,
++            "license": "MIT"
++        },
+         "node_modules/cross-spawn": {
+             "version": "7.0.6",
+             "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",
+@@ -1925,6 +2101,13 @@
+                 "url": "https://github.com/fb55/entities?sponsor=1"
+             }
+         },
++        "node_modules/es-module-lexer": {
++            "version": "2.3.2",
++            "resolved": "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-2.3.2.tgz",
++            "integrity": "sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==",
++            "dev": true,
++            "license": "MIT"
++        },
+         "node_modules/esbuild": {
+             "version": "0.28.2",
+             "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz",
+@@ -2277,6 +2460,16 @@
+                 "node": ">=0.10.0"
+             }
+         },
++        "node_modules/expect-type": {
++            "version": "1.4.0",
++            "resolved": "https://registry.npmjs.org/expect-type/-/expect-type-1.4.0.tgz",
++            "integrity": "sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==",
++            "dev": true,
++            "license": "Apache-2.0",
++            "engines": {
++                "node": ">=12.0.0"
++            }
++        },
+         "node_modules/fast-deep-equal": {
+             "version": "3.1.3",
+             "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+@@ -2760,6 +2953,20 @@
+                 "url": "https://github.com/fb55/nth-check?sponsor=1"
+             }
+         },
++        "node_modules/obug": {
++            "version": "2.2.1",
++            "resolved": "https://registry.npmjs.org/obug/-/obug-2.2.1.tgz",
++            "integrity": "sha512-XrsrhT5sybtKI6wakr2SPOlGZWWYbUXZ7a0jT8/QOeAPau+1X/bSegNe5YR75oJmEZQbKningirmGOEJCIk61Q==",
++            "dev": true,
++            "funding": [
++                "https://github.com/sponsors/sxzz",
++                "https://opencollective.com/debug"
++            ],
++            "license": "MIT",
++            "engines": {
++                "node": ">=12.20.0"
++            }
++        },
+         "node_modules/optionator": {
+             "version": "0.9.4",
+             "resolved": "https://registry.npmjs.org/optionator/-/optionator-0.9.4.tgz",
+@@ -2850,6 +3057,13 @@
+                 "node": ">=8"
+             }
+         },
++        "node_modules/pathe": {
++            "version": "2.0.3",
++            "resolved": "https://registry.npmjs.org/pathe/-/pathe-2.0.3.tgz",
++            "integrity": "sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==",
++            "dev": true,
++            "license": "MIT"
++        },
+         "node_modules/picocolors": {
+             "version": "1.1.1",
+             "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+@@ -3108,6 +3322,13 @@
+                 "node": ">=8"
+             }
+         },
++        "node_modules/siginfo": {
++            "version": "2.0.0",
++            "resolved": "https://registry.npmjs.org/siginfo/-/siginfo-2.0.0.tgz",
++            "integrity": "sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==",
++            "dev": true,
++            "license": "ISC"
++        },
+         "node_modules/source-map-js": {
+             "version": "1.2.2",
+             "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz",
+@@ -3117,6 +3338,20 @@
+                 "node": ">=0.10.0"
+             }
+         },
++        "node_modules/stackback": {
++            "version": "0.0.2",
++            "resolved": "https://registry.npmjs.org/stackback/-/stackback-0.0.2.tgz",
++            "integrity": "sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==",
++            "dev": true,
++            "license": "MIT"
++        },
++        "node_modules/std-env": {
++            "version": "4.3.0",
++            "resolved": "https://registry.npmjs.org/std-env/-/std-env-4.3.0.tgz",
++            "integrity": "sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==",
++            "dev": true,
++            "license": "MIT"
++        },
+         "node_modules/strip-json-comments": {
+             "version": "3.1.1",
+             "resolved": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz",
+@@ -3160,6 +3395,23 @@
+                 "url": "https://opencollective.com/synckit"
+             }
+         },
++        "node_modules/tinybench": {
++            "version": "2.9.0",
++            "resolved": "https://registry.npmjs.org/tinybench/-/tinybench-2.9.0.tgz",
++            "integrity": "sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==",
++            "dev": true,
++            "license": "MIT"
++        },
++        "node_modules/tinyexec": {
++            "version": "1.3.1",
++            "resolved": "https://registry.npmjs.org/tinyexec/-/tinyexec-1.3.1.tgz",
++            "integrity": "sha512-GCvB3aoys96IuDFBMcTB46JOR6mdMtAToqwiW8JlWhsoh1mhHi/xn9ss/Dg7N555GiJyEt2qzoG/NHCwM6h1EA==",
++            "dev": true,
++            "license": "MIT",
++            "engines": {
++                "node": ">=18"
++            }
++        },
+         "node_modules/tinyglobby": {
+             "version": "0.2.17",
+             "resolved": "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz",
+@@ -3177,6 +3429,16 @@
+                 "url": "https://github.com/sponsors/SuperchupuDev"
+             }
+         },
++        "node_modules/tinyrainbow": {
++            "version": "3.2.0",
++            "resolved": "https://registry.npmjs.org/tinyrainbow/-/tinyrainbow-3.2.0.tgz",
++            "integrity": "sha512-LgO3D9yZJjApUiuUfl9iFAwrtaX4+lok3wJIqttGoKCHlWUqHqbQpnxCf82L8FjgKsh4iGo78hqJwgL8F6To2A==",
++            "dev": true,
++            "license": "MIT",
++            "engines": {
++                "node": ">=14.0.0"
++            }
++        },
+         "node_modules/to-regex-range": {
+             "version": "5.0.1",
+             "resolved": "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz",
+@@ -3346,6 +3608,96 @@
+                 }
+             }
+         },
++        "node_modules/vitest": {
++            "version": "4.1.11",
++            "resolved": "https://registry.npmjs.org/vitest/-/vitest-4.1.11.tgz",
++            "integrity": "sha512-fhACrNXUidIbGSBr5FlbuBkO7VWC1ZyLl0DO4CU2DrQoAPxX84Ysxs+HeGQpii5lZWV1Q4gBZTTu49mF+A6Edw==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "@vitest/expect": "4.1.11",
++                "@vitest/mocker": "4.1.11",
++                "@vitest/pretty-format": "4.1.11",
++                "@vitest/runner": "4.1.11",
++                "@vitest/snapshot": "4.1.11",
++                "@vitest/spy": "4.1.11",
++                "@vitest/utils": "4.1.11",
++                "es-module-lexer": "^2.0.0",
++                "expect-type": "^1.3.0",
++                "magic-string": "^0.30.21",
++                "obug": "^2.1.1",
++                "pathe": "^2.0.3",
++                "picomatch": "^4.0.3",
++                "std-env": "^4.0.0-rc.1",
++                "tinybench": "^2.9.0",
++                "tinyexec": "^1.0.2",
++                "tinyglobby": "^0.2.15",
++                "tinyrainbow": "^3.1.0",
++                "vite": "^6.0.0 || ^7.0.0 || ^8.0.0",
++                "why-is-node-running": "^2.3.0"
++            },
++            "bin": {
++                "vitest": "vitest.mjs"
++            },
++            "engines": {
++                "node": "^20.0.0 || ^22.0.0 || >=24.0.0"
++            },
++            "funding": {
++                "url": "https://opencollective.com/vitest"
++            },
++            "peerDependencies": {
++                "@edge-runtime/vm": "*",
++                "@opentelemetry/api": "^1.9.0",
++                "@types/node": "^20.0.0 || ^22.0.0 || >=24.0.0",
++                "@vitest/browser-playwright": "4.1.11",
++                "@vitest/browser-preview": "4.1.11",
++                "@vitest/browser-webdriverio": "4.1.11",
++                "@vitest/coverage-istanbul": "4.1.11",
++                "@vitest/coverage-v8": "4.1.11",
++                "@vitest/ui": "4.1.11",
++                "happy-dom": "*",
++                "jsdom": "*",
++                "vite": "^6.0.0 || ^7.0.0 || ^8.0.0"
++            },
++            "peerDependenciesMeta": {
++                "@edge-runtime/vm": {
++                    "optional": true
++                },
++                "@opentelemetry/api": {
++                    "optional": true
++                },
++                "@types/node": {
++                    "optional": true
++                },
++                "@vitest/browser-playwright": {
++                    "optional": true
++                },
++                "@vitest/browser-preview": {
++                    "optional": true
++                },
++                "@vitest/browser-webdriverio": {
++                    "optional": true
++                },
++                "@vitest/coverage-istanbul": {
++                    "optional": true
++                },
++                "@vitest/coverage-v8": {
++                    "optional": true
++                },
++                "@vitest/ui": {
++                    "optional": true
++                },
++                "happy-dom": {
++                    "optional": true
++                },
++                "jsdom": {
++                    "optional": true
++                },
++                "vite": {
++                    "optional": false
++                }
++            }
++        },
+         "node_modules/vscode-uri": {
+             "version": "3.2.0",
+             "resolved": "https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz",
+@@ -3444,6 +3796,23 @@
+                 "node": ">= 8"
+             }
+         },
++        "node_modules/why-is-node-running": {
++            "version": "2.3.0",
++            "resolved": "https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-2.3.0.tgz",
++            "integrity": "sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w==",
++            "dev": true,
++            "license": "MIT",
++            "dependencies": {
++                "siginfo": "^2.0.0",
++                "stackback": "0.0.2"
++            },
++            "bin": {
++                "why-is-node-running": "cli.js"
++            },
++            "engines": {
++                "node": ">=8"
++            }
++        },
+         "node_modules/word-wrap": {
+             "version": "1.2.5",
+             "resolved": "https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.5.tgz",
+diff --git a/package.json b/package.json
+index 67e0d89..2f5b8f3 100644
+--- a/package.json
++++ b/package.json
+@@ -12,7 +12,8 @@
+         "format": "prettier --write .",
+         "format:check": "prettier --check .",
+         "check": "npm run lint && npm run format:check && npm run build",
+-        "build:example": "vue-tsc --noEmit && vite build --mode example"
++        "build:example": "vue-tsc --noEmit && vite build --mode example",
++        "test": "vitest run"
+     },
+     "dependencies": {
+         "vue": "^3.5.22"
+@@ -28,6 +29,17 @@
+         "prettier": "^3.9.10",
+         "typescript": "~5.9.3",
+         "vite": "^7.1.10",
+-        "vue-tsc": "^3.1.1"
+-    }
++        "vue-tsc": "^3.1.1",
++        "vitest": "4.1.11"
++    },
++    "exports": {
++        ".": "./src/lib/index.ts",
++        "./components": "./src/lib/components.ts",
++        "./scoped-theme.css": "./src/lib/scoped-theme.css"
++    },
++    "files": [
++        "src/lib",
++        "README.md",
++        "docs"
++    ]
+ }
+diff --git a/src/demo/App.vue b/src/demo/App.vue
+index 9f55ee9..8f30150 100644
+--- a/src/demo/App.vue
++++ b/src/demo/App.vue
+@@ -565,7 +565,10 @@ function confirmModal() {
+                                                 <HSwitch
+                                                     v-model="notify"
+                                                     label="接收消息通知"
+-                                                /><HSwitch v-model="sound" label="界面音效" />
++                                                /><HSwitch v-model="sound" label="界面音效"
++                                                    ><template #icon
++                                                        ><HIcon name="star" :size="18" /></template
++                                                ></HSwitch>
+                                             </div>
+                                             <div class="choice-row">
+                                                 <HCheckbox v-model="check">自动保存</HCheckbox
+diff --git a/src/lib/components/HSlider.vue b/src/lib/components/HSlider.vue
+index 674d0d9..0af0fbc 100644
+--- a/src/lib/components/HSlider.vue
++++ b/src/lib/components/HSlider.vue
+@@ -1,5 +1,5 @@
+ <script setup lang="ts">
+-import { computed, useId } from 'vue'
++import { computed, useId, type InputHTMLAttributes } from 'vue'
+ import HIcon from './HIcon.vue'
+ const props = withDefaults(
+     defineProps<{
+@@ -9,11 +9,24 @@ const props = withDefaults(
+         step?: number
+         disabled?: boolean
+         controls?: boolean
++        decrementLabel?: string
++        incrementLabel?: string
++        inputId?: string
++        inputAttrs?: InputHTMLAttributes
+     }>(),
+-    { min: 0, max: 100, step: 1 },
++    {
++        min: 0,
++        max: 100,
++        step: 1,
++        decrementLabel: '',
++        incrementLabel: '',
++        inputId: '',
++        inputAttrs: () => ({}),
++    },
+ )
+ const model = defineModel<number>({ default: 0 })
+-const id = `h-slider-${useId()}`
++const generatedId = `h-slider-${useId()}`
++const id = computed(() => props.inputId || generatedId)
+ const percent = computed(() =>
+     Math.max(0, Math.min(100, ((model.value - props.min) / (props.max - props.min || 1)) * 100)),
+ )
+@@ -35,7 +48,7 @@ function adjust(direction: number) {
+                 v-if="controls"
+                 type="button"
+                 class="h-slider__step"
+-                :aria-label="`减少${label}`"
++                :aria-label="decrementLabel || `减少${label}`"
+                 :disabled="disabled || model <= min"
+                 @click="adjust(-1)"
+             >
+@@ -45,6 +58,7 @@ function adjust(direction: number) {
+             <div class="h-slider__control" :style="{ '--fill': `${percent}%` }">
+                 <span class="h-slider__track" aria-hidden="true"><span /></span>
+                 <input
++                    v-bind="inputAttrs"
+                     :id="id"
+                     v-model.number="model"
+                     type="range"
+@@ -60,7 +74,7 @@ function adjust(direction: number) {
+                 v-if="controls"
+                 type="button"
+                 class="h-slider__step"
+-                :aria-label="`增加${label}`"
++                :aria-label="incrementLabel || `增加${label}`"
+                 :disabled="disabled || model >= max"
+                 @click="adjust(1)"
+             >
+diff --git a/src/lib/components/HSwitch.vue b/src/lib/components/HSwitch.vue
+index e94492d..d0dbbed 100644
+--- a/src/lib/components/HSwitch.vue
++++ b/src/lib/components/HSwitch.vue
+@@ -3,9 +3,11 @@ defineProps<{ label: string; disabled?: boolean }>()
+ const model = defineModel<boolean>({ default: false })
+ </script>
+ <template>
+-    <label class="h-switch-label"
+-        ><span>{{ label }}</span
+-        ><button
++    <label class="h-switch-label">
++        <span class="h-switch-label__content"
++            ><slot name="icon" /><span>{{ label }}</span></span
++        >
++        <button
+             type="button"
+             class="h-switch"
+             role="switch"
+@@ -15,8 +17,9 @@ const model = defineModel<boolean>({ default: false })
+             :class="{ 'is-on': model }"
+             @click="model = !model"
+         >
+-            <span /></button
+-    ></label>
++            <span />
++        </button>
++    </label>
+ </template>
+ 
+ <style scoped>
+@@ -27,6 +30,12 @@ const model = defineModel<boolean>({ default: false })
+     gap: 12px;
+     font-size: var(--h-switch-font-size, 12px);
+ }
++.h-switch-label__content {
++    display: inline-flex;
++    align-items: center;
++    gap: 10px;
++    min-width: 0;
++}
+ .h-switch {
+     position: relative;
+     isolation: isolate;
+diff --git a/src/lib/components/HTabPanels.vue b/src/lib/components/HTabPanels.vue
+index 955659f..898720e 100644
+--- a/src/lib/components/HTabPanels.vue
++++ b/src/lib/components/HTabPanels.vue
+@@ -7,8 +7,10 @@ const props = withDefaults(
+         order: string[]
+         axis?: 'x' | 'y'
+         animateHeight?: boolean
++        animated?: boolean
++        idPrefix?: string
+     }>(),
+-    { axis: 'x', animateHeight: true },
++    { axis: 'x', animateHeight: true, animated: true, idPrefix: '' },
+ )
+ const emit = defineEmits<{ display: [value: string] }>()
+ const container = ref<HTMLElement>()
+@@ -76,7 +78,12 @@ watch(
+         const currentRevision = ++revision
+         const root = container.value
+         const oldPanel = panel.value
+-        if (!root || !oldPanel) return
++        if (!root || !oldPanel || !props.animated) {
++            freeze()
++            displayedValue.value = target
++            settle()
++            return
++        }
+         const startHeight = root.getBoundingClientRect().height
+         freeze()
+         if (reducedMotion()) {
+@@ -148,9 +155,13 @@ onBeforeUnmount(() => {
+ <template>
+     <div ref="container" class="h-tab-panels" :class="{ 'is-moving': moving }">
+         <div
++            :id="idPrefix ? `${idPrefix}-panel-${displayedValue}` : undefined"
+             :key="displayedValue"
+             ref="panel"
+             class="h-tab-panels__page"
++            :role="idPrefix ? 'tabpanel' : undefined"
++            :aria-labelledby="idPrefix ? `${idPrefix}-tab-${displayedValue}` : undefined"
++            :tabindex="idPrefix ? 0 : undefined"
+             :style="{ opacity: concealed ? 0 : undefined }"
+         >
+             <slot :value="displayedValue" />
+diff --git a/src/lib/components/HTabs.vue b/src/lib/components/HTabs.vue
+index 6a8ff07..afb2afa 100644
+--- a/src/lib/components/HTabs.vue
++++ b/src/lib/components/HTabs.vue
+@@ -7,7 +7,12 @@ export interface TabItem {
+     iconSrc?: string
+     disabled?: boolean
+ }
+-defineProps<{ items: TabItem[]; label?: string; variant?: 'line' | 'pill' | 'icon' }>()
++defineProps<{
++    items: TabItem[]
++    label?: string
++    idPrefix?: string
++    variant?: 'line' | 'pill' | 'icon'
++}>()
+ const orbitDots = Array.from({ length: 80 }, (_, index) => {
+     const angle = (index / 80) * Math.PI * 2
+     const distance = Math.min(index % 40, 40 - (index % 40))
+@@ -48,8 +53,10 @@ function move(event: KeyboardEvent) {
+     >
+         <button
+             v-for="(item, index) in items"
++            :id="idPrefix ? `${idPrefix}-tab-${item.value}` : undefined"
+             :key="item.value"
+             role="tab"
++            :aria-controls="idPrefix ? `${idPrefix}-panel-${item.value}` : undefined"
+             type="button"
+             :aria-selected="model === item.value"
+             :aria-label="variant === 'icon' ? item.label : undefined"
+diff --git a/src/lib/index.ts b/src/lib/index.ts
+index fed8331..682dd2d 100644
+--- a/src/lib/index.ts
++++ b/src/lib/index.ts
+@@ -1,68 +1,3 @@
+-import type { App } from 'vue'
+-import HIcon from './components/HIcon.vue'
+-import HButton from './components/HButton.vue'
+-import HCloseButton from './components/HCloseButton.vue'
+-import HPanel from './components/HPanel.vue'
+-import HTabs from './components/HTabs.vue'
+-import HTabPanels from './components/HTabPanels.vue'
+-import HNavigation from './components/HNavigation.vue'
+-import HInput from './components/HInput.vue'
+-import HSelect from './components/HSelect.vue'
+-import HSwitch from './components/HSwitch.vue'
+-import HCheckbox from './components/HCheckbox.vue'
+-import HRadio from './components/HRadio.vue'
+-import HSlider from './components/HSlider.vue'
+-import HProgress from './components/HProgress.vue'
+-import HBadge from './components/HBadge.vue'
+-import HModal from './components/HModal.vue'
+-import HToast from './components/HToast.vue'
+-import HEmpty from './components/HEmpty.vue'
+-import HFadeContainer from './components/HFadeContainer.vue'
++export * from './components'
++export { default } from './components'
+ import './theme.css'
+-export {
+-    HIcon,
+-    HButton,
+-    HCloseButton,
+-    HPanel,
+-    HTabs,
+-    HTabPanels,
+-    HNavigation,
+-    HInput,
+-    HSelect,
+-    HSwitch,
+-    HCheckbox,
+-    HRadio,
+-    HSlider,
+-    HProgress,
+-    HBadge,
+-    HModal,
+-    HToast,
+-    HEmpty,
+-    HFadeContainer,
+-}
+-const components = {
+-    HIcon,
+-    HButton,
+-    HCloseButton,
+-    HPanel,
+-    HTabs,
+-    HTabPanels,
+-    HNavigation,
+-    HInput,
+-    HSelect,
+-    HSwitch,
+-    HCheckbox,
+-    HRadio,
+-    HSlider,
+-    HProgress,
+-    HBadge,
+-    HModal,
+-    HToast,
+-    HEmpty,
+-    HFadeContainer,
+-}
+-export default {
+-    install(app: App) {
+-        for (const [name, component] of Object.entries(components)) app.component(name, component)
+-    },
+-}
+diff --git a/tsconfig.json b/tsconfig.json
+index dfe6d6d..8e80d25 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -13,5 +13,5 @@
+         "noEmit": true,
+         "strict": true
+     },
+-    "include": ["src/**/*.ts", "src/**/*.vue", "vite*.ts"]
++    "include": ["src/**/*.ts", "src/**/*.vue", "tests/**/*.ts", "vite*.ts"]
+ }
+diff --git a/docs/components.md b/docs/components.md
+index de5b05a..74752f1 100644
+--- a/docs/components.md
++++ b/docs/components.md
+@@ -1,26 +1,26 @@
+ # 组件接口
+
+-| 组件             | 主要属性 / 插槽                                                                                                                                                            |
+-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| `HIcon`          | `name`、`size`，未知名称回退为星形；纯装饰，父控件负责无障碍名称                                                                                                           |
+-| `HButton`        | `variant`: primary / secondary / ghost / danger / reward；`size`: sm / md；`icon`、`iconShape`: plain / round、`sparkles`、`loading`、`disabled`、`type`                   |
+-| `HCloseButton`   | `label` 默认为“关闭”；中心点与四条线独立动画                                                                                                                               |
+-| `HPanel`         | `title`、`subtitle`、`number`；默认内容、`action`、`footer` 插槽                                                                                                           |
+-| `HTabs`          | 字符串 `v-model`；`items`: `{label,value,icon?,iconSrc?,disabled?}[]`；`variant`: line / pill / icon；`#icon="{ item }"` 自定义图标；左右键及 Home / End 导航              |
+-| `HTabPanels`     | `value` 为当前内容，`order` 为页签值的顺序数组；`axis`: x / y；`animateHeight` 默认 true；默认插槽接收 `{value}`，`display` 事件传出实际显示值                             |
+-| `HFadeContainer` | `fadeEdges`: top / right / bottom / left 数组，默认四边；`fadeSize`: 像素数或 CSS 长度，默认 32；`overflow`: auto / hidden；`label`；默认插槽；通过 CSS 设置容器高度或宽度 |
+-| `HNavigation`    | 字符串 `v-model`；`items`: `{label,value,disabled?}[]`；`label`、`horizontal`、`responsive`；方向键及 Home / End；默认插槽接收 `{item,index}`，可添加图标和副标题          |
+-| `HInput`         | 字符串 `v-model`；`label`、`icon`、`error`、`placeholder`、`disabled`、`type`；原生属性传递给 input                                                                        |
+-| `HSelect`        | 自定义下拉面板，字符串 `v-model`；`label`、`options`、`disabled`；选项为字符串或 `{label,value,disabled?}`；`change` 事件传出选中值；`name` 可用于原生表单提交             |
+-| `HSwitch`        | 布尔 `v-model`；必填 `label`、`disabled`                                                                                                                                   |
+-| `HCheckbox`      | 布尔 `v-model`、`disabled`；默认插槽为标签                                                                                                                                 |
+-| `HRadio`         | 字符串 `v-model`；`value`、`name`、`disabled`；默认插槽为标签                                                                                                              |
+-| `HSlider`        | 数字 `v-model`；`label`、`min`、`max`、`step`、`disabled`；`controls` 开启合成数量样式，显示两端数值及胶囊加减按钮                                                         |
+-| `HProgress`      | `value`、`max`、`label`                                                                                                                                                    |
+-| `HBadge`         | `tone`: gold / success / muted / danger                                                                                                                                    |
+-| `HModal`         | 布尔 `v-model`；`title`、`subtitle`；默认、`footer` 和可选的左侧 `illustration` 插槽；背景点击、Esc 关闭、焦点限制与恢复。当前适用于单层弹窗                               |
+-| `HToast`         | 布尔 `v-model`；`message`、`duration`，默认 3200ms，0 为不自动隐藏；`role=status`                                                                                          |
+-| `HEmpty`         | `title`、`description`，可插入重置按钮                                                                                                                                     |
++| 组件             | 主要属性 / 插槽                                                                                                                                                                                                                                          |
++| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
++| `HIcon`          | `name`、`size`，未知名称回退为星形；纯装饰，父控件负责无障碍名称                                                                                                                                                                                         |
++| `HButton`        | `variant`: primary / secondary / ghost / danger / reward；`size`: sm / md；`icon`、`iconShape`: plain / round、`sparkles`、`loading`、`disabled`、`type`                                                                                                 |
++| `HCloseButton`   | `label` 默认为“关闭”；中心点与四条线独立动画                                                                                                                                                                                                             |
++| `HPanel`         | `title`、`subtitle`、`number`；默认内容、`action`、`footer` 插槽                                                                                                                                                                                         |
++| `HTabs`          | 字符串 `v-model`；`items`: `{label,value,icon?,iconSrc?,disabled?}[]`；`variant`: line / pill / icon；`#icon="{ item }"` 自定义图标；左右键及 Home / End 导航；可选 `idPrefix` 与内容面板关联                                                            |
++| `HTabPanels`     | `value` 为当前内容，`order` 为页签值的顺序数组；`axis`: x / y；`animateHeight` 默认 true；默认插槽接收 `{value}`，`display` 事件传出实际显示值；`animated=false` 关闭切换动画；`idPrefix` 与页签一致                                                     |
++| `HFadeContainer` | `fadeEdges`: top / right / bottom / left 数组，默认四边；`fadeSize`: 像素数或 CSS 长度，默认 32；`overflow`: auto / hidden；`label`；默认插槽；通过 CSS 设置容器高度或宽度                                                                               |
++| `HNavigation`    | 字符串 `v-model`；`items`: `{label,value,disabled?}[]`；`label`、`horizontal`、`responsive`；方向键及 Home / End；默认插槽接收 `{item,index}`，可添加图标和副标题                                                                                        |
++| `HInput`         | 字符串 `v-model`；`label`、`icon`、`error`、`placeholder`、`disabled`、`type`；原生属性传递给 input                                                                                                                                                      |
++| `HSelect`        | 自定义下拉面板，字符串 `v-model`；`label`、`options`、`disabled`；选项为字符串或 `{label,value,disabled?}`；`change` 事件传出选中值；`name` 可用于原生表单提交                                                                                           |
++| `HSwitch`        | 布尔 `v-model`；必填 `label`、`disabled`；可选 `#icon` 前置装饰插槽                                                                                                                                                                                      |
++| `HCheckbox`      | 布尔 `v-model`、`disabled`；默认插槽为标签                                                                                                                                                                                                               |
++| `HRadio`         | 字符串 `v-model`；`value`、`name`、`disabled`；默认插槽为标签                                                                                                                                                                                            |
++| `HSlider`        | 数字 `v-model`；`label`、`min`、`max`、`step`、`disabled`；`controls` 开启合成数量样式；`decrementLabel` / `incrementLabel` 本地化按钮名称；`inputId` / `inputAttrs` 传递输入 ID 与 ARIA 属性                                                            |
++| `HProgress`      | `value`、`max`、`label`                                                                                                                                                                                                                                  |
++| `HBadge`         | `tone`: gold / success / muted / danger                                                                                                                                                                                                                  |
++| `HModal`         | 布尔 `v-model`；`title`、`subtitle`、`closeLabel`；默认、`footer` 和左侧 `illustration` 插槽；属性透传至 Teleport 遮罩。背景点击、Esc 关闭、焦点限制与恢复；`after-leave` 在退出完成及滚动锁释放后发出，重开时忽略旧退出；卸载释放锁。当前适用于单层弹窗 |
++| `HToast`         | 布尔 `v-model`；`message`、`duration`，默认 3200ms，0 为不自动隐藏；`role=status`                                                                                                                                                                        |
++| `HEmpty`         | `title`、`description`，可插入重置按钮                                                                                                                                                                                                                   |
+
+ ## 页签与内容联动
+
+@@ -48,3 +48,24 @@ const items = [
+ ```
+
+ 跨页签保留的数据放在父组件中。固定高度布局设置 `:animate-height="false"`。
++
++## 前置图标与无障碍关联
++
++```vue
++<HSwitch v-model="enabled" label="Notifications">
++    <template #icon><HIcon name="star" /></template>
++</HSwitch>
++<HSlider
++    v-model="quantity"
++    label="Quantity"
++    controls
++    decrement-label="Decrease quantity"
++    increment-label="Increase quantity"
++    input-id="quantity"
++    :input-attrs="{ 'aria-describedby': 'quantity-help' }"
++/>
++```
++
++`HTabs` 和 `HTabPanels` 使用相同且页面内唯一的 `idPrefix`，自动连接
++`aria-controls`、`aria-labelledby` 和 `tabpanel`。单面板不提供此前缀即可。
++`animated=false` 同时关闭离场、入场和高度动画，适用于切换完整结果。
+diff --git a/src/lib/components/HModal.vue b/src/lib/components/HModal.vue
+index 7b4a47a..8924dec 100644
+--- a/src/lib/components/HModal.vue
++++ b/src/lib/components/HModal.vue
+@@ -1,11 +1,16 @@
+ <script setup lang="ts">
+ import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
+ import HCloseButton from './HCloseButton.vue'
+-defineProps<{ title: string; subtitle?: string }>()
++defineOptions({ inheritAttrs: false })
++defineProps<{ title: string; subtitle?: string; closeLabel?: string }>()
++const emit = defineEmits<{ 'after-leave': [] }>()
+ const open = defineModel<boolean>({ default: false })
+ const dialog = ref<HTMLElement>()
+ let previousFocus: HTMLElement | null = null
+ let previousOverflow = ''
++let locked = false
++let focusRevision = 0
++let leavingElement: Element | undefined
+ let previousGutter: { value: string; priority: string } | null = null
+ function onKey(event: KeyboardEvent) {
+     if (event.key === 'Escape') open.value = false
+@@ -30,6 +35,8 @@ function onKey(event: KeyboardEvent) {
+     }
+ }
+ function release() {
++    if (!locked) return
++    locked = false
+     document.body.style.overflow = previousOverflow
+     if (previousGutter) {
+         document.documentElement.style.setProperty(
+@@ -40,42 +47,61 @@ function release() {
+         previousGutter = null
+     }
+     document.removeEventListener('keydown', onKey)
+-    previousFocus?.focus({ preventScroll: true })
++    if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true })
+     previousFocus = null
+ }
++function beforeLeave(element: Element) {
++    leavingElement = element
++}
++function afterLeave(element: Element) {
++    // An interrupted leave must never release a reopened modal's lock or selection.
++    if (open.value || element !== leavingElement) return
++    leavingElement = undefined
++    release()
++    emit('after-leave')
++}
+ watch(
+     open,
+     async (value) => {
++        const revision = ++focusRevision
+         if (value) {
+-            previousFocus = document.activeElement as HTMLElement
+-            previousOverflow = document.body.style.overflow
+-            const root = document.documentElement
+-            if (
+-                window.innerWidth > root.clientWidth &&
+-                getComputedStyle(root).scrollbarGutter === 'auto'
+-            ) {
+-                previousGutter = {
+-                    value: root.style.getPropertyValue('scrollbar-gutter'),
+-                    priority: root.style.getPropertyPriority('scrollbar-gutter'),
++            leavingElement = undefined
++            if (!locked) {
++                locked = true
++                previousFocus = document.activeElement as HTMLElement
++                previousOverflow = document.body.style.overflow
++                const root = document.documentElement
++                if (
++                    window.innerWidth > root.clientWidth &&
++                    getComputedStyle(root).scrollbarGutter === 'auto'
++                ) {
++                    previousGutter = {
++                        value: root.style.getPropertyValue('scrollbar-gutter'),
++                        priority: root.style.getPropertyPriority('scrollbar-gutter'),
++                    }
++                    root.style.setProperty('scrollbar-gutter', 'stable')
+                 }
+-                root.style.setProperty('scrollbar-gutter', 'stable')
++                document.body.style.overflow = 'hidden'
++                document.addEventListener('keydown', onKey)
+             }
+-            document.body.style.overflow = 'hidden'
+-            document.addEventListener('keydown', onKey)
+             await nextTick()
+-            dialog.value?.querySelector<HTMLElement>('.h-close')?.focus({ preventScroll: true })
+-        } else if (previousFocus) release()
++            // Allow an immediately queued owner close/unmount to propagate before initial focus.
++            await nextTick()
++            if (open.value && revision === focusRevision)
++                dialog.value?.querySelector<HTMLElement>('.h-close')?.focus({ preventScroll: true })
++        }
+     },
+     { immediate: true },
+ )
+ onBeforeUnmount(() => {
+-    if (open.value) release()
++    focusRevision++
++    release()
+ })
+ </script>
+ <template>
+     <Teleport to="body">
+-        <Transition name="h-modal">
+-            <div v-if="open" class="h-modal-backdrop" @click.self="open = false">
++        <Transition name="h-modal" @before-leave="beforeLeave" @after-leave="afterLeave">
++            <div v-if="open" v-bind="$attrs" class="h-modal-backdrop" @click.self="open = false">
+                 <div class="h-modal-shell">
+                     <section
+                         ref="dialog"
+@@ -94,7 +120,7 @@ onBeforeUnmount(() => {
+                             <header class="h-modal__header">
+                                 <div class="h-modal__title-row">
+                                     <h2>{{ title }}</h2>
+-                                    <HCloseButton @click="open = false" />
++                                    <HCloseButton :label="closeLabel" @click="open = false" />
+                                 </div>
+                                 <p v-if="subtitle">{{ subtitle }}</p>
+                             </header>

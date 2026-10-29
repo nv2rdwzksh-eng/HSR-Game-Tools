@@ -1,0 +1,3145 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "4.6.0",
+  "characters": [
+    {
+      "id": "1001",
+      "names": {
+        "zh-CN": "三月七·存护",
+        "en": "March 7th - Preservation"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1001",
+      "aliases": {
+        "zh-CN": {
+          "official": [
+            "三月七"
+          ],
+          "player": [
+            "傻子",
+            "啥子",
+            "小三月",
+            "无漏净子",
+            "盾三月",
+            "粉毛",
+            "粉霞天女",
+            "赵相机"
+          ]
+        },
+        "en": {
+          "official": [
+            "March 7th"
+          ],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight"
+      }
+    },
+    {
+      "id": "1002",
+      "names": {
+        "zh-CN": "丹恒",
+        "en": "Dan Heng"
+      },
+      "baseSpeed": 110,
+      "assetKey": "character:1002",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "冷面小青龙",
+            "蛋黄"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1003",
+      "names": {
+        "zh-CN": "姬子",
+        "en": "Himeko"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1003",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "咖啡",
+            "妈妈",
+            "无量塔",
+            "最后一课",
+            "领航员"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1004",
+      "names": {
+        "zh-CN": "瓦尔特",
+        "en": "Welt"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1004",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "星穹列车最强大的男人",
+            "杨叔",
+            "理之律者",
+            "老杨"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1005",
+      "names": {
+        "zh-CN": "卡芙卡",
+        "en": "Kafka"
+      },
+      "baseSpeed": 100,
+      "assetKey": "character:1005",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "卡妈",
+            "听我说",
+            "妈妈"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1006",
+      "names": {
+        "zh-CN": "银狼",
+        "en": "Silver Wolf"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1006",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "小银狼",
+            "狼宝"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1008",
+      "names": {
+        "zh-CN": "阿兰",
+        "en": "Arlan"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1008",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1009",
+      "names": {
+        "zh-CN": "艾丝妲",
+        "en": "Asta"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:1009",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "大小姐",
+            "富婆",
+            "黑塔空间站站长"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1013",
+      "names": {
+        "zh-CN": "黑塔",
+        "en": "Herta"
+      },
+      "baseSpeed": 100,
+      "assetKey": "character:1013",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "小黑塔",
+            "黑塔人偶"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1014",
+      "names": {
+        "zh-CN": "Saber",
+        "en": "Saber"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1014",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "吾王",
+            "呆毛王"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1015",
+      "names": {
+        "zh-CN": "Archer",
+        "en": "Archer"
+      },
+      "baseSpeed": 105,
+      "assetKey": "character:1015",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "卫宫士郎",
+            "男神",
+            "神秘拉矢人",
+            "红A"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1101",
+      "names": {
+        "zh-CN": "布洛妮娅",
+        "en": "Bronya"
+      },
+      "baseSpeed": 99,
+      "assetKey": "character:1101",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "大守护者",
+            "板鸭",
+            "鸭子",
+            "鸭鸭"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1102",
+      "names": {
+        "zh-CN": "希儿",
+        "en": "Seele"
+      },
+      "baseSpeed": 115,
+      "assetKey": "character:1102",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "希镰",
+            "量子镰刀蝴蝶"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1103",
+      "names": {
+        "zh-CN": "希露瓦",
+        "en": "Serval"
+      },
+      "baseSpeed": 104,
+      "assetKey": "character:1103",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "乐队"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1104",
+      "names": {
+        "zh-CN": "杰帕德",
+        "en": "Gepard"
+      },
+      "baseSpeed": 92,
+      "assetKey": "character:1104",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "杰哥",
+            "银鬃铁卫戍卫官"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight"
+      }
+    },
+    {
+      "id": "1105",
+      "names": {
+        "zh-CN": "娜塔莎",
+        "en": "Natasha"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1105",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1106",
+      "names": {
+        "zh-CN": "佩拉",
+        "en": "Pela"
+      },
+      "baseSpeed": 105,
+      "assetKey": "character:1106",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1107",
+      "names": {
+        "zh-CN": "克拉拉",
+        "en": "Clara"
+      },
+      "baseSpeed": 90,
+      "assetKey": "character:1107",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "史瓦罗"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1108",
+      "names": {
+        "zh-CN": "桑博",
+        "en": "Sampo"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1108",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "寒腿叔叔",
+            "桑博叔叔",
+            "老桑博"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1109",
+      "names": {
+        "zh-CN": "虎克",
+        "en": "Hook"
+      },
+      "baseSpeed": 94,
+      "assetKey": "character:1109",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "漆黑的虎克大人"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1110",
+      "names": {
+        "zh-CN": "玲可",
+        "en": "Lynx"
+      },
+      "baseSpeed": 100,
+      "assetKey": "character:1110",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1111",
+      "names": {
+        "zh-CN": "卢卡",
+        "en": "Luka"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:1111",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1112",
+      "names": {
+        "zh-CN": "托帕&账账",
+        "en": "Topaz & Numby"
+      },
+      "baseSpeed": 110,
+      "assetKey": "character:1112",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "买榜姐",
+            "扑满"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1201",
+      "names": {
+        "zh-CN": "青雀",
+        "en": "Qingque"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1201",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "帝垣琼玉",
+            "摸鱼",
+            "雀神",
+            "麻将"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1202",
+      "names": {
+        "zh-CN": "停云",
+        "en": "Tingyun"
+      },
+      "baseSpeed": 112,
+      "assetKey": "character:1202",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "存狐",
+            "小停云"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1203",
+      "names": {
+        "zh-CN": "罗刹",
+        "en": "Luocha"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1203",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "奥托",
+            "罗大夫"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1204",
+      "names": {
+        "zh-CN": "景元",
+        "en": "Jing Yuan"
+      },
+      "baseSpeed": 99,
+      "assetKey": "character:1204",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "又站起来了",
+            "喝汤",
+            "汤达人",
+            "牢景",
+            "神策将军",
+            "老景"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1205",
+      "names": {
+        "zh-CN": "刃",
+        "en": "Blade"
+      },
+      "baseSpeed": 97,
+      "assetKey": "character:1205",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "人五代三",
+            "人有五名",
+            "人有五名，代价有三个",
+            "点刀哥",
+            "牢刃",
+            "芝麻酥"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1206",
+      "names": {
+        "zh-CN": "素裳",
+        "en": "Sushang"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1206",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "傻子",
+            "啥子"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1207",
+      "names": {
+        "zh-CN": "驭空",
+        "en": "Yukong"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1207",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1208",
+      "names": {
+        "zh-CN": "符玄",
+        "en": "Fu Xuan"
+      },
+      "baseSpeed": 100,
+      "assetKey": "character:1208",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "太卜大人",
+            "没有护盾的存护",
+            "粉毛矮子",
+            "高人"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight"
+      }
+    },
+    {
+      "id": "1209",
+      "names": {
+        "zh-CN": "彦卿",
+        "en": "Yanqing"
+      },
+      "baseSpeed": 109,
+      "assetKey": "character:1209",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "世界第一冰巡猎",
+            "冷锋",
+            "区",
+            "小孩哥",
+            "鞋底"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1210",
+      "names": {
+        "zh-CN": "桂乃芬",
+        "en": "Guinaifen"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:1210",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "小桂子"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1211",
+      "names": {
+        "zh-CN": "白露",
+        "en": "Bailu"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1211",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "龙女大人"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1212",
+      "names": {
+        "zh-CN": "镜流",
+        "en": "Jingliu"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1212",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "牢镜",
+            "罗浮剑首"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1213",
+      "names": {
+        "zh-CN": "丹恒•饮月",
+        "en": "Dan Heng • Imbibitor Lunae"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1213",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP丹恒",
+            "冷面小青龙",
+            "饮月君",
+            "龙丹"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1214",
+      "names": {
+        "zh-CN": "雪衣",
+        "en": "Xueyi"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:1214",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1215",
+      "names": {
+        "zh-CN": "寒鸦",
+        "en": "Hanya"
+      },
+      "baseSpeed": 110,
+      "assetKey": "character:1215",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1217",
+      "names": {
+        "zh-CN": "藿藿",
+        "en": "Huohuo"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1217",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "尾巴大爷",
+            "抹茶小蛋糕",
+            "抹茶蛋糕"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1218",
+      "names": {
+        "zh-CN": "椒丘",
+        "en": "Jiaoqiu"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1218",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "区",
+            "椒大夫",
+            "椒师傅",
+            "神秘火锅男子"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1220",
+      "names": {
+        "zh-CN": "飞霄",
+        "en": "Feixiao"
+      },
+      "baseSpeed": 112,
+      "assetKey": "character:1220",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "大飞",
+            "天击将军",
+            "最后一舞"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1221",
+      "names": {
+        "zh-CN": "云璃",
+        "en": "Yunli"
+      },
+      "baseSpeed": 94,
+      "assetKey": "character:1221",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "小孩姐",
+            "老铁"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1222",
+      "names": {
+        "zh-CN": "灵砂",
+        "en": "Lingsha"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1222",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "区",
+            "大加拉赫",
+            "抢击破",
+            "灵灵的砂",
+            "砂姐",
+            "神",
+            "绝区灵",
+            "绝区零"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1223",
+      "names": {
+        "zh-CN": "貊泽",
+        "en": "Moze"
+      },
+      "baseSpeed": 111,
+      "assetKey": "character:1223",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1224",
+      "names": {
+        "zh-CN": "三月七·巡猎",
+        "en": "March 7th - The Hunt"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1224",
+      "aliases": {
+        "zh-CN": {
+          "official": [
+            "三月七"
+          ],
+          "player": [
+            "傻子",
+            "剑三月",
+            "啥子"
+          ]
+        },
+        "en": {
+          "official": [
+            "March 7th"
+          ],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1225",
+      "names": {
+        "zh-CN": "忘归人",
+        "en": "Fugue"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1225",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP停云",
+            "大停云",
+            "存狐",
+            "王贵人"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1301",
+      "names": {
+        "zh-CN": "加拉赫",
+        "en": "Gallagher"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1301",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "老狗"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Priest"
+      }
+    },
+    {
+      "id": "1302",
+      "names": {
+        "zh-CN": "银枝",
+        "en": "Argenti"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:1302",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "伊德莉拉",
+            "捍卫银河中的美",
+            "空降",
+            "纯美骑士",
+            "银河街溜子"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1303",
+      "names": {
+        "zh-CN": "阮•梅",
+        "en": "Ruan Mei"
+      },
+      "baseSpeed": 104,
+      "assetKey": "character:1303",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "天才俱乐部#81",
+            "软妹",
+            "黑塔女士的对象"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1304",
+      "names": {
+        "zh-CN": "砂金",
+        "en": "Aventurine"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:1304",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "卡卡瓦夏",
+            "埃维金人",
+            "好运",
+            "所有或一无所有",
+            "赌徒"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight"
+      }
+    },
+    {
+      "id": "1305",
+      "names": {
+        "zh-CN": "真理医生",
+        "en": "Dr. Ratio"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:1305",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "义父",
+            "拉帝奥教授"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1306",
+      "names": {
+        "zh-CN": "花火",
+        "en": "Sparkle"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1306",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "好女孩",
+            "花导"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1307",
+      "names": {
+        "zh-CN": "黑天鹅",
+        "en": "Black Swan"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1307",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "所以我出手了",
+            "神秘出手女",
+            "鹅姐"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1308",
+      "names": {
+        "zh-CN": "黄泉",
+        "en": "Acheron"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1308",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "我不玩回合制",
+            "芽衣",
+            "虚无令使",
+            "雷电·忘川守·芽衣"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1309",
+      "names": {
+        "zh-CN": "知更鸟",
+        "en": "Robin"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1309",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "向天再借一回合",
+            "小鸟",
+            "银河歌姬"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1310",
+      "names": {
+        "zh-CN": "流萤",
+        "en": "Firefly"
+      },
+      "baseSpeed": 104,
+      "assetKey": "character:1310",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "点燃大海",
+            "牢萤",
+            "萤宝",
+            "萤绒绒",
+            "萨姆"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1312",
+      "names": {
+        "zh-CN": "米沙",
+        "en": "Misha"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1312",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "米哈伊尔"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1313",
+      "names": {
+        "zh-CN": "星期日",
+        "en": "Sunday"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1313",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "半步星神",
+            "周天哥",
+            "周天子",
+            "周日哥",
+            "太初有为",
+            "小鸟",
+            "平A",
+            "拐力*2",
+            "拐力x2",
+            "拐力乘二",
+            "拐力乘以二",
+            "最关键",
+            "正阳狮鹫",
+            "老日",
+            "黑日狮鹫",
+            "齐响诗班"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1314",
+      "names": {
+        "zh-CN": "翡翠",
+        "en": "Jade"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:1314",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1315",
+      "names": {
+        "zh-CN": "波提欧",
+        "en": "Boothill"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1315",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "bto",
+            "一枪爱死",
+            "他宝贝的",
+            "波波鲨"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1317",
+      "names": {
+        "zh-CN": "乱破",
+        "en": "Rappa"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1317",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "神秘说唱女",
+            "缭乱忍侠"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1321",
+      "names": {
+        "zh-CN": "大丽花",
+        "en": "The Dahlia"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1321",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "康士坦丝"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1401",
+      "names": {
+        "zh-CN": "大黑塔",
+        "en": "The Herta"
+      },
+      "baseSpeed": 99,
+      "assetKey": "character:1401",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP黑塔",
+            "举世无双",
+            "天才俱乐部#83",
+            "帽子尖尖女士",
+            "智识令使",
+            "沉鱼落雁",
+            "牢塔",
+            "聪明绝顶",
+            "路边塔",
+            "阮梅女士的对象",
+            "黑塔女士"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1402",
+      "names": {
+        "zh-CN": "阿格莱雅",
+        "en": "Aglaea"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1402",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "双鞋风扇轮椅",
+            "墨涅塔",
+            "生命脆若游丝",
+            "裁缝女",
+            "谎言纤毫毕现",
+            "金织",
+            "阿雅",
+            "黄金之茧"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory"
+      }
+    },
+    {
+      "id": "1403",
+      "names": {
+        "zh-CN": "缇宝",
+        "en": "Tribbie"
+      },
+      "baseSpeed": 96,
+      "assetKey": "character:1403",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "万径之门",
+            "最初的半神",
+            "缇里西庇俄丝",
+            "雅努斯"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1404",
+      "names": {
+        "zh-CN": "万敌",
+        "en": "Mydei"
+      },
+      "baseSpeed": 95,
+      "assetKey": "character:1404",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "天谴之矛",
+            "尼卡多利",
+            "必痛哥",
+            "此世必要之痛",
+            "狮子头",
+            "迈德漠斯"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1405",
+      "names": {
+        "zh-CN": "那刻夏",
+        "en": "Anaxa"
+      },
+      "baseSpeed": 97,
+      "assetKey": "character:1405",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "瑟希斯",
+            "裂分之枝",
+            "阿那克萨戈拉斯",
+            "魔术技巧"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1406",
+      "names": {
+        "zh-CN": "赛飞儿",
+        "en": "Cipher"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:1406",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "扎格列斯",
+            "牢猫",
+            "猫咪怪盗",
+            "猫猫",
+            "翻飞之币",
+            "赛法利娅"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1407",
+      "names": {
+        "zh-CN": "遐蝶",
+        "en": "Castorice"
+      },
+      "baseSpeed": 95,
+      "assetKey": "character:1407",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "小蝶",
+            "拥抱新生吧",
+            "死龙",
+            "灰黯之手",
+            "玻吕克斯",
+            "紫色扑棱蛾子",
+            "蝶宝",
+            "量子镰刀蝴蝶"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory"
+      }
+    },
+    {
+      "id": "1408",
+      "names": {
+        "zh-CN": "白厄",
+        "en": "Phainon"
+      },
+      "baseSpeed": 94,
+      "assetKey": "character:1408",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "全世之座",
+            "卡厄斯兰那",
+            "哀丽秘榭的白厄",
+            "小白",
+            "烈阳哥",
+            "烩面",
+            "爱上雷神",
+            "终将升起的烈阳",
+            "请输入文本",
+            "黄紫色"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1409",
+      "names": {
+        "zh-CN": "风堇",
+        "en": "Hyacine"
+      },
+      "baseSpeed": 110,
+      "assetKey": "character:1409",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "小伊卡",
+            "晨昏之眼",
+            "粉毛",
+            "雅辛忒丝",
+            "风宝",
+            "马头"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory"
+      }
+    },
+    {
+      "id": "1410",
+      "names": {
+        "zh-CN": "海瑟音",
+        "en": "Hysilens"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1410",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "大鲸鱼",
+            "法吉娜",
+            "海列屈拉",
+            "满溢之杯"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1412",
+      "names": {
+        "zh-CN": "刻律德菈",
+        "en": "Cerydra"
+      },
+      "baseSpeed": 99,
+      "assetKey": "character:1412",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "公正之秤",
+            "兵分五路抗击黑潮",
+            "凯撒",
+            "塔兰顿",
+            "头顶蜡烛的小皇冠",
+            "高人"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman"
+      }
+    },
+    {
+      "id": "1413",
+      "names": {
+        "zh-CN": "长夜月",
+        "en": "Evernight"
+      },
+      "baseSpeed": 99,
+      "assetKey": "character:1413",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP三月七",
+            "三月",
+            "伞月七",
+            "欧洛尼斯",
+            "水母",
+            "永夜之帷",
+            "粉毛",
+            "黑漆七"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory"
+      }
+    },
+    {
+      "id": "1414",
+      "names": {
+        "zh-CN": "丹恒•腾荒",
+        "en": "Dan Heng • Permansor Terrae"
+      },
+      "baseSpeed": 97,
+      "assetKey": "character:1414",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "冷面小青龙",
+            "炖蛋",
+            "盾丹",
+            "磐岩之脊",
+            "荒笛"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight"
+      }
+    },
+    {
+      "id": "1415",
+      "names": {
+        "zh-CN": "昔涟",
+        "en": "Cyrene"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1415",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "大迷迷",
+            "往昔的涟漪",
+            "德谬歌",
+            "无漏净子",
+            "浮黎涟",
+            "爱莉希雅",
+            "粉毛",
+            "粉色小狗",
+            "翁法罗斯之心",
+            "迷迷"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory"
+      }
+    },
+    {
+      "id": "1501",
+      "names": {
+        "zh-CN": "火花",
+        "en": "Sparxie"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1501",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "好女孩",
+            "火花花"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation"
+      }
+    },
+    {
+      "id": "1502",
+      "names": {
+        "zh-CN": "爻光",
+        "en": "Yao Guang"
+      },
+      "baseSpeed": 101,
+      "assetKey": "character:1502",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "戎韬将军",
+            "爻老板"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation"
+      }
+    },
+    {
+      "id": "1503",
+      "names": {
+        "zh-CN": "真珠",
+        "en": "Pearl"
+      },
+      "baseSpeed": 99,
+      "assetKey": "character:1503",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation"
+      }
+    },
+    {
+      "id": "1504",
+      "names": {
+        "zh-CN": "不死途",
+        "en": "Ashveil"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:1504",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "牢大",
+            "老大"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Rogue"
+      }
+    },
+    {
+      "id": "1505",
+      "names": {
+        "zh-CN": "绯英",
+        "en": "Evanescia"
+      },
+      "baseSpeed": 104,
+      "assetKey": "character:1505",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "粉毛狐狸"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation"
+      }
+    },
+    {
+      "id": "1506",
+      "names": {
+        "zh-CN": "银狼LV.999",
+        "en": "Silver Wolf LV.999"
+      },
+      "baseSpeed": 110,
+      "assetKey": "character:1506",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "狼尊"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation"
+      }
+    },
+    {
+      "id": "1507",
+      "names": {
+        "zh-CN": "千冶•刃",
+        "en": "Mortenax Blade"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1507",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP刃",
+            "忘归刃",
+            "芝麻酥"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warlock"
+      }
+    },
+    {
+      "id": "1508",
+      "names": {
+        "zh-CN": "远坂凛",
+        "en": "Rin Tohsaka"
+      },
+      "baseSpeed": 102,
+      "assetKey": "character:1508",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": []
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1509",
+      "names": {
+        "zh-CN": "吉尔伽美什",
+        "en": "Gilgamesh"
+      },
+      "baseSpeed": 97,
+      "assetKey": "character:1509",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "金闪闪",
+            "闪大王"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior"
+      }
+    },
+    {
+      "id": "1510",
+      "names": {
+        "zh-CN": "姬子•启行",
+        "en": "Himeko • Nova"
+      },
+      "baseSpeed": 98,
+      "assetKey": "character:1510",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP姬子",
+            "咖啡",
+            "妈妈",
+            "无量塔",
+            "最后一课",
+            "领航员"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Mage"
+      }
+    },
+    {
+      "id": "1512",
+      "names": {
+        "zh-CN": "知更鸟•晴歌",
+        "en": "Robin • Summeretto"
+      },
+      "baseSpeed": 95,
+      "assetKey": "character:1512",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP知更鸟",
+            "水鸟"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory"
+      }
+    },
+    {
+      "id": "1513",
+      "names": {
+        "zh-CN": "砂金•戏浪",
+        "en": "Aventurine • Waveflair"
+      },
+      "baseSpeed": 107,
+      "assetKey": "character:1513",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "SP砂金",
+            "水砂"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation"
+      }
+    },
+    {
+      "id": "8001",
+      "names": {
+        "zh-CN": "开拓者·毁灭",
+        "en": "Trailblazer - Destruction"
+      },
+      "baseSpeed": 100,
+      "assetKey": "character:8001",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "毁灭主",
+            "物主",
+            "男主",
+            "男开拓者",
+            "穹"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior",
+        "gender": "male"
+      }
+    },
+    {
+      "id": "8002",
+      "names": {
+        "zh-CN": "开拓者·毁灭",
+        "en": "Trailblazer - Destruction"
+      },
+      "baseSpeed": 100,
+      "assetKey": "character:8002",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "女主",
+            "女开拓者",
+            "星",
+            "毁灭主",
+            "物主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Warrior",
+        "gender": "female"
+      }
+    },
+    {
+      "id": "8003",
+      "names": {
+        "zh-CN": "开拓者·存护",
+        "en": "Trailblazer - Preservation"
+      },
+      "baseSpeed": 95,
+      "assetKey": "character:8003",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "存护主",
+            "火主",
+            "男主",
+            "男开拓者",
+            "穹"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight",
+        "gender": "male"
+      }
+    },
+    {
+      "id": "8004",
+      "names": {
+        "zh-CN": "开拓者·存护",
+        "en": "Trailblazer - Preservation"
+      },
+      "baseSpeed": 95,
+      "assetKey": "character:8004",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "女主",
+            "女开拓者",
+            "存护主",
+            "星",
+            "火主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Knight",
+        "gender": "female"
+      }
+    },
+    {
+      "id": "8005",
+      "names": {
+        "zh-CN": "开拓者·同谐",
+        "en": "Trailblazer - Harmony"
+      },
+      "baseSpeed": 105,
+      "assetKey": "character:8005",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "同谐主",
+            "男主",
+            "男开拓者",
+            "穹",
+            "虚数主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman",
+        "gender": "male"
+      }
+    },
+    {
+      "id": "8006",
+      "names": {
+        "zh-CN": "开拓者·同谐",
+        "en": "Trailblazer - Harmony"
+      },
+      "baseSpeed": 105,
+      "assetKey": "character:8006",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "同谐主",
+            "女主",
+            "女开拓者",
+            "星",
+            "虚数主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Shaman",
+        "gender": "female"
+      }
+    },
+    {
+      "id": "8007",
+      "names": {
+        "zh-CN": "开拓者·记忆",
+        "en": "Trailblazer - Remembrance"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:8007",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "冰主",
+            "男主",
+            "男开拓者",
+            "穹",
+            "记忆主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory",
+        "gender": "male"
+      }
+    },
+    {
+      "id": "8008",
+      "names": {
+        "zh-CN": "开拓者·记忆",
+        "en": "Trailblazer - Remembrance"
+      },
+      "baseSpeed": 103,
+      "assetKey": "character:8008",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "冰主",
+            "女主",
+            "女开拓者",
+            "星",
+            "记忆主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Memory",
+        "gender": "female"
+      }
+    },
+    {
+      "id": "8009",
+      "names": {
+        "zh-CN": "开拓者·欢愉",
+        "en": "Trailblazer - Elation"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:8009",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "欢愉主",
+            "男主",
+            "男开拓者",
+            "穹",
+            "雷主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation",
+        "gender": "male"
+      }
+    },
+    {
+      "id": "8010",
+      "names": {
+        "zh-CN": "开拓者·欢愉",
+        "en": "Trailblazer - Elation"
+      },
+      "baseSpeed": 106,
+      "assetKey": "character:8010",
+      "aliases": {
+        "zh-CN": {
+          "official": [],
+          "player": [
+            "女主",
+            "女开拓者",
+            "星",
+            "欢愉主",
+            "雷主"
+          ]
+        },
+        "en": {
+          "official": [],
+          "player": []
+        }
+      },
+      "form": {
+        "pathCode": "Elation",
+        "gender": "female"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "308",
+      "kind": "vonwacq",
+      "names": {
+        "zh-CN": "生命的翁瓦克",
+        "en": "Sprightly Vonwacq"
+      },
+      "assetKey": "preset:vonwacq"
+    },
+    {
+      "id": "110",
+      "kind": "eagle",
+      "names": {
+        "zh-CN": "晨昏交界的翔鹰",
+        "en": "Eagle of Twilight Line"
+      },
+      "assetKey": "preset:eagle"
+    },
+    {
+      "id": "21018",
+      "kind": "dance",
+      "names": {
+        "zh-CN": "舞！舞！舞！",
+        "en": "Dance! Dance! Dance!"
+      },
+      "assetKey": "preset:dance"
+    }
+  ],
+  "assets": {
+    "character:1001": {
+      "path": "game-assets/character/1001.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1002": {
+      "path": "game-assets/character/1002.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1003": {
+      "path": "game-assets/character/1003.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1004": {
+      "path": "game-assets/character/1004.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1005": {
+      "path": "game-assets/character/1005.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1006": {
+      "path": "game-assets/character/1006.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1008": {
+      "path": "game-assets/character/1008.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1009": {
+      "path": "game-assets/character/1009.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1013": {
+      "path": "game-assets/character/1013.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1014": {
+      "path": "game-assets/character/1014.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1015": {
+      "path": "game-assets/character/1015.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1101": {
+      "path": "game-assets/character/1101.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1102": {
+      "path": "game-assets/character/1102.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1103": {
+      "path": "game-assets/character/1103.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1104": {
+      "path": "game-assets/character/1104.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1105": {
+      "path": "game-assets/character/1105.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1106": {
+      "path": "game-assets/character/1106.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1107": {
+      "path": "game-assets/character/1107.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1108": {
+      "path": "game-assets/character/1108.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1109": {
+      "path": "game-assets/character/1109.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1110": {
+      "path": "game-assets/character/1110.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1111": {
+      "path": "game-assets/character/1111.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1112": {
+      "path": "game-assets/character/1112.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1201": {
+      "path": "game-assets/character/1201.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1202": {
+      "path": "game-assets/character/1202.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1203": {
+      "path": "game-assets/character/1203.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1204": {
+      "path": "game-assets/character/1204.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1205": {
+      "path": "game-assets/character/1205.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1206": {
+      "path": "game-assets/character/1206.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1207": {
+      "path": "game-assets/character/1207.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1208": {
+      "path": "game-assets/character/1208.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1209": {
+      "path": "game-assets/character/1209.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1210": {
+      "path": "game-assets/character/1210.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1211": {
+      "path": "game-assets/character/1211.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1212": {
+      "path": "game-assets/character/1212.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1213": {
+      "path": "game-assets/character/1213.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1214": {
+      "path": "game-assets/character/1214.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1215": {
+      "path": "game-assets/character/1215.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1217": {
+      "path": "game-assets/character/1217.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1218": {
+      "path": "game-assets/character/1218.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1220": {
+      "path": "game-assets/character/1220.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1221": {
+      "path": "game-assets/character/1221.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1222": {
+      "path": "game-assets/character/1222.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1223": {
+      "path": "game-assets/character/1223.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1224": {
+      "path": "game-assets/character/1224.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1225": {
+      "path": "game-assets/character/1225.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1301": {
+      "path": "game-assets/character/1301.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1302": {
+      "path": "game-assets/character/1302.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1303": {
+      "path": "game-assets/character/1303.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1304": {
+      "path": "game-assets/character/1304.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1305": {
+      "path": "game-assets/character/1305.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1306": {
+      "path": "game-assets/character/1306.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1307": {
+      "path": "game-assets/character/1307.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1308": {
+      "path": "game-assets/character/1308.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1309": {
+      "path": "game-assets/character/1309.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1310": {
+      "path": "game-assets/character/1310.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1312": {
+      "path": "game-assets/character/1312.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1313": {
+      "path": "game-assets/character/1313.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1314": {
+      "path": "game-assets/character/1314.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1315": {
+      "path": "game-assets/character/1315.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1317": {
+      "path": "game-assets/character/1317.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1321": {
+      "path": "game-assets/character/1321.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1401": {
+      "path": "game-assets/character/1401.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1402": {
+      "path": "game-assets/character/1402.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1403": {
+      "path": "game-assets/character/1403.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1404": {
+      "path": "game-assets/character/1404.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1405": {
+      "path": "game-assets/character/1405.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1406": {
+      "path": "game-assets/character/1406.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1407": {
+      "path": "game-assets/character/1407.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1408": {
+      "path": "game-assets/character/1408.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1409": {
+      "path": "game-assets/character/1409.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1410": {
+      "path": "game-assets/character/1410.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1412": {
+      "path": "game-assets/character/1412.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1413": {
+      "path": "game-assets/character/1413.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1414": {
+      "path": "game-assets/character/1414.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1415": {
+      "path": "game-assets/character/1415.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1501": {
+      "path": "game-assets/character/1501.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1502": {
+      "path": "game-assets/character/1502.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1503": {
+      "path": "game-assets/character/1503.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1504": {
+      "path": "game-assets/character/1504.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1505": {
+      "path": "game-assets/character/1505.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1506": {
+      "path": "game-assets/character/1506.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1507": {
+      "path": "game-assets/character/1507.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1508": {
+      "path": "game-assets/character/1508.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1509": {
+      "path": "game-assets/character/1509.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1510": {
+      "path": "game-assets/character/1510.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1512": {
+      "path": "game-assets/character/1512.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:1513": {
+      "path": "game-assets/character/1513.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8001": {
+      "path": "game-assets/character/8001.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8002": {
+      "path": "game-assets/character/8002.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8003": {
+      "path": "game-assets/character/8003.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8004": {
+      "path": "game-assets/character/8004.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8005": {
+      "path": "game-assets/character/8005.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8006": {
+      "path": "game-assets/character/8006.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8007": {
+      "path": "game-assets/character/8007.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8008": {
+      "path": "game-assets/character/8008.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8009": {
+      "path": "game-assets/character/8009.webp",
+      "width": 256,
+      "height": 256
+    },
+    "character:8010": {
+      "path": "game-assets/character/8010.webp",
+      "width": 256,
+      "height": 256
+    },
+    "preset:vonwacq": {
+      "path": "game-assets/relic/308.webp",
+      "width": 128,
+      "height": 128
+    },
+    "preset:eagle": {
+      "path": "game-assets/relic/110.webp",
+      "width": 128,
+      "height": 128
+    },
+    "preset:dance": {
+      "path": "game-assets/light_cone/21018.webp",
+      "width": 128,
+      "height": 128
+    }
+  }
+}

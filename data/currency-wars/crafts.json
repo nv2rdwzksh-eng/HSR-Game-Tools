@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "seasonId": 1,
+  "materials": [
+    {
+      "id": 350201,
+      "name": "轮滑鞋",
+      "icon": "game-assets/currency-war-equipments/350201.webp"
+    },
+    {
+      "id": 350202,
+      "name": "折叠小刀",
+      "icon": "game-assets/currency-war-equipments/350202.webp"
+    },
+    {
+      "id": 350203,
+      "name": "和平手枪",
+      "icon": "game-assets/currency-war-equipments/350203.webp"
+    },
+    {
+      "id": 350204,
+      "name": "幸运星",
+      "icon": "game-assets/currency-war-equipments/350204.webp"
+    },
+    {
+      "id": 350205,
+      "name": "生命之花",
+      "icon": "game-assets/currency-war-equipments/350205.webp"
+    },
+    {
+      "id": 350206,
+      "name": "量产型装甲",
+      "icon": "game-assets/currency-war-equipments/350206.webp"
+    },
+    {
+      "id": 350207,
+      "name": "以太钻头",
+      "icon": "game-assets/currency-war-equipments/350207.webp"
+    },
+    {
+      "id": 350208,
+      "name": "光能电池",
+      "icon": "game-assets/currency-war-equipments/350208.webp"
+    },
+    {
+      "id": 350601,
+      "name": "红钻",
+      "icon": "game-assets/currency-war-equipments/350601.webp"
+    },
+    {
+      "id": 350602,
+      "name": "蓝钻",
+      "icon": "game-assets/currency-war-equipments/350602.webp"
+    },
+    {
+      "id": 352101,
+      "name": "垃圾袋",
+      "icon": "game-assets/currency-war-equipments/352101.webp"
+    }
+  ],
+  "recipes": {
+    "35051001": [],
+    "35051003": [
+      {
+        "craftIds": [
+          41
+        ],
+        "materials": [
+          350208,
+          350601
+        ]
+      }
+    ],
+    "35051005": [
+      {
+        "craftIds": [
+          42
+        ],
+        "materials": [
+          350206,
+          350601
+        ]
+      }
+    ],
+    "35051006": [
+      {
+        "craftIds": [
+          43
+        ],
+        "materials": [
+          350207,
+          350601
+        ]
+      }
+    ],
+    "35051007": [
+      {
+        "craftIds": [
+          44
+        ],
+        "materials": [
+          350202,
+          350601
+        ]
+      }
+    ],
+    "35051008": [
+      {
+        "craftIds": [
+          45
+        ],
+        "materials": [
+          350205,
+          350601
+        ]
+      }
+    ],
+    "35051010": [
+      {
+        "craftIds": [
+          46
+        ],
+        "materials": [
+          350204,
+          350601
+        ]
+      }
+    ],
+    "35051011": [
+      {
+        "craftIds": [
+          47
+        ],
+        "materials": [
+          350201,
+          350601
+        ]
+      }
+    ],
+    "35051012": [
+      {
+        "craftIds": [
+          48
+        ],
+        "materials": [
+          350203,
+          350601
+        ]
+      }
+    ],
+    "35051013": [],
+    "35052001": [
+      {
+        "craftIds": [
+          49
+        ],
+        "materials": [
+          350201,
+          350602
+        ]
+      }
+    ],
+    "35052002": [
+      {
+        "craftIds": [
+          50
+        ],
+        "materials": [
+          350207,
+          350602
+        ]
+      }
+    ],
+    "35052003": [
+      {
+        "craftIds": [
+          51
+        ],
+        "materials": [
+          350204,
+          350602
+        ]
+      }
+    ],
+    "35052004": [
+      {
+        "craftIds": [
+          52
+        ],
+        "materials": [
+          350208,
+          350602
+        ]
+      }
+    ],
+    "35052005": [],
+    "35052006": [
+      {
+        "craftIds": [
+          54
+        ],
+        "materials": [
+          350205,
+          350602
+        ]
+      }
+    ],
+    "35052007": [
+      {
+        "craftIds": [
+          55
+        ],
+        "materials": [
+          350203,
+          350602
+        ]
+      }
+    ],
+    "35052008": [
+      {
+        "craftIds": [
+          53
+        ],
+        "materials": [
+          350206,
+          350602
+        ]
+      }
+    ],
+    "35052009": [],
+    "35052010": [],
+    "35052011": [
+      {
+        "craftIds": [
+          56
+        ],
+        "materials": [
+          350202,
+          350602
+        ]
+      }
+    ],
+    "35052012": [
+      {
+        "craftIds": [
+          57
+        ],
+        "materials": [
+          350602,
+          352101
+        ]
+      },
+      {
+        "craftIds": [
+          58
+        ],
+        "materials": [
+          350601,
+          352101
+        ]
+      }
+    ]
+  }
+}

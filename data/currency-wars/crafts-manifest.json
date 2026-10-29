@@ -1,0 +1,42 @@
+{
+  "repository": "https://github.com/DimbreathBot/TurnBasedGameData",
+  "commit": "312b4597691e0a29cf9828a15b592757dba86949",
+  "gameVersion": "4.6.0",
+  "seasonId": 1,
+  "transformVersion": 1,
+  "inputSha256": {
+    "ExcelOutput/GridFightCraftConfig.json": "f84405c8ff644fc5b2efced69615b841dcace4bc2afc644eeabcf9ae46aa7b80",
+    "ExcelOutput/GridFightSeasonCraft.json": "1958a4a80c82ea93f00a2ecc447e30cd5886e61e3c23df9bf37b8ef7cac33851",
+    "ExcelOutput/GridFightEquipment.json": "e27434f36c82153bce2e2462791be8b7bbe4e6253e05b2ceb4566530aaf62904",
+    "ExcelOutput/GridFightItems.json": "981facfa235f879fbf29dd9a7511e3906c708e447b6f2d4cb0834b42e02bee4c",
+    "TextMap/TextMapCHS.json": "a9028313c772e684c91359b467b398a1ded2079de67a191dff80d9adf43dfca4"
+  },
+  "snapshotSha256": "35c713b3ac2cc65da06541a5668fdd8b4b322087bebd20993cea975437b36886",
+  "craftsSha256": "a5a5e3ed4adee87606e022ed5dcf9fcd36b03ae2bc088c3457149c6916b6c1fb",
+  "assetSha256": {
+    "game-assets/currency-war-equipments/350201.webp": "ce540cdd2df06c5a344e123b3714b49f1f6a185ac0dfa20576f117aacd42aaa5",
+    "game-assets/currency-war-equipments/350202.webp": "cc6eb251832ff91758a6b0812402d4a8c6406cc7c0f1aaad8215a2842f3bae1a",
+    "game-assets/currency-war-equipments/350203.webp": "d86ac5046c2a87420495e7c9e2cbaa9c8d0391506e60ce89094229eb7c933177",
+    "game-assets/currency-war-equipments/350204.webp": "384ec7d93de0a0c28c5efbeabe33b803be2bf046d92141ccfa107f88f2beafc8",
+    "game-assets/currency-war-equipments/350205.webp": "7d5b1fd96104479f2284c9a8b32c1504f89ce7dd19333084da89124ac001823c",
+    "game-assets/currency-war-equipments/350206.webp": "0fa9c0299e82b4175fc2f98fa0862fc4868116fcaf4e33cfa4456daf1370d8e6",
+    "game-assets/currency-war-equipments/350207.webp": "a3591134dc166a41936424a1c96e51f68e31b379f6211ecf40dc2f3b42b1738d",
+    "game-assets/currency-war-equipments/350208.webp": "c3b1bc39abbeb9de05555da63d3f5facaa70b989887babd19caa7463aaf5861c",
+    "game-assets/currency-war-equipments/350601.webp": "f6a76fb6342ef5d6d0d3621764035df4a562f5b3689495e013ab4d45afecc4d2",
+    "game-assets/currency-war-equipments/350602.webp": "a0528e8c8bc3cdaaf11b4e878801d6f03d9c60e73303a0de4fb2dd3037950768",
+    "game-assets/currency-war-equipments/352101.webp": "58e09e35eed237945cb3275e71945f8f911063f17266092a46347eebc5f2a1a1"
+  },
+  "coverage": {
+    "emblems": 22,
+    "craftableEmblems": 17,
+    "recipes": 18,
+    "sourceCrafts": 18,
+    "materials": 11,
+    "missingIconIds": []
+  },
+  "notes": [
+    "Only CraftIDs explicitly associated with the locked season are used; outputs join snapshot emblems by equipment ID.",
+    "Equivalent ingredient multisets are merged while preserving every source CraftID; empty arrays explicitly record no recipe in this season.",
+    "Chinese material names use exact Hash lexemes. Local material icons were supplied by the user and are mapped by item ID; missing icons retain names and use neutral UI placeholders."
+  ]
+}

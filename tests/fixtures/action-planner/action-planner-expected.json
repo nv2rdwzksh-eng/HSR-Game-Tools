@@ -1,0 +1,2857 @@
+{
+  "sourceCommit": "72c2d4d1b9ccc0fc0bb191d16ac29492750ea1b0",
+  "results": {
+    "natural": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 74.6268656716418,
+          "deltaAV": 12.126865671641792,
+          "effectiveSpeed": 134,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 125,
+          "deltaAV": 50.373134328358205,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 2
+          },
+          "elapsedAV": 149.2537313432836,
+          "deltaAV": 24.25373134328359,
+          "effectiveSpeed": 134,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 1625,
+              "remainingAV": 12.126865671641792,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 74.6268656716418,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 8059.701492537313,
+              "remainingAV": 50.373134328358205,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 125,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 3250.000000000001,
+              "remainingAV": 24.25373134328359,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 149.2537313432836,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 6119.402985074626,
+              "remainingAV": 38.24626865671641,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    },
+    "continuous": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 134,
+          "actionChanges": [
+            {
+              "operationId": "second",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 134,
+              "deltaAV": -74.6268656716418,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 160,
+          "actionChanges": [
+            {
+              "operationId": "first",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 160,
+              "deltaAV": -62.5,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 2
+          },
+          "elapsedAV": 74.6268656716418,
+          "deltaAV": 12.126865671641792,
+          "effectiveSpeed": 134,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "second",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -74.6268656716418,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "first",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -62.5,
+                  "zeroAVInsertion": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "first",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -62.5,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 1625,
+              "remainingAV": 12.126865671641792,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 74.6268656716418,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 8059.701492537313,
+              "remainingAV": 50.373134328358205,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    },
+    "zeroRefresh": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 160,
+          "actionChanges": [
+            {
+              "operationId": "first",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 160,
+              "deltaAV": -62.5,
+              "zeroAVInsertion": false
+            },
+            {
+              "operationId": "again",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 0,
+              "afterAG": 0,
+              "effectiveSpeed": 160,
+              "deltaAV": 0,
+              "zeroAVInsertion": true
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 134,
+          "actionChanges": [
+            {
+              "operationId": "second",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 134,
+              "deltaAV": -74.6268656716418,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 2
+          },
+          "elapsedAV": 74.6268656716418,
+          "deltaAV": 12.126865671641792,
+          "effectiveSpeed": 134,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "first",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -62.5,
+                  "zeroAVInsertion": false
+                },
+                {
+                  "operationId": "again",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 0,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": 0,
+                  "zeroAVInsertion": true
+                }
+              ]
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "second",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -74.6268656716418,
+                  "zeroAVInsertion": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "second",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -74.6268656716418,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 1625,
+              "remainingAV": 12.126865671641792,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 74.6268656716418,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 8059.701492537313,
+              "remainingAV": 50.373134328358205,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    },
+    "group": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "c",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 100,
+          "actionChanges": [
+            {
+              "operationId": "group",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 100,
+              "deltaAV": -100,
+              "zeroAVInsertion": false
+            },
+            {
+              "operationId": "overlap",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 0,
+              "afterAG": 0,
+              "effectiveSpeed": 100,
+              "deltaAV": 0,
+              "zeroAVInsertion": true
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 134,
+          "actionChanges": [
+            {
+              "operationId": "b-first",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 134,
+              "deltaAV": -74.6268656716418,
+              "zeroAVInsertion": false
+            },
+            {
+              "operationId": "overlap",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 0,
+              "afterAG": 0,
+              "effectiveSpeed": 134,
+              "deltaAV": 0,
+              "zeroAVInsertion": true
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 0,
+          "deltaAV": 0,
+          "effectiveSpeed": 160,
+          "actionChanges": [
+            {
+              "operationId": "group",
+              "sourceAnchor": {
+                "kind": "start"
+              },
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "elapsedAV": 0,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 0,
+              "effectiveSpeed": 160,
+              "deltaAV": -62.5,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "c",
+              "anchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "group",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "c",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 100,
+                  "deltaAV": -100,
+                  "zeroAVInsertion": false
+                },
+                {
+                  "operationId": "overlap",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "c",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 0,
+                  "afterAG": 0,
+                  "effectiveSpeed": 100,
+                  "deltaAV": 0,
+                  "zeroAVInsertion": true
+                }
+              ]
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "b-first",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -74.6268656716418,
+                  "zeroAVInsertion": false
+                },
+                {
+                  "operationId": "overlap",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 0,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": 0,
+                  "zeroAVInsertion": true
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "group",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -62.5,
+                  "zeroAVInsertion": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "b-first",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -74.6268656716418,
+                  "zeroAVInsertion": false
+                },
+                {
+                  "operationId": "overlap",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 0,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": 0,
+                  "zeroAVInsertion": true
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "group",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -62.5,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "c",
+              "anchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "group",
+                  "sourceAnchor": {
+                    "kind": "start"
+                  },
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "elapsedAV": 0,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -62.5,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "c",
+              "anchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 0,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "c",
+              "anchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 1625,
+              "remainingAV": 12.126865671641792,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "c",
+              "anchor": {
+                "kind": "action",
+                "participantId": "c",
+                "turn": 2
+              },
+              "remainingAG": 3750,
+              "remainingAV": 37.5,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    },
+    "pre": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 0,
+          "effectiveSpeed": 134,
+          "actionChanges": [
+            {
+              "operationId": "dance",
+              "sourceAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "phase": "preAction",
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 62.5,
+              "type": "advance",
+              "beforeAG": 1625,
+              "afterAG": 0,
+              "effectiveSpeed": 134,
+              "deltaAV": -12.126865671641792,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 125,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 2
+          },
+          "elapsedAV": 137.12686567164178,
+          "deltaAV": 12.126865671641792,
+          "effectiveSpeed": 134,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "dance",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "preAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 62.5,
+                  "type": "advance",
+                  "beforeAG": 1625,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -12.126865671641792,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 125,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 1625,
+              "remainingAV": 12.126865671641792,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 137.12686567164178,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 8059.701492537313,
+              "remainingAV": 50.373134328358205,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "active-target",
+          "severity": "warning",
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "operationId": "dance",
+          "participantId": "a"
+        }
+      ],
+      "stopReason": "nodes"
+    },
+    "post": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 62.5,
+          "effectiveSpeed": 160,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 62.5,
+          "deltaAV": 0,
+          "effectiveSpeed": 134,
+          "actionChanges": [
+            {
+              "operationId": "dance",
+              "sourceAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "phase": "postAction",
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 62.5,
+              "type": "advance",
+              "beforeAG": 1625,
+              "afterAG": 0,
+              "effectiveSpeed": 134,
+              "deltaAV": -12.126865671641792,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 110,
+          "deltaAV": 47.5,
+          "effectiveSpeed": 160,
+          "actionChanges": [
+            {
+              "operationId": "dance",
+              "sourceAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "phase": "postAction",
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "elapsedAV": 62.5,
+              "type": "advance",
+              "beforeAG": 10000,
+              "afterAG": 7600,
+              "effectiveSpeed": 160,
+              "deltaAV": -15,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 2
+          },
+          "elapsedAV": 137.12686567164178,
+          "deltaAV": 27.12686567164179,
+          "effectiveSpeed": 134,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "dance",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "postAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 62.5,
+                  "type": "advance",
+                  "beforeAG": 1625,
+                  "afterAG": 0,
+                  "effectiveSpeed": 134,
+                  "deltaAV": -12.126865671641792,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 7600,
+              "remainingAV": 47.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "dance",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "postAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 2
+                  },
+                  "elapsedAV": 62.5,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 7600,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -15,
+                  "zeroAVInsertion": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "elapsedAV": 62.5,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 7600,
+              "remainingAV": 47.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": [
+                {
+                  "operationId": "dance",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "postAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 2
+                  },
+                  "elapsedAV": 62.5,
+                  "type": "advance",
+                  "beforeAG": 10000,
+                  "afterAG": 7600,
+                  "effectiveSpeed": 160,
+                  "deltaAV": -15,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 110,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 3635,
+              "remainingAV": 27.12686567164179,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 62.5,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 137.12686567164178,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 5659.701492537313,
+              "remainingAV": 35.373134328358205,
+              "effectiveSpeed": 160,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 74.6268656716418,
+              "effectiveSpeed": 134,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    },
+    "finite": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 100,
+          "deltaAV": 100,
+          "effectiveSpeed": 100,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 200,
+          "deltaAV": 100,
+          "effectiveSpeed": 100,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 100,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 200,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": []
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "empty"
+    },
+    "linked": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "trigger",
+            "participantId": "countdown:timed"
+          },
+          "elapsedAV": 50,
+          "deltaAV": 50,
+          "effectiveSpeed": 200,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 75,
+          "deltaAV": 25,
+          "effectiveSpeed": 100,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 75,
+          "deltaAV": 0,
+          "effectiveSpeed": 100,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 175,
+          "deltaAV": 100,
+          "effectiveSpeed": 100,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "countdown:timed",
+              "anchor": {
+                "kind": "trigger",
+                "participantId": "countdown:timed"
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 66.66666666666667,
+              "effectiveSpeed": 150,
+              "modifiers": [
+                {
+                  "id": "timed::a",
+                  "operationId": "timed",
+                  "mode": "flat",
+                  "amount": 50,
+                  "lifetime": {
+                    "kind": "countdown",
+                    "participantId": "countdown:timed"
+                  }
+                }
+              ],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 66.66666666666667,
+              "effectiveSpeed": 150,
+              "modifiers": [
+                {
+                  "id": "timed::b",
+                  "operationId": "timed",
+                  "mode": "flat",
+                  "amount": 50,
+                  "lifetime": {
+                    "kind": "countdown",
+                    "participantId": "countdown:timed"
+                  }
+                }
+              ],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 50,
+          "completedNodes": 1,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 2500,
+              "remainingAV": 25,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 2500,
+              "remainingAV": 25,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 75,
+          "completedNodes": 2,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 75,
+          "completedNodes": 3,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 175,
+          "completedNodes": 4,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    },
+    "independent": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "trigger",
+            "participantId": "spawn:event"
+          },
+          "elapsedAV": 111.11111111111111,
+          "deltaAV": 111.11111111111111,
+          "effectiveSpeed": 90,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "spawn:event",
+              "anchor": {
+                "kind": "trigger",
+                "participantId": "spawn:event"
+              },
+              "remainingAG": 10000,
+              "remainingAV": 111.11111111111111,
+              "effectiveSpeed": 90,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 111.11111111111111,
+          "completedNodes": 1,
+          "completedActions": 0,
+          "queue": []
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "empty"
+    },
+    "dynamic": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "trigger",
+            "participantId": "spawn:event"
+          },
+          "elapsedAV": 111.11111111111111,
+          "deltaAV": 111.11111111111111,
+          "effectiveSpeed": 90,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "spawn:child",
+            "turn": 1
+          },
+          "elapsedAV": 111.11111111111111,
+          "deltaAV": 0,
+          "effectiveSpeed": 100,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "spawn:event",
+              "anchor": {
+                "kind": "trigger",
+                "participantId": "spawn:event"
+              },
+              "remainingAG": 10000,
+              "remainingAV": 111.11111111111111,
+              "effectiveSpeed": 90,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 111.11111111111111,
+          "completedNodes": 1,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "spawn:child",
+              "anchor": {
+                "kind": "action",
+                "participantId": "spawn:child",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 111.11111111111111,
+          "completedNodes": 2,
+          "completedActions": 1,
+          "queue": []
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "empty"
+    },
+    "trace": {
+      "records": [
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 1
+          },
+          "elapsedAV": 50,
+          "deltaAV": 50,
+          "effectiveSpeed": 200,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 1
+          },
+          "elapsedAV": 50,
+          "deltaAV": 0,
+          "effectiveSpeed": 200,
+          "actionChanges": [
+            {
+              "operationId": "pull",
+              "sourceAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "phase": "preAction",
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 50,
+              "type": "advance",
+              "beforeAG": 5000,
+              "afterAG": 3000,
+              "effectiveSpeed": 100,
+              "deltaAV": -20,
+              "zeroAVInsertion": false
+            },
+            {
+              "operationId": "push",
+              "sourceAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "phase": "postAction",
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 50,
+              "type": "delay",
+              "beforeAG": 3000,
+              "afterAG": 4000,
+              "effectiveSpeed": 200,
+              "deltaAV": 5,
+              "zeroAVInsertion": false
+            },
+            {
+              "operationId": "clamp",
+              "sourceAnchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "phase": "postAction",
+              "targetAnchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "elapsedAV": 50,
+              "type": "advance",
+              "beforeAG": 4000,
+              "afterAG": 0,
+              "effectiveSpeed": 200,
+              "deltaAV": -20,
+              "zeroAVInsertion": false
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "a",
+            "turn": 2
+          },
+          "elapsedAV": 100,
+          "deltaAV": 50,
+          "effectiveSpeed": 200,
+          "actionChanges": []
+        },
+        {
+          "anchor": {
+            "kind": "action",
+            "participantId": "b",
+            "turn": 2
+          },
+          "elapsedAV": 100,
+          "deltaAV": 0,
+          "effectiveSpeed": 200,
+          "actionChanges": []
+        }
+      ],
+      "snapshots": [
+        {
+          "elapsedAV": 0,
+          "completedNodes": 0,
+          "completedActions": 0,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 10000,
+              "remainingAV": 100,
+              "effectiveSpeed": 100,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 50,
+          "completedNodes": 1,
+          "completedActions": 1,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 1
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 200,
+              "modifiers": [
+                {
+                  "id": "speed::b",
+                  "operationId": "speed",
+                  "mode": "flat",
+                  "amount": 100,
+                  "lifetime": {
+                    "kind": "turns",
+                    "remainingTurns": null
+                  }
+                }
+              ],
+              "actionChanges": [
+                {
+                  "operationId": "pull",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "preAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 50,
+                  "type": "advance",
+                  "beforeAG": 5000,
+                  "afterAG": 3000,
+                  "effectiveSpeed": 100,
+                  "deltaAV": -20,
+                  "zeroAVInsertion": false
+                },
+                {
+                  "operationId": "push",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "postAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 50,
+                  "type": "delay",
+                  "beforeAG": 3000,
+                  "afterAG": 4000,
+                  "effectiveSpeed": 200,
+                  "deltaAV": 5,
+                  "zeroAVInsertion": false
+                },
+                {
+                  "operationId": "clamp",
+                  "sourceAnchor": {
+                    "kind": "action",
+                    "participantId": "a",
+                    "turn": 1
+                  },
+                  "phase": "postAction",
+                  "targetAnchor": {
+                    "kind": "action",
+                    "participantId": "b",
+                    "turn": 1
+                  },
+                  "elapsedAV": 50,
+                  "type": "advance",
+                  "beforeAG": 4000,
+                  "afterAG": 0,
+                  "effectiveSpeed": 200,
+                  "deltaAV": -20,
+                  "zeroAVInsertion": false
+                }
+              ]
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 50,
+          "completedNodes": 2,
+          "completedActions": 2,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [
+                {
+                  "id": "speed::b",
+                  "operationId": "speed",
+                  "mode": "flat",
+                  "amount": 100,
+                  "lifetime": {
+                    "kind": "turns",
+                    "remainingTurns": null
+                  }
+                }
+              ],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 100,
+          "completedNodes": 3,
+          "completedActions": 3,
+          "queue": [
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 2
+              },
+              "remainingAG": 0,
+              "remainingAV": 0,
+              "effectiveSpeed": 200,
+              "modifiers": [
+                {
+                  "id": "speed::b",
+                  "operationId": "speed",
+                  "mode": "flat",
+                  "amount": 100,
+                  "lifetime": {
+                    "kind": "turns",
+                    "remainingTurns": null
+                  }
+                }
+              ],
+              "actionChanges": []
+            },
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [],
+              "actionChanges": []
+            }
+          ]
+        },
+        {
+          "elapsedAV": 100,
+          "completedNodes": 4,
+          "completedActions": 4,
+          "queue": [
+            {
+              "id": "a",
+              "anchor": {
+                "kind": "action",
+                "participantId": "a",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [],
+              "actionChanges": []
+            },
+            {
+              "id": "b",
+              "anchor": {
+                "kind": "action",
+                "participantId": "b",
+                "turn": 3
+              },
+              "remainingAG": 10000,
+              "remainingAV": 50,
+              "effectiveSpeed": 200,
+              "modifiers": [
+                {
+                  "id": "speed::b",
+                  "operationId": "speed",
+                  "mode": "flat",
+                  "amount": 100,
+                  "lifetime": {
+                    "kind": "turns",
+                    "remainingTurns": null
+                  }
+                }
+              ],
+              "actionChanges": []
+            }
+          ]
+        }
+      ],
+      "diagnostics": [],
+      "stopReason": "nodes"
+    }
+  }
+}

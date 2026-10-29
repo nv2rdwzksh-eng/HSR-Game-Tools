@@ -1,0 +1,1114 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "repository": "https://github.com/Oereor/HSR-Database.git",
+    "commit": "72c2d4d1b9ccc0fc0bb191d16ac29492750ea1b0",
+    "files": [
+      "src/lib/generated/views/{zh-CN,en}/character-search.json",
+      "data/search/character-player-aliases.json",
+      "data/search/character-official-names.generated.json"
+    ],
+    "note": "Finite character-only projection from existing audited names and classified aliases; no runtime source dependency."
+  },
+  "names": {
+    "1001": {
+      "zh-CN": "三月七·存护",
+      "en": "March 7th - Preservation"
+    },
+    "1224": {
+      "zh-CN": "三月七·巡猎",
+      "en": "March 7th - The Hunt"
+    },
+    "8001": {
+      "zh-CN": "开拓者·毁灭",
+      "en": "Trailblazer - Destruction"
+    },
+    "8002": {
+      "zh-CN": "开拓者·毁灭",
+      "en": "Trailblazer - Destruction"
+    },
+    "8003": {
+      "zh-CN": "开拓者·存护",
+      "en": "Trailblazer - Preservation"
+    },
+    "8004": {
+      "zh-CN": "开拓者·存护",
+      "en": "Trailblazer - Preservation"
+    },
+    "8005": {
+      "zh-CN": "开拓者·同谐",
+      "en": "Trailblazer - Harmony"
+    },
+    "8006": {
+      "zh-CN": "开拓者·同谐",
+      "en": "Trailblazer - Harmony"
+    },
+    "8007": {
+      "zh-CN": "开拓者·记忆",
+      "en": "Trailblazer - Remembrance"
+    },
+    "8008": {
+      "zh-CN": "开拓者·记忆",
+      "en": "Trailblazer - Remembrance"
+    },
+    "8009": {
+      "zh-CN": "开拓者·欢愉",
+      "en": "Trailblazer - Elation"
+    },
+    "8010": {
+      "zh-CN": "开拓者·欢愉",
+      "en": "Trailblazer - Elation"
+    }
+  },
+  "aliases": {
+    "1001": {
+      "zh-CN": {
+        "official": ["三月七"],
+        "player": ["傻子", "啥子", "小三月", "无漏净子", "盾三月", "粉毛", "粉霞天女", "赵相机"]
+      },
+      "en": {
+        "official": ["March 7th"],
+        "player": []
+      }
+    },
+    "1002": {
+      "zh-CN": {
+        "official": [],
+        "player": ["冷面小青龙", "蛋黄"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1003": {
+      "zh-CN": {
+        "official": [],
+        "player": ["咖啡", "妈妈", "无量塔", "最后一课", "领航员"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1004": {
+      "zh-CN": {
+        "official": [],
+        "player": ["星穹列车最强大的男人", "杨叔", "理之律者", "老杨"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1005": {
+      "zh-CN": {
+        "official": [],
+        "player": ["卡妈", "听我说", "妈妈"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1006": {
+      "zh-CN": {
+        "official": [],
+        "player": ["小银狼", "狼宝"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1008": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1009": {
+      "zh-CN": {
+        "official": [],
+        "player": ["大小姐", "富婆", "黑塔空间站站长"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1013": {
+      "zh-CN": {
+        "official": [],
+        "player": ["小黑塔", "黑塔人偶"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1014": {
+      "zh-CN": {
+        "official": [],
+        "player": ["吾王", "呆毛王"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1015": {
+      "zh-CN": {
+        "official": [],
+        "player": ["卫宫士郎", "男神", "神秘拉矢人", "红A"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1101": {
+      "zh-CN": {
+        "official": [],
+        "player": ["大守护者", "板鸭", "鸭子", "鸭鸭"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1102": {
+      "zh-CN": {
+        "official": [],
+        "player": ["希镰", "量子镰刀蝴蝶"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1103": {
+      "zh-CN": {
+        "official": [],
+        "player": ["乐队"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1104": {
+      "zh-CN": {
+        "official": [],
+        "player": ["杰哥", "银鬃铁卫戍卫官"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1105": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1106": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1107": {
+      "zh-CN": {
+        "official": [],
+        "player": ["史瓦罗"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1108": {
+      "zh-CN": {
+        "official": [],
+        "player": ["寒腿叔叔", "桑博叔叔", "老桑博"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1109": {
+      "zh-CN": {
+        "official": [],
+        "player": ["漆黑的虎克大人"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1110": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1111": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1112": {
+      "zh-CN": {
+        "official": [],
+        "player": ["买榜姐", "扑满"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1201": {
+      "zh-CN": {
+        "official": [],
+        "player": ["帝垣琼玉", "摸鱼", "雀神", "麻将"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1202": {
+      "zh-CN": {
+        "official": [],
+        "player": ["存狐", "小停云"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1203": {
+      "zh-CN": {
+        "official": [],
+        "player": ["奥托", "罗大夫"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1204": {
+      "zh-CN": {
+        "official": [],
+        "player": ["又站起来了", "喝汤", "汤达人", "牢景", "神策将军", "老景"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1205": {
+      "zh-CN": {
+        "official": [],
+        "player": ["人五代三", "人有五名", "人有五名，代价有三个", "点刀哥", "牢刃", "芝麻酥"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1206": {
+      "zh-CN": {
+        "official": [],
+        "player": ["傻子", "啥子"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1207": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1208": {
+      "zh-CN": {
+        "official": [],
+        "player": ["太卜大人", "没有护盾的存护", "粉毛矮子", "高人"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1209": {
+      "zh-CN": {
+        "official": [],
+        "player": ["世界第一冰巡猎", "冷锋", "区", "小孩哥", "鞋底"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1210": {
+      "zh-CN": {
+        "official": [],
+        "player": ["小桂子"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1211": {
+      "zh-CN": {
+        "official": [],
+        "player": ["龙女大人"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1212": {
+      "zh-CN": {
+        "official": [],
+        "player": ["牢镜", "罗浮剑首"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1213": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP丹恒", "冷面小青龙", "饮月君", "龙丹"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1214": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1215": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1217": {
+      "zh-CN": {
+        "official": [],
+        "player": ["尾巴大爷", "抹茶小蛋糕", "抹茶蛋糕"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1218": {
+      "zh-CN": {
+        "official": [],
+        "player": ["区", "椒大夫", "椒师傅", "神秘火锅男子"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1220": {
+      "zh-CN": {
+        "official": [],
+        "player": ["大飞", "天击将军", "最后一舞"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1221": {
+      "zh-CN": {
+        "official": [],
+        "player": ["小孩姐", "老铁"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1222": {
+      "zh-CN": {
+        "official": [],
+        "player": ["区", "大加拉赫", "抢击破", "灵灵的砂", "砂姐", "神", "绝区灵", "绝区零"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1223": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1224": {
+      "zh-CN": {
+        "official": ["三月七"],
+        "player": ["傻子", "剑三月", "啥子"]
+      },
+      "en": {
+        "official": ["March 7th"],
+        "player": []
+      }
+    },
+    "1225": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP停云", "大停云", "存狐", "王贵人"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1301": {
+      "zh-CN": {
+        "official": [],
+        "player": ["老狗"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1302": {
+      "zh-CN": {
+        "official": [],
+        "player": ["伊德莉拉", "捍卫银河中的美", "空降", "纯美骑士", "银河街溜子"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1303": {
+      "zh-CN": {
+        "official": [],
+        "player": ["天才俱乐部#81", "软妹", "黑塔女士的对象"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1304": {
+      "zh-CN": {
+        "official": [],
+        "player": ["卡卡瓦夏", "埃维金人", "好运", "所有或一无所有", "赌徒"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1305": {
+      "zh-CN": {
+        "official": [],
+        "player": ["义父", "拉帝奥教授"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1306": {
+      "zh-CN": {
+        "official": [],
+        "player": ["好女孩", "花导"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1307": {
+      "zh-CN": {
+        "official": [],
+        "player": ["所以我出手了", "神秘出手女", "鹅姐"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1308": {
+      "zh-CN": {
+        "official": [],
+        "player": ["我不玩回合制", "芽衣", "虚无令使", "雷电·忘川守·芽衣"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1309": {
+      "zh-CN": {
+        "official": [],
+        "player": ["向天再借一回合", "小鸟", "银河歌姬"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1310": {
+      "zh-CN": {
+        "official": [],
+        "player": ["点燃大海", "牢萤", "萤宝", "萤绒绒", "萨姆"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1312": {
+      "zh-CN": {
+        "official": [],
+        "player": ["米哈伊尔"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1313": {
+      "zh-CN": {
+        "official": [],
+        "player": [
+          "半步星神",
+          "周天哥",
+          "周天子",
+          "周日哥",
+          "太初有为",
+          "小鸟",
+          "平A",
+          "拐力*2",
+          "拐力x2",
+          "拐力乘二",
+          "拐力乘以二",
+          "最关键",
+          "正阳狮鹫",
+          "老日",
+          "黑日狮鹫",
+          "齐响诗班"
+        ]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1314": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1315": {
+      "zh-CN": {
+        "official": [],
+        "player": ["bto", "一枪爱死", "他宝贝的", "波波鲨"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1317": {
+      "zh-CN": {
+        "official": [],
+        "player": ["神秘说唱女", "缭乱忍侠"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1321": {
+      "zh-CN": {
+        "official": [],
+        "player": ["康士坦丝"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1401": {
+      "zh-CN": {
+        "official": [],
+        "player": [
+          "SP黑塔",
+          "举世无双",
+          "天才俱乐部#83",
+          "帽子尖尖女士",
+          "智识令使",
+          "沉鱼落雁",
+          "牢塔",
+          "聪明绝顶",
+          "路边塔",
+          "阮梅女士的对象",
+          "黑塔女士"
+        ]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1402": {
+      "zh-CN": {
+        "official": [],
+        "player": [
+          "双鞋风扇轮椅",
+          "墨涅塔",
+          "生命脆若游丝",
+          "裁缝女",
+          "谎言纤毫毕现",
+          "金织",
+          "阿雅",
+          "黄金之茧"
+        ]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1403": {
+      "zh-CN": {
+        "official": [],
+        "player": ["万径之门", "最初的半神", "缇里西庇俄丝", "雅努斯"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1404": {
+      "zh-CN": {
+        "official": [],
+        "player": ["天谴之矛", "尼卡多利", "必痛哥", "此世必要之痛", "狮子头", "迈德漠斯"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1405": {
+      "zh-CN": {
+        "official": [],
+        "player": ["瑟希斯", "裂分之枝", "阿那克萨戈拉斯", "魔术技巧"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1406": {
+      "zh-CN": {
+        "official": [],
+        "player": ["扎格列斯", "牢猫", "猫咪怪盗", "猫猫", "翻飞之币", "赛法利娅"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1407": {
+      "zh-CN": {
+        "official": [],
+        "player": [
+          "小蝶",
+          "拥抱新生吧",
+          "死龙",
+          "灰黯之手",
+          "玻吕克斯",
+          "紫色扑棱蛾子",
+          "蝶宝",
+          "量子镰刀蝴蝶"
+        ]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1408": {
+      "zh-CN": {
+        "official": [],
+        "player": [
+          "全世之座",
+          "卡厄斯兰那",
+          "哀丽秘榭的白厄",
+          "小白",
+          "烈阳哥",
+          "烩面",
+          "爱上雷神",
+          "终将升起的烈阳",
+          "请输入文本",
+          "黄紫色"
+        ]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1409": {
+      "zh-CN": {
+        "official": [],
+        "player": ["小伊卡", "晨昏之眼", "粉毛", "雅辛忒丝", "风宝", "马头"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1410": {
+      "zh-CN": {
+        "official": [],
+        "player": ["大鲸鱼", "法吉娜", "海列屈拉", "满溢之杯"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1412": {
+      "zh-CN": {
+        "official": [],
+        "player": ["公正之秤", "兵分五路抗击黑潮", "凯撒", "塔兰顿", "头顶蜡烛的小皇冠", "高人"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1413": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP三月七", "三月", "伞月七", "欧洛尼斯", "水母", "永夜之帷", "粉毛", "黑漆七"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1414": {
+      "zh-CN": {
+        "official": [],
+        "player": ["冷面小青龙", "炖蛋", "盾丹", "磐岩之脊", "荒笛"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1415": {
+      "zh-CN": {
+        "official": [],
+        "player": [
+          "大迷迷",
+          "往昔的涟漪",
+          "德谬歌",
+          "无漏净子",
+          "浮黎涟",
+          "爱莉希雅",
+          "粉毛",
+          "粉色小狗",
+          "翁法罗斯之心",
+          "迷迷"
+        ]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1501": {
+      "zh-CN": {
+        "official": [],
+        "player": ["好女孩", "火花花"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1502": {
+      "zh-CN": {
+        "official": [],
+        "player": ["戎韬将军", "爻老板"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1503": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1504": {
+      "zh-CN": {
+        "official": [],
+        "player": ["牢大", "老大"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1505": {
+      "zh-CN": {
+        "official": [],
+        "player": ["粉毛狐狸"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1506": {
+      "zh-CN": {
+        "official": [],
+        "player": ["狼尊"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1507": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP刃", "忘归刃", "芝麻酥"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1508": {
+      "zh-CN": {
+        "official": [],
+        "player": []
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1509": {
+      "zh-CN": {
+        "official": [],
+        "player": ["金闪闪", "闪大王"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1510": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP姬子", "咖啡", "妈妈", "无量塔", "最后一课", "领航员"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1512": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP知更鸟", "水鸟"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "1513": {
+      "zh-CN": {
+        "official": [],
+        "player": ["SP砂金", "水砂"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8001": {
+      "zh-CN": {
+        "official": [],
+        "player": ["毁灭主", "物主", "男主", "男开拓者", "穹"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8002": {
+      "zh-CN": {
+        "official": [],
+        "player": ["女主", "女开拓者", "星", "毁灭主", "物主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8003": {
+      "zh-CN": {
+        "official": [],
+        "player": ["存护主", "火主", "男主", "男开拓者", "穹"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8004": {
+      "zh-CN": {
+        "official": [],
+        "player": ["女主", "女开拓者", "存护主", "星", "火主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8005": {
+      "zh-CN": {
+        "official": [],
+        "player": ["同谐主", "男主", "男开拓者", "穹", "虚数主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8006": {
+      "zh-CN": {
+        "official": [],
+        "player": ["同谐主", "女主", "女开拓者", "星", "虚数主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8007": {
+      "zh-CN": {
+        "official": [],
+        "player": ["冰主", "男主", "男开拓者", "穹", "记忆主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8008": {
+      "zh-CN": {
+        "official": [],
+        "player": ["冰主", "女主", "女开拓者", "星", "记忆主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8009": {
+      "zh-CN": {
+        "official": [],
+        "player": ["欢愉主", "男主", "男开拓者", "穹", "雷主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    },
+    "8010": {
+      "zh-CN": {
+        "official": [],
+        "player": ["女主", "女开拓者", "星", "欢愉主", "雷主"]
+      },
+      "en": {
+        "official": [],
+        "player": []
+      }
+    }
+  }
+}

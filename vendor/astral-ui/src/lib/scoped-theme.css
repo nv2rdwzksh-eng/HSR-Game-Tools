@@ -1,0 +1,130 @@
+/* Opt-in light theme. Import with astral-ui/components, never the global entry. */
+:where(.h-theme) {
+    --h-font: Astral, 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    --h-cursor: url('./assets/cursor.svg') 3 2, default;
+    --h-gold: #c7a66a;
+    --h-gold-bright: #e9d39d;
+    --h-gold-dark: #927343;
+    --h-ink: #303139;
+    --h-muted: #76757b;
+    --h-paper: #dededc;
+    --h-paper-light: #eeede8;
+    --h-line: rgba(63, 61, 61, 0.19);
+    --h-dark: #22232c;
+    --h-danger: #a64c47;
+    --h-success: #527561;
+    --h-radius: 0 22px 0 0;
+    --h-duration: 180ms;
+    --h-slider-accent: #eea03e;
+    font-family: var(--h-font);
+    font-synthesis: none;
+    color: var(--h-ink);
+    color-scheme: light;
+    cursor: var(--h-cursor);
+}
+:where(.h-theme),
+:where(.h-theme) *,
+:where(.h-theme) *::before,
+:where(.h-theme) *::after {
+    box-sizing: border-box;
+    cursor: var(--h-cursor);
+}
+:where(.h-theme) input[type='range']::-webkit-slider-thumb {
+    cursor: var(--h-cursor);
+}
+:where(.h-theme) button,
+:where(.h-theme) input,
+:where(.h-theme) select,
+:where(.h-theme) textarea {
+    font: inherit;
+}
+:where(.h-theme) button {
+    color: inherit;
+    font-weight: 400;
+}
+:where(.h-theme) button:disabled,
+:where(.h-theme) input:disabled,
+:where(.h-theme) select:disabled {
+    opacity: 0.38;
+}
+:where(.h-theme):focus-visible,
+:where(.h-theme) :focus-visible {
+    outline: 2px solid var(--h-gold-dark);
+    outline-offset: 4px;
+}
+:where(.h-theme) .h-field {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 6px;
+    min-width: 0;
+    font-size: 12px;
+}
+:where(.h-theme) .h-field__label {
+    display: block;
+    color: #66666c;
+    font-size: 12px;
+    line-height: 18px;
+}
+:where(.h-theme) button,
+:where(.h-theme) a {
+    -webkit-tap-highlight-color: transparent;
+}
+:where(.h-theme) a {
+    color: inherit;
+    text-decoration: none;
+}
+:where(.h-theme) svg {
+    flex-shrink: 0;
+}
+:where(.h-theme) ::selection {
+    background: #baa16b66;
+}
+:where(.h-theme)::-webkit-scrollbar,
+:where(.h-theme) ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+}
+:where(.h-theme)::-webkit-scrollbar-thumb,
+:where(.h-theme) ::-webkit-scrollbar-thumb {
+    background: var(--h-scrollbar-thumb, #76757b99);
+}
+:where(.h-theme)::-webkit-scrollbar-track,
+:where(.h-theme) ::-webkit-scrollbar-track {
+    background: var(--h-scrollbar-track, #76757b08);
+}
+:where(.h-theme) ::-webkit-scrollbar-corner {
+    background: transparent;
+}
+@supports not selector(::-webkit-scrollbar) {
+    :where(.h-theme),
+    :where(.h-theme) * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--h-scrollbar-thumb, #76757b99) var(--h-scrollbar-track, #76757b08);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    :where(.h-theme),
+    :where(.h-theme) *,
+    :where(.h-theme) *::before,
+    :where(.h-theme) *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+}
+:root[data-h-motion='reduced'] :where(.h-theme),
+:root[data-h-motion='reduced'] :where(.h-theme) *,
+:root[data-h-motion='reduced'] :where(.h-theme) *::before,
+:root[data-h-motion='reduced'] :where(.h-theme) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+}

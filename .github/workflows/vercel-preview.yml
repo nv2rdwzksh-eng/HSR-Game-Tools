@@ -1,0 +1,97 @@
+name: Vercel Preview Deployment
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    name: Deploy Preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Guard Preview source
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF_TYPE" != 'branch' || "$GITHUB_REF" == 'refs/heads/main' ]]; then
+            echo '::error::Preview requires a non-main branch. Select develop or a feature branch.'
+            exit 1
+          fi
+
+      - name: Checkout selected commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '24.x'
+
+      - name: Verify Node.js version
+        run: node -e "const [major, minor] = process.versions.node.split('.').map(Number); if (major !== 24 || minor < 12) throw new Error('Node.js must satisfy >=24.12.0 <25');"
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@59.16.0
+
+      - name: Deploy Vercel Preview
+        id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        shell: bash
+        run: |
+          for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            if [[ -z "${!name}" ]]; then
+              echo "::error::Missing repository secret: $name"
+              exit 1
+            fi
+          done
+
+          if ! vercel project inspect --non-interactive > /dev/null; then
+            echo '::error::Cannot resolve the existing Vercel project. Check the token and project/team secrets.'
+            exit 1
+          fi
+
+          deployment_output="$(vercel deploy --yes --target=preview --non-interactive)"
+          deployment_url="$(DEPLOYMENT_OUTPUT="$deployment_output" node --input-type=module -e '
+            let value = process.env.DEPLOYMENT_OUTPUT?.trim() ?? "";
+            if (value.startsWith("{")) {
+              const result = JSON.parse(value);
+              if (result.status !== "ok" || result.deployment?.readyState !== "READY") {
+                throw new Error("Vercel CLI did not return a successful READY deployment");
+              }
+              value = result.deployment.url;
+            }
+            if (typeof value !== "string" || !value) {
+              throw new Error("Vercel CLI did not return a Preview URL");
+            }
+            const url = new URL(value);
+            if (url.protocol !== "https:" || url.origin !== value || !url.hostname.endsWith(".vercel.app")) {
+              throw new Error("Vercel CLI did not return a valid HTTPS Preview URL");
+            }
+            process.stdout.write(value);
+          ')"
+          echo "Preview URL: $deployment_url"
+          echo "url=$deployment_url" >> "$GITHUB_OUTPUT"
+
+      - name: Write deployment summary
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.url }}
+        shell: bash
+        run: |
+          {
+            echo '## Vercel Preview Deployment'
+            echo
+            printf -- '- Ref: `%s`\n' "$GITHUB_REF_NAME"
+            printf -- '- Commit: `%s`\n' "$GITHUB_SHA"
+            printf -- '- Preview URL: [%s](%s)\n' "$DEPLOYMENT_URL" "$DEPLOYMENT_URL"
+          } >> "$GITHUB_STEP_SUMMARY"

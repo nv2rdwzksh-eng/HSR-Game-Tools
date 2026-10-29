@@ -1,0 +1,48 @@
+# Dependencies and package-manager caches
+node_modules/
+.npm/
+.pnpm-store/
+
+# Build output and local caches
+dist/
+dist-subpath/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Tests and coverage
+coverage/
+playwright-report/
+test-results/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Updater inputs, staging and rollback state; never ignore published snapshots
+.upstream/
+.game-data-cache/
+.game-data-staging/
+.game-data-backup/
+.warp-data-staging/
+.warp-data-backup/
+.warp-visuals-staging/
+.warp-visuals-backup/
+
+# Local deployment state
+.vercel/
+.netlify/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Deliberately tracked when introduced in Phase 1:
+# package lockfiles, src/tools/action-planner/data/game/, public/game-assets/, manifests and reports

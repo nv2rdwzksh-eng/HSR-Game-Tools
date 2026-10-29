@@ -1,0 +1,1173 @@
+{
+  "banners": [
+    {
+      "gachaId": "1001",
+      "kind": "ordinary"
+    },
+    {
+      "gachaId": "2001",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2002",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2003",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2004",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2005",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2006",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2007",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2008",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2009",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2010",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2011",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2012",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2013",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2014",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2015",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2016",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2017",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2018",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2019",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2020",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2021",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2022",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2023",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2024",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2025",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2026",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2027",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2028",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2029",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2030",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2031",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2032",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2033",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2034",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2035",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2036",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2037",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2038",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2039",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2040",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2041",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2042",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2043",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2044",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2045",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2046",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2047",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2048",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2049",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2050",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2051",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2052",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2053",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2054",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2055",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2056",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2057",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2058",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2059",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2060",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2061",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2062",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2063",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2064",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2065",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2066",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2067",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2068",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2069",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2070",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2071",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2072",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2073",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2074",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2075",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2076",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2077",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2078",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2079",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2080",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2081",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2082",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2083",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2084",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2085",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2086",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2087",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2088",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2089",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2090",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2091",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2092",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2093",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2094",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2095",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2096",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2097",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2098",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2099",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2100",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2101",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2102",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2103",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2104",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2105",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2106",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2107",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2108",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2109",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2110",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2111",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2112",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2113",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2114",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2115",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2116",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2117",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2118",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2119",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2120",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2121",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2122",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2123",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2124",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2125",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2126",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2127",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2128",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2129",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2130",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2131",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2132",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2133",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2134",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2135",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2136",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2137",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2138",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2139",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2140",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "2141",
+      "kind": "event-avatar"
+    },
+    {
+      "gachaId": "3001",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3002",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3003",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3004",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3005",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3006",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3007",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3008",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3009",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3010",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3011",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3012",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3013",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3014",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3015",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3016",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3017",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3018",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3019",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3020",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3021",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3022",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3023",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3024",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3025",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3026",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3027",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3028",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3029",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3030",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3031",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3032",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3033",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3034",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3035",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3036",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3037",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3038",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3039",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3040",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3041",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3042",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3043",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3044",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3045",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3046",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3047",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3048",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3049",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3050",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3051",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3052",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3053",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3054",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3055",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3056",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3057",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3058",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3059",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3060",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3061",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3062",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3063",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3064",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3065",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3066",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3067",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3068",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3069",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3070",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3071",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3072",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3073",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3074",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3075",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3076",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3077",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3078",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3079",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3080",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3081",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3082",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3083",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3084",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3085",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3086",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3087",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3088",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3089",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3090",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3091",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3092",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3093",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3094",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3095",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3096",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3097",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3098",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3099",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3100",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3101",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3102",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3103",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3104",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3105",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3106",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3107",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3108",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3109",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3110",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3111",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3112",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3113",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3114",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3115",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3116",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3117",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3118",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3119",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3120",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3121",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3122",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3123",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3124",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3125",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3126",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3127",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3128",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3129",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3130",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3131",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3132",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3133",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3134",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3135",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3136",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3137",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3138",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3139",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3140",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "3141",
+      "kind": "event-light-cone"
+    },
+    {
+      "gachaId": "4001",
+      "kind": "unsupported"
+    },
+    {
+      "gachaId": "5001",
+      "kind": "fate-avatar"
+    },
+    {
+      "gachaId": "5002",
+      "kind": "fate-avatar"
+    },
+    {
+      "gachaId": "5003",
+      "kind": "fate-avatar"
+    },
+    {
+      "gachaId": "5004",
+      "kind": "fate-avatar"
+    },
+    {
+      "gachaId": "6001",
+      "kind": "fate-light-cone"
+    },
+    {
+      "gachaId": "6002",
+      "kind": "fate-light-cone"
+    },
+    {
+      "gachaId": "6003",
+      "kind": "fate-light-cone"
+    },
+    {
+      "gachaId": "6004",
+      "kind": "fate-light-cone"
+    }
+  ],
+  "schemaVersion": 1
+}

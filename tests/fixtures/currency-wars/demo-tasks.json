@@ -1,0 +1,14 @@
+[
+  { "id": "demo-debuff-4", "traitId": 2007, "requiredCount": 4 },
+  { "id": "demo-debuff-6", "traitId": 2007, "requiredCount": 6 },
+  { "id": "demo-dot-4", "traitId": 2008, "requiredCount": 4 },
+  { "id": "demo-dot-6", "traitId": 2008, "requiredCount": 6 },
+  { "id": "demo-xianzhou-7", "traitId": 1007, "requiredCount": 7 },
+  { "id": "demo-train-6", "traitId": 1001, "requiredCount": 6 },
+  { "id": "demo-elation-5", "traitId": 2012, "requiredCount": 5 },
+  { "id": "demo-hunt-3", "traitId": 1009, "requiredCount": 3 },
+  { "id": "demo-energy-7", "traitId": 2004, "requiredCount": 7 },
+  { "id": "demo-shield-4", "traitId": 2010, "requiredCount": 4 },
+  { "id": "demo-stellaron-4", "traitId": 1002, "requiredCount": 4 },
+  { "id": "demo-navigator-1", "traitId": 3007, "requiredCount": 1 }
+]

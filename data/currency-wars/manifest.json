@@ -1,0 +1,36 @@
+{
+  "repository": "https://github.com/DimbreathBot/TurnBasedGameData",
+  "commit": "312b4597691e0a29cf9828a15b592757dba86949",
+  "gameVersion": "4.6.0",
+  "seasonId": 1,
+  "transformVersion": 1,
+  "inputSha256": {
+    "ExcelOutput/GridFightRoleBasicInfo.json": "ab8698fd70d1f53a2c99602ffec38eaa233cb291f9baea692d7599fae03885ed",
+    "ExcelOutput/GridFightTraitBasicInfo.json": "aeb10abc86f4320d49dc9af22e1096fef4e43f227cf672522acb50c5c6a7c5d8",
+    "ExcelOutput/GridFightEquipment.json": "e27434f36c82153bce2e2462791be8b7bbe4e6253e05b2ceb4566530aaf62904",
+    "ExcelOutput/GridFightTraitLayer.json": "d0edae25df8718709af803a64e46de8f12766805cf68dd852740b5c05b9e5076",
+    "ExcelOutput/GridFightRoleSwitchConfig.json": "5b1e167c8a6bcf4c8c6a07ec55cc33bfb13d1fe7afeff7b8b14822ecaea416ad",
+    "ExcelOutput/GridFightTraitEffect.json": "d586f67afa0e8202163878ce34aeb4cc0901afe7442ee3d5d7b6a68f091c5d0c",
+    "ExcelOutput/GridFightItems.json": "981facfa235f879fbf29dd9a7511e3906c708e447b6f2d4cb0834b42e02bee4c",
+    "ExcelOutput/AvatarConfig.json": "d8f3c9f55078611ad010751f82333735eb7bc732e22df6b8ad235021658e0456",
+    "ExcelOutput/AvatarConfigLD.json": "4ad4896dc0384f141419a9989b3893c1ee9a1a090394e5d2f658752cda5bde64",
+    "TextMap/TextMapCHS.json": "a9028313c772e684c91359b467b398a1ded2079de67a191dff80d9adf43dfca4"
+  },
+  "snapshotSha256": "35c713b3ac2cc65da06541a5668fdd8b4b322087bebd20993cea975437b36886",
+  "counts": {
+    "sourceRoleConfigs": 77,
+    "normalizedForms": 78,
+    "identities": 71,
+    "nonExpertIdentities": 62,
+    "traits": 33,
+    "emblems": 22
+  },
+  "ruleNotes": [
+    "Missing TraitType maps to camp only for the reviewed source-lock camp IDs.",
+    "Trailblazer front/back innate Class traits are exclusive; emblems may add the other Class.",
+    "Navigator copies all Class traits only; its selected target must have the train camp trait.",
+    "Bronya ties contribute to neither compared trait; equipment must be legal in either possible form.",
+    "Bronya cannot be a navigator target in V1.",
+    "Only trait headcounts are modeled, not combat effects, copied equipment or encounter/module modifiers."
+  ]
+}

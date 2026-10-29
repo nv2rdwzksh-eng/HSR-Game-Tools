@@ -1,0 +1,14 @@
+/* Control-local opt-in: surrounding Warp surfaces retain their existing dark theme. */
+.warp-astral-button {
+  --h-button-min-width: 0;
+  --h-button-padding: 6px 16px;
+}
+.warp-astral-button.h-button--ghost {
+  --h-button-color: var(--color-ink);
+}
+.warp-astral-button .h-button__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

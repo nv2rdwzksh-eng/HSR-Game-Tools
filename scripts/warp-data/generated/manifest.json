@@ -1,0 +1,1656 @@
+{
+  "files": {
+    "catalog.json": {
+      "bytes": 48241,
+      "sha256": "63974b7f4e0d5a6ddd3a171768f64d123fe8f1cfa884ecfeaf55ef6df1104118"
+    },
+    "gacha-index.json": {
+      "bytes": 20175,
+      "sha256": "ad0bd81343bb949683e3650bb046ececb1be95d6b275269f8fc736873e40d609"
+    }
+  },
+  "generatorVersion": 1,
+  "origins": [
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1001",
+      "nameHash": "6186714091647966180",
+      "recordKey": "1001"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1002",
+      "nameHash": "10239807114774791393",
+      "recordKey": "1002"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1003",
+      "nameHash": "17590286599225097191",
+      "recordKey": "1003"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1004",
+      "nameHash": "2178816269909174781",
+      "recordKey": "1004"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1005",
+      "nameHash": "831482934451783913",
+      "recordKey": "1005"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1006",
+      "nameHash": "12437709666645057337",
+      "recordKey": "1006"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1008",
+      "nameHash": "4959846561380667115",
+      "recordKey": "1008"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1009",
+      "nameHash": "1893706111363255403",
+      "recordKey": "1009"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1013",
+      "nameHash": "6548832256366079839",
+      "recordKey": "1013"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfigLD.json",
+      "id": "avatar:1014",
+      "nameHash": "11292532298779825003",
+      "recordKey": "1014"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfigLD.json",
+      "id": "avatar:1015",
+      "nameHash": "18287682968624271100",
+      "recordKey": "1015"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1101",
+      "nameHash": "12577335996298259768",
+      "recordKey": "1101"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1102",
+      "nameHash": "11512502346378460564",
+      "recordKey": "1102"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1103",
+      "nameHash": "5848201789834711118",
+      "recordKey": "1103"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1104",
+      "nameHash": "4662720147964902997",
+      "recordKey": "1104"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1105",
+      "nameHash": "12514207603391426951",
+      "recordKey": "1105"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1106",
+      "nameHash": "3030343134428618721",
+      "recordKey": "1106"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1107",
+      "nameHash": "4657497849737059681",
+      "recordKey": "1107"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1108",
+      "nameHash": "3797624834743983017",
+      "recordKey": "1108"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1109",
+      "nameHash": "8885814719909498250",
+      "recordKey": "1109"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1110",
+      "nameHash": "6300665444027651453",
+      "recordKey": "1110"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1111",
+      "nameHash": "5638032823797991781",
+      "recordKey": "1111"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1112",
+      "nameHash": "11869199815763640258",
+      "recordKey": "1112"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1201",
+      "nameHash": "16637763514010100144",
+      "recordKey": "1201"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1202",
+      "nameHash": "8701250082145497679",
+      "recordKey": "1202"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1203",
+      "nameHash": "2482429559561780479",
+      "recordKey": "1203"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1204",
+      "nameHash": "330404745587936068",
+      "recordKey": "1204"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1205",
+      "nameHash": "4951589951007146550",
+      "recordKey": "1205"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1206",
+      "nameHash": "4806955196389400116",
+      "recordKey": "1206"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1207",
+      "nameHash": "1140041957738323619",
+      "recordKey": "1207"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1208",
+      "nameHash": "10351737015595052238",
+      "recordKey": "1208"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1209",
+      "nameHash": "1960800194395687973",
+      "recordKey": "1209"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1210",
+      "nameHash": "13845204571586703663",
+      "recordKey": "1210"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1211",
+      "nameHash": "13619135324463789256",
+      "recordKey": "1211"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1212",
+      "nameHash": "940795027444042330",
+      "recordKey": "1212"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1213",
+      "nameHash": "12834585016341721411",
+      "recordKey": "1213"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1214",
+      "nameHash": "11495763016926788582",
+      "recordKey": "1214"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1215",
+      "nameHash": "8944718300027499818",
+      "recordKey": "1215"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1217",
+      "nameHash": "12871454551122846403",
+      "recordKey": "1217"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1218",
+      "nameHash": "8300000119407817972",
+      "recordKey": "1218"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1220",
+      "nameHash": "640945362161159110",
+      "recordKey": "1220"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1221",
+      "nameHash": "15084362025105138520",
+      "recordKey": "1221"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1222",
+      "nameHash": "1890772581194122354",
+      "recordKey": "1222"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1223",
+      "nameHash": "581825062468630609",
+      "recordKey": "1223"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1224",
+      "nameHash": "16417870574330506928",
+      "recordKey": "1224"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1225",
+      "nameHash": "3056810111125476882",
+      "recordKey": "1225"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1301",
+      "nameHash": "6816343973270607908",
+      "recordKey": "1301"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1302",
+      "nameHash": "16607369145002760691",
+      "recordKey": "1302"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1303",
+      "nameHash": "6427183216833446662",
+      "recordKey": "1303"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1304",
+      "nameHash": "1512189965928596940",
+      "recordKey": "1304"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1305",
+      "nameHash": "5574869376996182732",
+      "recordKey": "1305"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1306",
+      "nameHash": "1154772689835031402",
+      "recordKey": "1306"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1307",
+      "nameHash": "5006907115971129934",
+      "recordKey": "1307"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1308",
+      "nameHash": "15302882570557665677",
+      "recordKey": "1308"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1309",
+      "nameHash": "16319070348582555665",
+      "recordKey": "1309"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1310",
+      "nameHash": "17277451216686117891",
+      "recordKey": "1310"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1312",
+      "nameHash": "15577682837980439839",
+      "recordKey": "1312"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1313",
+      "nameHash": "7913253176711977067",
+      "recordKey": "1313"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1314",
+      "nameHash": "2887610941167968962",
+      "recordKey": "1314"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1315",
+      "nameHash": "6424512602058263868",
+      "recordKey": "1315"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1317",
+      "nameHash": "9807064938372011036",
+      "recordKey": "1317"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1321",
+      "nameHash": "16283352174817039417",
+      "recordKey": "1321"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1401",
+      "nameHash": "4559632095226063367",
+      "recordKey": "1401"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1402",
+      "nameHash": "764283421684818925",
+      "recordKey": "1402"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1403",
+      "nameHash": "15410848306228341212",
+      "recordKey": "1403"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1404",
+      "nameHash": "13777984539817850592",
+      "recordKey": "1404"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1405",
+      "nameHash": "14399225845844956184",
+      "recordKey": "1405"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1406",
+      "nameHash": "1283986297634256167",
+      "recordKey": "1406"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1407",
+      "nameHash": "6284038990417808171",
+      "recordKey": "1407"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1408",
+      "nameHash": "2073865627579588830",
+      "recordKey": "1408"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1409",
+      "nameHash": "14193361837482662840",
+      "recordKey": "1409"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1410",
+      "nameHash": "11044358311620332259",
+      "recordKey": "1410"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1412",
+      "nameHash": "3528626799663072375",
+      "recordKey": "1412"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1413",
+      "nameHash": "14327888430982372557",
+      "recordKey": "1413"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1414",
+      "nameHash": "12485086905499638965",
+      "recordKey": "1414"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1415",
+      "nameHash": "7809981386909966580",
+      "recordKey": "1415"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1501",
+      "nameHash": "17862078353219696025",
+      "recordKey": "1501"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1502",
+      "nameHash": "5676363387127417629",
+      "recordKey": "1502"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1503",
+      "nameHash": "17971979440145228372",
+      "recordKey": "1503"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1504",
+      "nameHash": "16507315893888115872",
+      "recordKey": "1504"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1505",
+      "nameHash": "9927439444416271873",
+      "recordKey": "1505"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1506",
+      "nameHash": "11557317042334401025",
+      "recordKey": "1506"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1507",
+      "nameHash": "13319237045724646398",
+      "recordKey": "1507"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfigLD.json",
+      "id": "avatar:1508",
+      "nameHash": "15249535273064221797",
+      "recordKey": "1508"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfigLD.json",
+      "id": "avatar:1509",
+      "nameHash": "195746835239934719",
+      "recordKey": "1509"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1510",
+      "nameHash": "12653203655511224443",
+      "recordKey": "1510"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1512",
+      "nameHash": "9781128254395420869",
+      "recordKey": "1512"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:1513",
+      "nameHash": "5591079138023962224",
+      "recordKey": "1513"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8001",
+      "nameHash": "15351791685587679468",
+      "recordKey": "8001"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8002",
+      "nameHash": "915414112326692585",
+      "recordKey": "8002"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8003",
+      "nameHash": "1401066943349888144",
+      "recordKey": "8003"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8004",
+      "nameHash": "12002536695852490847",
+      "recordKey": "8004"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8005",
+      "nameHash": "10447948767909792082",
+      "recordKey": "8005"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8006",
+      "nameHash": "10393121115260878389",
+      "recordKey": "8006"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8007",
+      "nameHash": "16176654588635246657",
+      "recordKey": "8007"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8008",
+      "nameHash": "4088185837206355760",
+      "recordKey": "8008"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8009",
+      "nameHash": "7663307095624772319",
+      "recordKey": "8009"
+    },
+    {
+      "file": "ExcelOutput/AvatarConfig.json",
+      "id": "avatar:8010",
+      "nameHash": "11669351296701672101",
+      "recordKey": "8010"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20000",
+      "nameHash": "1315631816518421847",
+      "recordKey": "20000"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20001",
+      "nameHash": "626150995471578115",
+      "recordKey": "20001"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20002",
+      "nameHash": "131015357822286277",
+      "recordKey": "20002"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20003",
+      "nameHash": "1980577345993249477",
+      "recordKey": "20003"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20004",
+      "nameHash": "6342114722180502380",
+      "recordKey": "20004"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20005",
+      "nameHash": "15002084058293597877",
+      "recordKey": "20005"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20006",
+      "nameHash": "2920583894071632168",
+      "recordKey": "20006"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20007",
+      "nameHash": "12734437266111259030",
+      "recordKey": "20007"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20008",
+      "nameHash": "10739058991811781260",
+      "recordKey": "20008"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20009",
+      "nameHash": "11402115896427763107",
+      "recordKey": "20009"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20010",
+      "nameHash": "13332347318490615628",
+      "recordKey": "20010"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20011",
+      "nameHash": "17785355910974162683",
+      "recordKey": "20011"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20012",
+      "nameHash": "12247399936092798494",
+      "recordKey": "20012"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20013",
+      "nameHash": "17410807256696397784",
+      "recordKey": "20013"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20014",
+      "nameHash": "2319508155290238659",
+      "recordKey": "20014"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20015",
+      "nameHash": "13040055884517558711",
+      "recordKey": "20015"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20016",
+      "nameHash": "11103093482623620642",
+      "recordKey": "20016"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20017",
+      "nameHash": "13879749833137113727",
+      "recordKey": "20017"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20018",
+      "nameHash": "12247613731536879846",
+      "recordKey": "20018"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20019",
+      "nameHash": "15032070239134334540",
+      "recordKey": "20019"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20020",
+      "nameHash": "12568713156998545906",
+      "recordKey": "20020"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20021",
+      "nameHash": "8589021141704183905",
+      "recordKey": "20021"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20022",
+      "nameHash": "3133619668689285080",
+      "recordKey": "20022"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20023",
+      "nameHash": "17981808852139106353",
+      "recordKey": "20023"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:20024",
+      "nameHash": "14442278216073659952",
+      "recordKey": "20024"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21000",
+      "nameHash": "2167454448275708155",
+      "recordKey": "21000"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21001",
+      "nameHash": "7552929900027690675",
+      "recordKey": "21001"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21002",
+      "nameHash": "14499399798298365304",
+      "recordKey": "21002"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21003",
+      "nameHash": "12928749239135264942",
+      "recordKey": "21003"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21004",
+      "nameHash": "10427242296541626113",
+      "recordKey": "21004"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21005",
+      "nameHash": "10839077926966289407",
+      "recordKey": "21005"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21006",
+      "nameHash": "14111965920986505827",
+      "recordKey": "21006"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21007",
+      "nameHash": "1689191955197149654",
+      "recordKey": "21007"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21008",
+      "nameHash": "7595585734525049293",
+      "recordKey": "21008"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21009",
+      "nameHash": "1697621481831882137",
+      "recordKey": "21009"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21010",
+      "nameHash": "12749567746103982808",
+      "recordKey": "21010"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21011",
+      "nameHash": "13158293906785266925",
+      "recordKey": "21011"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21012",
+      "nameHash": "7988605493025865868",
+      "recordKey": "21012"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21013",
+      "nameHash": "162961089588416007",
+      "recordKey": "21013"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21014",
+      "nameHash": "13174243432611028231",
+      "recordKey": "21014"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21015",
+      "nameHash": "13745399009822153287",
+      "recordKey": "21015"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21016",
+      "nameHash": "1574056865504538423",
+      "recordKey": "21016"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21017",
+      "nameHash": "16799517243763151061",
+      "recordKey": "21017"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21018",
+      "nameHash": "2617276305345465640",
+      "recordKey": "21018"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21019",
+      "nameHash": "7087158918269789482",
+      "recordKey": "21019"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21020",
+      "nameHash": "3011459729684543498",
+      "recordKey": "21020"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21021",
+      "nameHash": "5213115940555228162",
+      "recordKey": "21021"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21022",
+      "nameHash": "11556837653135001833",
+      "recordKey": "21022"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21023",
+      "nameHash": "2437893704371924013",
+      "recordKey": "21023"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21024",
+      "nameHash": "7199060513447123746",
+      "recordKey": "21024"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21025",
+      "nameHash": "6669890141724855046",
+      "recordKey": "21025"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21026",
+      "nameHash": "2865330475640667594",
+      "recordKey": "21026"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21027",
+      "nameHash": "10425213309433675372",
+      "recordKey": "21027"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21028",
+      "nameHash": "9790535670345159450",
+      "recordKey": "21028"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21029",
+      "nameHash": "16240711282141343645",
+      "recordKey": "21029"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21030",
+      "nameHash": "12664422904687735233",
+      "recordKey": "21030"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21031",
+      "nameHash": "9181486690944903166",
+      "recordKey": "21031"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21032",
+      "nameHash": "12162768609723681896",
+      "recordKey": "21032"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21033",
+      "nameHash": "14096160680959455656",
+      "recordKey": "21033"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21034",
+      "nameHash": "4457157234821228851",
+      "recordKey": "21034"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21035",
+      "nameHash": "14618451847251881593",
+      "recordKey": "21035"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21036",
+      "nameHash": "7190155227974321848",
+      "recordKey": "21036"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21037",
+      "nameHash": "11986294710949841576",
+      "recordKey": "21037"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21038",
+      "nameHash": "15061106384238445075",
+      "recordKey": "21038"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21039",
+      "nameHash": "17221523966150677749",
+      "recordKey": "21039"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21040",
+      "nameHash": "11787985211097824188",
+      "recordKey": "21040"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21041",
+      "nameHash": "9917675222835188030",
+      "recordKey": "21041"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21042",
+      "nameHash": "10092969236133299188",
+      "recordKey": "21042"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21043",
+      "nameHash": "14152526364798022068",
+      "recordKey": "21043"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21044",
+      "nameHash": "10467065315466017245",
+      "recordKey": "21044"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21045",
+      "nameHash": "2017811926861740653",
+      "recordKey": "21045"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21046",
+      "nameHash": "7852072680209603817",
+      "recordKey": "21046"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21047",
+      "nameHash": "5449558217329844746",
+      "recordKey": "21047"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21048",
+      "nameHash": "17607126303400988571",
+      "recordKey": "21048"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21050",
+      "nameHash": "3826288517981139592",
+      "recordKey": "21050"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21051",
+      "nameHash": "6987783680196069182",
+      "recordKey": "21051"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21052",
+      "nameHash": "2812952012494006470",
+      "recordKey": "21052"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21053",
+      "nameHash": "8374190943812153532",
+      "recordKey": "21053"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21054",
+      "nameHash": "925285841184946344",
+      "recordKey": "21054"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21055",
+      "nameHash": "8234482625723588709",
+      "recordKey": "21055"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21056",
+      "nameHash": "13758363745381237568",
+      "recordKey": "21056"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21057",
+      "nameHash": "9049859548954827221",
+      "recordKey": "21057"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21058",
+      "nameHash": "7494166407242075795",
+      "recordKey": "21058"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21060",
+      "nameHash": "2081896813700414495",
+      "recordKey": "21060"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21061",
+      "nameHash": "6535201401877376706",
+      "recordKey": "21061"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21062",
+      "nameHash": "5119764409776904864",
+      "recordKey": "21062"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21064",
+      "nameHash": "3318507436183091065",
+      "recordKey": "21064"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21065",
+      "nameHash": "9454774255307972807",
+      "recordKey": "21065"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:21066",
+      "nameHash": "3394179651702416076",
+      "recordKey": "21066"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22000",
+      "nameHash": "6499212577580680601",
+      "recordKey": "22000"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22001",
+      "nameHash": "5044439088801606790",
+      "recordKey": "22001"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22002",
+      "nameHash": "12477180630545967573",
+      "recordKey": "22002"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22003",
+      "nameHash": "3181001684884320491",
+      "recordKey": "22003"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22004",
+      "nameHash": "14528966166175872583",
+      "recordKey": "22004"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22005",
+      "nameHash": "641298228203045566",
+      "recordKey": "22005"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22006",
+      "nameHash": "15207548416483397866",
+      "recordKey": "22006"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22007",
+      "nameHash": "1470137069313109545",
+      "recordKey": "22007"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:22008",
+      "nameHash": "14250856990396693091",
+      "recordKey": "22008"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23000",
+      "nameHash": "15382217452095502614",
+      "recordKey": "23000"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23001",
+      "nameHash": "8801957355485281282",
+      "recordKey": "23001"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23002",
+      "nameHash": "12383480154175459629",
+      "recordKey": "23002"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23003",
+      "nameHash": "8522650187971319173",
+      "recordKey": "23003"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23004",
+      "nameHash": "10183975544059560062",
+      "recordKey": "23004"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23005",
+      "nameHash": "7937757985821192715",
+      "recordKey": "23005"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23006",
+      "nameHash": "17574691798561298326",
+      "recordKey": "23006"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23007",
+      "nameHash": "12681543763079713620",
+      "recordKey": "23007"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23008",
+      "nameHash": "14622040109051771747",
+      "recordKey": "23008"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23009",
+      "nameHash": "9878785544467344708",
+      "recordKey": "23009"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23010",
+      "nameHash": "5016139085509664328",
+      "recordKey": "23010"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23011",
+      "nameHash": "4097943518132692404",
+      "recordKey": "23011"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23012",
+      "nameHash": "3988416931465964572",
+      "recordKey": "23012"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23013",
+      "nameHash": "2939788966008364272",
+      "recordKey": "23013"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23014",
+      "nameHash": "8896320544221495485",
+      "recordKey": "23014"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23015",
+      "nameHash": "5882077875757512131",
+      "recordKey": "23015"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23016",
+      "nameHash": "6338477157066304065",
+      "recordKey": "23016"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23017",
+      "nameHash": "6652371494884618152",
+      "recordKey": "23017"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23018",
+      "nameHash": "7806293657413569732",
+      "recordKey": "23018"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23019",
+      "nameHash": "6511942529766525790",
+      "recordKey": "23019"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23020",
+      "nameHash": "13217917909606342578",
+      "recordKey": "23020"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23021",
+      "nameHash": "13392063733437188899",
+      "recordKey": "23021"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23022",
+      "nameHash": "1760113629327884437",
+      "recordKey": "23022"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23023",
+      "nameHash": "16572767459975564925",
+      "recordKey": "23023"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23024",
+      "nameHash": "2304736168270673834",
+      "recordKey": "23024"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23025",
+      "nameHash": "5533133162833624556",
+      "recordKey": "23025"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23026",
+      "nameHash": "7151795079392647332",
+      "recordKey": "23026"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23027",
+      "nameHash": "16562686593279533010",
+      "recordKey": "23027"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23028",
+      "nameHash": "8391488999247369590",
+      "recordKey": "23028"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23029",
+      "nameHash": "458554896646617640",
+      "recordKey": "23029"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23030",
+      "nameHash": "9582006062334260573",
+      "recordKey": "23030"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23031",
+      "nameHash": "14143448995387386080",
+      "recordKey": "23031"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23032",
+      "nameHash": "7711419540001836555",
+      "recordKey": "23032"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23033",
+      "nameHash": "166399991008704530",
+      "recordKey": "23033"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23034",
+      "nameHash": "17036794612158182092",
+      "recordKey": "23034"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23035",
+      "nameHash": "2365588922771791772",
+      "recordKey": "23035"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23036",
+      "nameHash": "12998084085250275171",
+      "recordKey": "23036"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23037",
+      "nameHash": "7647972073962524348",
+      "recordKey": "23037"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23038",
+      "nameHash": "5079774664946893569",
+      "recordKey": "23038"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23039",
+      "nameHash": "10640455180150177057",
+      "recordKey": "23039"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23040",
+      "nameHash": "17921507779222204537",
+      "recordKey": "23040"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23041",
+      "nameHash": "12290078682480906936",
+      "recordKey": "23041"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23042",
+      "nameHash": "1992513852031797087",
+      "recordKey": "23042"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23043",
+      "nameHash": "17437100551828055817",
+      "recordKey": "23043"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23044",
+      "nameHash": "1669624186204340722",
+      "recordKey": "23044"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23045",
+      "nameHash": "2655752028575549155",
+      "recordKey": "23045"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23046",
+      "nameHash": "17063264696383380947",
+      "recordKey": "23046"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23047",
+      "nameHash": "16402735087408937717",
+      "recordKey": "23047"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23048",
+      "nameHash": "6685295983161490522",
+      "recordKey": "23048"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23049",
+      "nameHash": "4836366408334833891",
+      "recordKey": "23049"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23050",
+      "nameHash": "9307349825241855113",
+      "recordKey": "23050"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23051",
+      "nameHash": "12008774210001466871",
+      "recordKey": "23051"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23052",
+      "nameHash": "10407794298159211059",
+      "recordKey": "23052"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23053",
+      "nameHash": "6574050664224309043",
+      "recordKey": "23053"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23054",
+      "nameHash": "5484320404804108704",
+      "recordKey": "23054"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23055",
+      "nameHash": "5383274067590643422",
+      "recordKey": "23055"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23056",
+      "nameHash": "580008868750168993",
+      "recordKey": "23056"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23057",
+      "nameHash": "18067789291542392699",
+      "recordKey": "23057"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23058",
+      "nameHash": "12250452824306430514",
+      "recordKey": "23058"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23059",
+      "nameHash": "5178844806898592560",
+      "recordKey": "23059"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23060",
+      "nameHash": "7768214880470327395",
+      "recordKey": "23060"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23061",
+      "nameHash": "12878612287235138706",
+      "recordKey": "23061"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23062",
+      "nameHash": "13693150873761509240",
+      "recordKey": "23062"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23063",
+      "nameHash": "1179447360796025287",
+      "recordKey": "23063"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:23064",
+      "nameHash": "14974151069627830085",
+      "recordKey": "23064"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24000",
+      "nameHash": "4075116411984711274",
+      "recordKey": "24000"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24001",
+      "nameHash": "6397781049354459849",
+      "recordKey": "24001"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24002",
+      "nameHash": "2383987427860701439",
+      "recordKey": "24002"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24003",
+      "nameHash": "6603370301531956729",
+      "recordKey": "24003"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24004",
+      "nameHash": "15435895158678403029",
+      "recordKey": "24004"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24005",
+      "nameHash": "10592306546445443705",
+      "recordKey": "24005"
+    },
+    {
+      "file": "ExcelOutput/EquipmentConfig.json",
+      "id": "light-cone:24006",
+      "nameHash": "13065036285849747195",
+      "recordKey": "24006"
+    }
+  ],
+  "schemaVersion": 1,
+  "source": {
+    "commit": "312b4597691e0a29cf9828a15b592757dba86949",
+    "repository": "https://github.com/DimbreathBot/TurnBasedGameData",
+    "schemaVersion": 1,
+    "transformVersion": 1
+  },
+  "sourceFiles": {
+    "ExcelOutput/AvatarConfig.json": {
+      "bytes": 240466,
+      "sha256": "d8f3c9f55078611ad010751f82333735eb7bc732e22df6b8ad235021658e0456"
+    },
+    "ExcelOutput/AvatarConfigLD.json": {
+      "bytes": 10780,
+      "sha256": "4ad4896dc0384f141419a9989b3893c1ee9a1a090394e5d2f658752cda5bde64"
+    },
+    "ExcelOutput/EquipmentConfig.json": {
+      "bytes": 132304,
+      "sha256": "74ea91580ab4a251ee16c3b491be46465f37ec2f6178982a92a6cbf4c0086ebc"
+    },
+    "ExcelOutput/GachaBasicInfo.json": {
+      "bytes": 192478,
+      "sha256": "07a7a9de1d843295b16ff5c0813ea4633ec87914b033d2c39cc5186a47eba794"
+    },
+    "TextMap/TextMapCHS.json": {
+      "bytes": 52399646,
+      "sha256": "a9028313c772e684c91359b467b398a1ded2079de67a191dff80d9adf43dfca4"
+    },
+    "TextMap/TextMapEN.json": {
+      "bytes": 59061007,
+      "sha256": "aa0c181739dd056fae03823294f65657130226ad732b92ceed07849b8bf14717"
+    }
+  }
+}

@@ -1,0 +1,2249 @@
+{
+  "schemaVersion": 1,
+  "items": {
+    "avatar:1001": {
+      "path": "Knight",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1001.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/27d30870b2610ee1c8be5e1417a157473847879cb853f709ed42c98820641b31.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/27d30870b2610ee1c8be5e1417a157473847879cb853f709ed42c98820641b31.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/2803b11c3aaeec1df61554672ef1afbed923764dd86985fd8a07484c9365cc5f.webp"
+    },
+    "avatar:1002": {
+      "path": "Rogue",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1002.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/72f4fadd9155aa36fde442bd0e947830fe84fdbe832be202c06e0101c73f8534.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/72f4fadd9155aa36fde442bd0e947830fe84fdbe832be202c06e0101c73f8534.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/4ab3b7968c24f8cad90cc6a3ea4c94495373731f3dbbaeb360ce0072dda21897.webp"
+    },
+    "avatar:1003": {
+      "path": "Mage",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1003.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/e644fb7bf32184c6acaace5131753b9710c5c6f9457b130d85166801cb939246.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/e644fb7bf32184c6acaace5131753b9710c5c6f9457b130d85166801cb939246.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/97ea1fead7bc97ffe7a5f4a63d0aed618d09c8e0c1ae049c94f10811508b56d0.webp"
+    },
+    "avatar:1004": {
+      "path": "Warlock",
+      "element": "Imaginary",
+      "portraitPath": "game-assets/character/1004.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/b02f6a763f5aaac61ac01a97fea961e96279122694ad399f73f747da12d222dd.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/b02f6a763f5aaac61ac01a97fea961e96279122694ad399f73f747da12d222dd.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/dab431c836eeec85ab1e71d46944f478e52cbc8c7932169f05ad4728bb2372bb.webp"
+    },
+    "avatar:1006": {
+      "path": "Warlock",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1006.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/3539134e5de445a907880ab3cb9fbaf428cf4d102b678ab27257ae459d7d5324.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/3539134e5de445a907880ab3cb9fbaf428cf4d102b678ab27257ae459d7d5324.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/43275f5a1b6a9e0d9e09a803e5116e4e94c9ce40281f2a7c5f5c68ec6908a034.webp"
+    },
+    "avatar:1008": {
+      "path": "Warrior",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1008.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/3179d70faaf0da6c5f6dcaa1c073b7d17889bd67e7bcccf0b6a17dcd74628087.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/3179d70faaf0da6c5f6dcaa1c073b7d17889bd67e7bcccf0b6a17dcd74628087.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/cb64c4cd9e190a69e3575a8cd7181d8a2b1d7b621b8f7e80502b62540cd48f42.webp"
+    },
+    "avatar:1009": {
+      "path": "Shaman",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1009.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/287a7926cdc294501ecb1663bc7989e775f5ef5167fa3ea8f645162785f1f9d2.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/287a7926cdc294501ecb1663bc7989e775f5ef5167fa3ea8f645162785f1f9d2.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/59c6afce45650045591c604e4b9c070bb655250ee71983c616cf227561798c25.webp"
+    },
+    "avatar:1013": {
+      "path": "Mage",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1013.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/4f216f760ddf11670dfba0510249250279deba9b9fe82f69ea51b67826c7388b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/4f216f760ddf11670dfba0510249250279deba9b9fe82f69ea51b67826c7388b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/d983190b128be36811af85ce6495b3d19f05004592fb2bc98ad6e85cddbdce58.webp"
+    },
+    "avatar:1014": {
+      "path": "Warrior",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1014.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/225ff056d53e307d5bb9e4e9c52deed9483e704221f073f455457ddb5466217a.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/225ff056d53e307d5bb9e4e9c52deed9483e704221f073f455457ddb5466217a.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/fe57db53ed94a58f241b66426ad5062fedd744c8071847845c57007c59880052.webp"
+    },
+    "avatar:1015": {
+      "path": "Rogue",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1015.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/f6a1a020fa512fba4cae0a1a93966975fb8c52c620d57d0275c7b9196aef2846.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/f6a1a020fa512fba4cae0a1a93966975fb8c52c620d57d0275c7b9196aef2846.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/f6d802b6ab5fe1e696c3be424eaf5aa755e2cce1d444a73be47a4ce9adb6e7ef.webp"
+    },
+    "avatar:1101": {
+      "path": "Shaman",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1101.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/a530b1c56a9ff0a7b2bdd3cf1710ce25038c7b000b8a31e55d08c1483be96496.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/a530b1c56a9ff0a7b2bdd3cf1710ce25038c7b000b8a31e55d08c1483be96496.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/b1648b8f9b69a6177029ac2426baccd4dec282cb841f349f4324d36d06c5bec4.webp"
+    },
+    "avatar:1102": {
+      "path": "Rogue",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1102.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/ae72deee5affdf09515c1d34c36a5dc3abec1cb6a2230d74a61241b94d3435b0.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/ae72deee5affdf09515c1d34c36a5dc3abec1cb6a2230d74a61241b94d3435b0.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/5491757d4db1cbe2b63c0121c2f5b0ddae5d0d82afad7c40dd8f7c152415ec22.webp"
+    },
+    "avatar:1103": {
+      "path": "Mage",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1103.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/4ef9841c331dc63c90493df59eb33cb27851b21e7f69702c54b53f68a074c373.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/4ef9841c331dc63c90493df59eb33cb27851b21e7f69702c54b53f68a074c373.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/8fd814275ee0c11992f46e77de552617df5b28d291f3a5cb23d284bf9124826b.webp"
+    },
+    "avatar:1104": {
+      "path": "Knight",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1104.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/8fb92e15937047e3ff89e7fb9ac4e21c12f176504a43e11448f314fd56340258.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/8fb92e15937047e3ff89e7fb9ac4e21c12f176504a43e11448f314fd56340258.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/bbcaaae726ce8f737b27f41904b82bd1d59da4da778eba232564072fce62fd43.webp"
+    },
+    "avatar:1105": {
+      "path": "Priest",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1105.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/188e95761f02455ada2572ad404047b8fe70ca65b54b7f0dea81da39240d80c2.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/188e95761f02455ada2572ad404047b8fe70ca65b54b7f0dea81da39240d80c2.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/28278a27a3089045ab3ba95d791ca3d7d2a5e59f89c0a3667bdc80abe9e920c3.webp"
+    },
+    "avatar:1106": {
+      "path": "Warlock",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1106.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/d03e7a6d4e9180dd4d5f7ddd14770df60a8096a0e0988b9862d615fae24f480b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/d03e7a6d4e9180dd4d5f7ddd14770df60a8096a0e0988b9862d615fae24f480b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/22f5d340b73bd9b29fd639adf2e12b530c28722a057e6450f90f0eff142d6088.webp"
+    },
+    "avatar:1107": {
+      "path": "Warrior",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1107.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/798c21cb7557203ae983742176e208cd4fef807cbb29c73fb5654946146ca059.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/798c21cb7557203ae983742176e208cd4fef807cbb29c73fb5654946146ca059.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/f6b6e8c156f504962bad574989e81661bf68e3155fb4bce732a3882b8a2f8f91.webp"
+    },
+    "avatar:1108": {
+      "path": "Warlock",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1108.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/bc11b06b93d6620ad3f5736f7b3133e76b4d574b8c54a4ab7b3f423bd5183fa8.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/bc11b06b93d6620ad3f5736f7b3133e76b4d574b8c54a4ab7b3f423bd5183fa8.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/702c6a3f6363172b24e981a12e393cc753c77703c993c94a905eee9b0ddbeadf.webp"
+    },
+    "avatar:1109": {
+      "path": "Warrior",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1109.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/9d12c29f27efbb5911d5efc7617d4c908cf616bbc778260c21644d37b1509351.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/9d12c29f27efbb5911d5efc7617d4c908cf616bbc778260c21644d37b1509351.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/500d7d0015aab1aff2ce9bdd6982f780036fe0462883c66ca52a69dbd62fbf30.webp"
+    },
+    "avatar:1110": {
+      "path": "Priest",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1110.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/2ee1e122247799baad6d5acea9da79935ff2d415df4d1bd48f2a828bd155b30e.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/2ee1e122247799baad6d5acea9da79935ff2d415df4d1bd48f2a828bd155b30e.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/74148df62c778652a7b7909f80c5f350bf4e247c4170237d121ccf55e6d09d53.webp"
+    },
+    "avatar:1111": {
+      "path": "Warlock",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1111.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/ae6c20a7e6a985763509347bf5a2697a24a67e3d021cddb525598409115edc64.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/ae6c20a7e6a985763509347bf5a2697a24a67e3d021cddb525598409115edc64.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/db9012adfbe2a5f81479162db63cb204440e6445e80d98ea19ccd03d4f056bd1.webp"
+    },
+    "avatar:1201": {
+      "path": "Mage",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1201.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/266da524aef703d9702df89516ae6f96b47d0a377ca3616c3a3e564ff40ef5bd.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/266da524aef703d9702df89516ae6f96b47d0a377ca3616c3a3e564ff40ef5bd.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/3c53fd344d9f146440a7318577cf42fabe0eb4c62378c3976d6e313b8c58d7f0.webp"
+    },
+    "avatar:1202": {
+      "path": "Shaman",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1202.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/bb74d6e22bc6ad4776c751d584aa8ff8bf442ff5cd9d5f819f5b6dd9578a3e11.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/bb74d6e22bc6ad4776c751d584aa8ff8bf442ff5cd9d5f819f5b6dd9578a3e11.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/eb1fd12169f8351a394cc6ae9a62597d193a2edb6d4617f51cbf0ab73b7f581b.webp"
+    },
+    "avatar:1205": {
+      "path": "Warrior",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1205.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/63c797c9b31d1f74c6114fee2bd6606073cd70e575cecaf97a59b0e2afe275d4.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/63c797c9b31d1f74c6114fee2bd6606073cd70e575cecaf97a59b0e2afe275d4.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/bc6175b6c8b58a83d672aa102696f9011ef3585d07e213d6aa2da13578650ff7.webp"
+    },
+    "avatar:1206": {
+      "path": "Rogue",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1206.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/2d3aa7ad01de77625b5583d1359c96053af79209b51c2e24952fd077605a69b8.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/2d3aa7ad01de77625b5583d1359c96053af79209b51c2e24952fd077605a69b8.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/27ec78ff5a101c411eb768d994a27e2ef74f1b04e7099d5d29bd1c81ebf4bd1e.webp"
+    },
+    "avatar:1207": {
+      "path": "Shaman",
+      "element": "Imaginary",
+      "portraitPath": "game-assets/character/1207.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/08fe50407b24de4dd9ab761b633665f5820beb518c6fb9100a8ce0d0c7eb4550.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/08fe50407b24de4dd9ab761b633665f5820beb518c6fb9100a8ce0d0c7eb4550.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/d1a6cf883ed961d333ebbb890c9f03999efd2f7209037fbba6b1f7b8087311c0.webp"
+    },
+    "avatar:1208": {
+      "path": "Knight",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1208.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/c49b5e3e9c8e3248716f25b24525f1baad49112e7601b1fdd1455a8581772924.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/c49b5e3e9c8e3248716f25b24525f1baad49112e7601b1fdd1455a8581772924.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/ec98d5e0550b112f0cbc3a03404dd65282f9fe605405f7f7113c98424939db56.webp"
+    },
+    "avatar:1209": {
+      "path": "Rogue",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1209.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/c928b412239b2f018c7f8ddf2fc3b993d7076c310a089d86dee483ee934f6bea.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/c928b412239b2f018c7f8ddf2fc3b993d7076c310a089d86dee483ee934f6bea.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/1cfc9ecc4796b75832ab09a07c10527939debc0705d72c51bd202f6aee4eb9a4.webp"
+    },
+    "avatar:1210": {
+      "path": "Warlock",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1210.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/9dd96f95857ece83eb54b1ac55ec9dfdbc7cc50fd2c1b7c695c4bb9c46acc43d.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/9dd96f95857ece83eb54b1ac55ec9dfdbc7cc50fd2c1b7c695c4bb9c46acc43d.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/81240ff2dc63a4a96a07f34c47ceeae7a3af6fee33cfbd64c7c624c9fd90274c.webp"
+    },
+    "avatar:1211": {
+      "path": "Priest",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1211.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/b5f5220ca873cd54e675a42ebb747531bbc95d83e7a8f9de5abaa026b36e87c3.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/b5f5220ca873cd54e675a42ebb747531bbc95d83e7a8f9de5abaa026b36e87c3.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/8b5ff7cdfd61196ad35b88d766479e1b8f582ed0ae5c489196311ce2e4f5113c.webp"
+    },
+    "avatar:1214": {
+      "path": "Warrior",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1214.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/b3d3cd9e9fdc1b0d14f772e21bce4fcfadb24cae18ac2be0a955e34376f34ff9.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/b3d3cd9e9fdc1b0d14f772e21bce4fcfadb24cae18ac2be0a955e34376f34ff9.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/1cc2934262935819facd55968514c7ba702d9460e33016a046876a85e2ccd6b3.webp"
+    },
+    "avatar:1215": {
+      "path": "Shaman",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1215.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/dc59255ba25001ee67d35ec23de5455b1ce65cec87a298740a4e48c9b0ecc27c.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/dc59255ba25001ee67d35ec23de5455b1ce65cec87a298740a4e48c9b0ecc27c.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/c6d088c2e3aa4c6df3092ec6f29200f9a157457629dbc3ad8e5e10d131e03b1d.webp"
+    },
+    "avatar:1221": {
+      "path": "Warrior",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1221.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/eecca74bae443284c467264b97523283aa4cd43be5783c943784a25ff0c4312a.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/eecca74bae443284c467264b97523283aa4cd43be5783c943784a25ff0c4312a.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/820b18100114d7339c9d945f2826c0d8f64602e5f475889b74da3444a828240f.webp"
+    },
+    "avatar:1223": {
+      "path": "Rogue",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1223.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/8b30412bbf9a920e3242bf58b5efd1efe12eed8c63ade5f12fb02fe632aed6df.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/8b30412bbf9a920e3242bf58b5efd1efe12eed8c63ade5f12fb02fe632aed6df.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/dfbe9498eefd92a01972f35fd71aee8c29522822a06a84640c6922860633c44d.webp"
+    },
+    "avatar:1301": {
+      "path": "Priest",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1301.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/e5d92e5cfcef6b058d7d2f7a4cf87547978854cd0f4bcb8ede3dd04f8293b567.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/e5d92e5cfcef6b058d7d2f7a4cf87547978854cd0f4bcb8ede3dd04f8293b567.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/81b01ddd03c15a45db31e27feaf971dbf289ff6e65229335820f4217db1520fd.webp"
+    },
+    "avatar:1302": {
+      "path": "Mage",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1302.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/2f310e396c9adc39d61a7cc09b804c35e871a263d93844513b40f07a3f356673.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/2f310e396c9adc39d61a7cc09b804c35e871a263d93844513b40f07a3f356673.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/0b32e7648f08d92fc1d39485ef628d997918872facee529d7d8228e5c4a02f66.webp"
+    },
+    "avatar:1304": {
+      "path": "Knight",
+      "element": "Imaginary",
+      "portraitPath": "game-assets/character/1304.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/1f6bef0b823302dfa7260ab6f56a71cc13214cf60b8865bea43e624bf65d2bd0.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/1f6bef0b823302dfa7260ab6f56a71cc13214cf60b8865bea43e624bf65d2bd0.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/9aafec0778f7d7f8e239024b31bb788caf77a858251fc829d73a8ac2baceb82d.webp"
+    },
+    "avatar:1312": {
+      "path": "Warrior",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1312.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/fd5eb51642da4714a1998368522b67d1232184a427b5beacf91ceb1f2e642d02.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/fd5eb51642da4714a1998368522b67d1232184a427b5beacf91ceb1f2e642d02.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/9dc415db2ef3ab66e1f25848aaea006dc3b71d1b2ac19c433bf3500046f96b88.webp"
+    },
+    "avatar:1405": {
+      "path": "Mage",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1405.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/2c1047bb1e788ef077470355a45192a4d6f16f67ac702a4cd3bb38afbb102c2b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/2c1047bb1e788ef077470355a45192a4d6f16f67ac702a4cd3bb38afbb102c2b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/0f57cccb3fd14bdd07f2c59f950e2bc7849ce15ed543d4a81a9b874989e41de6.webp"
+    },
+    "avatar:1408": {
+      "path": "Warrior",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1408.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/5aff58be4482ed45494b9dc13a6d0f10b06e3a9fd6fa000a82e757964d303915.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/5aff58be4482ed45494b9dc13a6d0f10b06e3a9fd6fa000a82e757964d303915.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/5b4599860bb2722547b203c60ec2b0ea07f92bf5efb4d22c6271fbae63e92798.webp"
+    },
+    "avatar:1409": {
+      "path": "Memory",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1409.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/d15ead0a25c451de31a7c2192d7ccdf72de944bdcc88a1ae57a00ed6fe00eade.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/d15ead0a25c451de31a7c2192d7ccdf72de944bdcc88a1ae57a00ed6fe00eade.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/feabef3c6d8b896decaebbd71946cee13b2959cee2832b69bb5a209d17c6a907.webp"
+    },
+    "avatar:1412": {
+      "path": "Shaman",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1412.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/67fa8b86d180e66661eb8f50854af9be6ea6c9b53724bb74b6082c726cc64da4.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/67fa8b86d180e66661eb8f50854af9be6ea6c9b53724bb74b6082c726cc64da4.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/a40e0b7b04028f36eae5dd73025a1bf546a475152f82ac83fcd66d9da9c8146b.webp"
+    },
+    "avatar:1413": {
+      "path": "Memory",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1413.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/62251df0fb992ec3350bd99b1af48e187ef68b320551227ca1d1a8b276c2089b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/62251df0fb992ec3350bd99b1af48e187ef68b320551227ca1d1a8b276c2089b.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/27eeb1657cb47a9c0262d8e15b969e47aa900abd11f91b9554e7405b18c77545.webp"
+    },
+    "avatar:1414": {
+      "path": "Knight",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1414.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/6fd1abe7bcbb1f0f02b679bd9eeb593a5e5ee7f7e575771ef300f89c2de1c070.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/6fd1abe7bcbb1f0f02b679bd9eeb593a5e5ee7f7e575771ef300f89c2de1c070.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/04f7209a183fd4f126c1b8d521821aeb2013af6c3b4d71e4de6519eb67208b30.webp"
+    },
+    "avatar:1415": {
+      "path": "Memory",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1415.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/8df8e5d0fd51002da6005c2deb1bd9c45de7a0e52503f4d1191754c4c5e97b26.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/8df8e5d0fd51002da6005c2deb1bd9c45de7a0e52503f4d1191754c4c5e97b26.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/9c05bf23757663344f4b3e77c2d2f5754a401d5360c42f31b75778b2b55dbf2e.webp"
+    },
+    "avatar:1501": {
+      "path": "Elation",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1501.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/a3357e3ac7b1cb0c35496cccca3a86957a28aabd09f9e3cc5eec99948a683607.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/a3357e3ac7b1cb0c35496cccca3a86957a28aabd09f9e3cc5eec99948a683607.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/1d4e271f9721925de6b42f6ab98b91b71818960f173431af177e1f5a41705e52.webp"
+    },
+    "avatar:1503": {
+      "path": "Elation",
+      "element": "Ice",
+      "portraitPath": "game-assets/character/1503.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/0fa7a64cf8ebda51efc6cb2346ebd89afb839c00a91eb002cd0869b3655f1557.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/0fa7a64cf8ebda51efc6cb2346ebd89afb839c00a91eb002cd0869b3655f1557.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/3b927b7c51bd3074acfa67279399439d12f3355e5bfc0638319c46724d75eaf0.webp"
+    },
+    "avatar:1504": {
+      "path": "Rogue",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1504.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/988283ceb667b28a4b7079d98ceff71d894cdb2d18fe6334545132216386d316.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/988283ceb667b28a4b7079d98ceff71d894cdb2d18fe6334545132216386d316.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/abd25bb42e13280e56dd1836eef0e15aafb2282483bd47abb5637845fb4f984b.webp"
+    },
+    "avatar:1505": {
+      "path": "Elation",
+      "element": "Physical",
+      "portraitPath": "game-assets/character/1505.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/5e7dc8518d45aac63c07e4d2df48f7ec3e990bec559a8926c9ecbd2c5a226cb3.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/5e7dc8518d45aac63c07e4d2df48f7ec3e990bec559a8926c9ecbd2c5a226cb3.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/f3d5d9f133201859911efe376f9274d4e9b24838e495c845387d58a8cc774443.webp"
+    },
+    "avatar:1507": {
+      "path": "Warlock",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1507.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/84164fd6675e569eb68be890c1cedc31f20f67d67024e00d22583886440c8c81.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/84164fd6675e569eb68be890c1cedc31f20f67d67024e00d22583886440c8c81.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/cd6f8d1fbc6e99102fa980e9407fca2fd2cfe5c96a3409d0ff4d675c47f11775.webp"
+    },
+    "avatar:1508": {
+      "path": "Mage",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1508.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/00add9f05772a00d1edeca9d6da750060a9c9713cc509d46ca050494258cdeb7.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/00add9f05772a00d1edeca9d6da750060a9c9713cc509d46ca050494258cdeb7.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/9ce2633237f5ad5106b1ab1927fbb97f402e6efcbd6d0cde7cdf427e89638f79.webp"
+    },
+    "avatar:1509": {
+      "path": "Warrior",
+      "element": "Thunder",
+      "portraitPath": "game-assets/character/1509.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/9c3e469b04632a4a9ba3cb68331604003ae34effab9d1612835febd1ce63cfcb.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/9c3e469b04632a4a9ba3cb68331604003ae34effab9d1612835febd1ce63cfcb.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/9171b026eb20c03afc58ef030c9e4a60f1adae980f342ff0672656155c2cea6c.webp"
+    },
+    "avatar:1510": {
+      "path": "Mage",
+      "element": "Fire",
+      "portraitPath": "game-assets/character/1510.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/cc386af846343f16072d56cbbb322c54fcbce7a183fbb372296389f894a9071c.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/cc386af846343f16072d56cbbb322c54fcbce7a183fbb372296389f894a9071c.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/7e891f65c465f9113debe2807edfc0548662b9805020f8ad863ab73b1811b29f.webp"
+    },
+    "avatar:1512": {
+      "path": "Memory",
+      "element": "Wind",
+      "portraitPath": "game-assets/character/1512.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/9397c0563a986b2da13689f276efcfcd6638c5fdba33924c71709fd9e0e2786f.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/9397c0563a986b2da13689f276efcfcd6638c5fdba33924c71709fd9e0e2786f.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/d3ca5e46d6d28437e03420eda89194a8642c62d16efbca5cab6611ee8d7fc3a2.webp"
+    },
+    "avatar:1513": {
+      "path": "Elation",
+      "element": "Quantum",
+      "portraitPath": "game-assets/character/1513.webp",
+      "revealArtwork": {
+        "path": "game-assets/warp/b0036bbb38a6f5edbdf8eb5e06dac442931026787009ecb40fa08bebbe21d5bf.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "resultPortrait": {
+        "path": "game-assets/warp/b0036bbb38a6f5edbdf8eb5e06dac442931026787009ecb40fa08bebbe21d5bf.webp",
+        "width": 2048,
+        "height": 2048
+      },
+      "artworkPath": "game-assets/warp/490687f552f3d7ee4432e60043240ca00f32a1418bd6acff7660d3f822419695.webp"
+    },
+    "light-cone:20000": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/05d865d48b8c704f1eb60593a8dafd93777e9229a0e3949b3f210c2829477b91.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/aca88cb5f99e4f06f425d3e1e17d31deb45d3f923cb2bdcd50d5d7104f94d2c0.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/774348f76201dfde0c8af1cd8fdb72ccc1bc4730b0086eafe7335cd2967a2f86.webp"
+    },
+    "light-cone:20001": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/8c93c979b820860ae4c4c12b350812323155c4ecc1184c10600db70ddafd2ea2.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/5329c34bafd789d937b28e2b38563fd1bf0a8762ce1b05c18dcf0230865e47fb.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/b43ec8163827e185cc60ada561a15c182e42da31386399ca3ff1042e58df9971.webp"
+    },
+    "light-cone:20002": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/7861ef4086a41cd5af9a3cd85fca1710668920a27eff106608a4d5fe15072959.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/d723436e553a6409a572f7a5d1ab991b72678294bb8df21afc3b3e4fc85f1736.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/ac0d08b04013edf897801f0fb6689ac0e7a45b37af4757c732f4bfb58d3c6e0c.webp"
+    },
+    "light-cone:20003": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/fca41f2eca9b219e06ee602fc9a4d733a0bf4c1ddf9fe197fdba88c3edcbff24.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/f126222b3a61e60651399016bdc7f2f68b8e76303eb118271417fb50e1cee9a1.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/fb962d6c798504df913429b075d0ea5b3fa4fdfeae5db65cf5d2463595ad4ff7.webp"
+    },
+    "light-cone:20004": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/baf6828babc6197ca863df1fdd542d09cef0fd4bc86c0f31658fe3102a176c9b.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/0409cfbdb988817f6ed71137f7be4f6398ec755bad2d05ad31f6aacf8d633c69.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/61c191c0b66355724c3eb61313d49d73acc7286ed0ec23931954922c13d93351.webp"
+    },
+    "light-cone:20005": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/d197b3691bd010f6b9794ccb7a2b958c48dfd18b70283c8a5e3471d460dbe1b9.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/0523c90df9c5233b896aec8936dfa15297dbfb264ed1752ab358177dd1053713.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/6f63f45ff1d624d9e57a91b308a34515076995da25849fd203847e18f35f1aff.webp"
+    },
+    "light-cone:20006": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/589a734adf3d1ddd0ecb66a81fa068597f4fc9bb4f40ee75ae09b3733b806c88.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/1268ecf3d1141e876005be8c410c75b037f4e0eca8dd1ea30551cedecbf9a12c.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/0ac5f547d75a75bcfdfcc012962ce5fa8641bc302ff1305818c24cfce5aa2180.webp"
+    },
+    "light-cone:20007": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/f75a1aa12444d8378e8fe5af90152fd29220fe31e21657f02f658a81099474e7.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/75f8f24d484022d57520c286bcefabc1023204503247aa26b50aa2e956d89ebc.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/9f25b0240238b29c11f0164e82cd606b2668964be4f35b640863cbac068f1453.webp"
+    },
+    "light-cone:20008": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/858289b27663b7cdb7c4dd5c9c56253a09bb424a95422db1fad42a0c34c88a73.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/e8652ebdbec5118ea7217e6d6e37e96ad8cb688fc7e8fabb837dda9812010be8.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/7729265999e68fd20a7ba36b7140404e41f3067a32910ef68cb7cd3e27dcc367.webp"
+    },
+    "light-cone:20009": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/1b1246f00782745202cb2209876786f3609127f4f28aed312383739bcd2f17e5.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/b79deb96e9d1fdf3636a4a8f9e92f18e829e882b79d93300b1c07e2119bab1b5.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/8a9d2ee46939a71d9116951f1b37a5f7280c75b983c2c379c3d6ebd6da43a05d.webp"
+    },
+    "light-cone:20010": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/83dd6c87d1d365fa1eab3814d36e23238ea2886ea0b280f347f5bab84f6c1fac.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/7b494338fefed735d381c326476fef179cd6101276d1bfa94fd2b9b507473a11.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/3191d7ed033a5dcc57141c9544efc4c76c830a6baab77ab0ef8aaaa75929e429.webp"
+    },
+    "light-cone:20011": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/6206ad106e747405b4cafbc1d4f144b3e43f1e83b14e473a6aac285f7945dfaa.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/a49721f936f94beb0d94d6ec56d9d04a80777088f906d2dea99f55ee3a1b60cc.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/48979982e109adfe34b8047957a5c642b4132a8b3ffbe54b370dec20d28aa49e.webp"
+    },
+    "light-cone:20012": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/77389bae5ea4ce1a569c173030545aa75e5c45ea446cfbb565dd7b05ef7299b0.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/5b1eaf6b923f8fd97f232118624631ba2cc68532d1e6c5637549a4e9251a64d5.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/cfac934df3c3470559c77e06ea0a73b81209fcf10566a95219f00abb27a4ca9a.webp"
+    },
+    "light-cone:20013": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/40d742c1d967b4f83fe5a0e832f4a8826d4a3798f488327c73e7f7558c95b740.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/50e1510cc777c44c4965c50ed90a14fbc76a9285170dcfce863fe5bfb29f0e47.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/62f6247b0566454c2e46b5039a92f0d2f20d63ce749c1ae4cfbc816b4b64c915.webp"
+    },
+    "light-cone:20014": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/39620869b11b9947a47eba87135c5c19d784907f19ad142c1b6734a66e2fb5cb.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/45974635961b51dcfb022d3b7894d999238789e4d262c6d8abfe1c2b9d697fb7.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/b66cadb51dfbd947a95bc7d521635e8e3cec84dde4860b0b13dbc885de0d2b41.webp"
+    },
+    "light-cone:20015": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/f83a43a0246b7c3d719d3b84cb39671105b700c38c8c13d8cff17e75c1fab58a.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/b354af6fadf166ed722175eb287385a5c75a0749f68c28b3ef335edb7802e055.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/267336a535a1c474135fc96cb03e5663ebe038a5b50c21514dcebcac6a930e67.webp"
+    },
+    "light-cone:20016": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/770ac1e5f8cf7f0c2e0993bcd5049db1b4daaf1799effaa4aaf183875599442b.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/4e5eb4bfc280a03b83e4e497c774333f3eceac494acd6454dfed6b833a26683b.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/e6161e204fdda98acb7dbb56dcfc1abb51a8805849794a1ed4b62c8a5c678678.webp"
+    },
+    "light-cone:20017": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/bd184379f8bd76f1edf15e17160334181b65e2a9f720ff224687eff312ec566f.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/7ec155cc35f905c3134c08172dccd9e62e1450cda9a64520d783d5901abce491.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/ac8d6e88ca80d7f47facd646a2924261c340961480720d789d2f0d4e1b9319d4.webp"
+    },
+    "light-cone:20018": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/a1852654d11b04d07f1237a8a9b8c4432b56cbce1e3377d25fcdd83d8ea56c8b.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/89c95cd0f8b56837c44fe49f360545eeb6e00a14988ad89095fe9d7a44140e5a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/36503ed3b0b3a8fb61a1e19c6aa977b475cebdd83c52366a9c5acc840e4e530f.webp"
+    },
+    "light-cone:20019": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/8adcdaf09cb8c5bb95e16fb4b033df9695536b3f6b05f24ebe15c0e4263d76e5.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/76271fe8dc546ac000846dd18e614281a6a61119bd57d0541aedf04478e7a81f.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/1a98c6d4f092c54ca917aae1c643314dba7cbd0ac15ce70de8addcc45c6c4946.webp"
+    },
+    "light-cone:20020": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/9c8dda70c3c7ccf5db2f198ff291d5582fc5dc9551f99cacd92a46360585a082.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/cc90e54c643bfb49f3952cef58eb9136b175ba59a28b0ef0b48857967ee85c6b.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/2ba8d69b02167d629f6b0f1fd80dad5289478773732c4417ba5f62493c21c81a.webp"
+    },
+    "light-cone:20021": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/64ce1945cff752186c143e6d7462f76d15ae4fd9b9b4c5c5a00811a2ba7959b1.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/98148dfe4cb16c53485000ab1deed33f9b51a5e119d1694207d1e902e4fc74e6.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/6e626462d1db36201d78accde3145de8f2cf1bb76bd28c28059dfb3134ae1880.webp"
+    },
+    "light-cone:20022": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/e6a7c711e74a960d7bd7b97449043fd202a183d5dad475b923d6f4f3ec07d4fc.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/fdf2bbf2fb450389e982b6334cf876ad602f7dbb54a2b16aec4703f28b9042bf.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/e6127a76ec012f53a5516bc685763e9d038d050175c404df6389213b53b7c102.webp"
+    },
+    "light-cone:20023": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/0d10b9d7c9100bdeb16fb1f530fa10ea3f733b5b0d5aa1d962ae03bf14ce58fe.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/3113a9f2a8b8413746e8f903b2d9d03b61421baef86e1248f7b980bfc7265664.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/5ae7b860580b2eee9471932f5f3fd5d058775b60d9653d32654b924e86b7f030.webp"
+    },
+    "light-cone:20024": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/992d5bb16ba625dd3851dea5fae67afcae60ef7ef2d7e12871074100e0b7209a.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/d0a649687daadbc95bc45858f5e33da073b3a523fd2f5b2107c06100f8b98327.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/3947d41c0f730ba1ef236784c42cd4daa59b6056cec50840fd90175849321923.webp"
+    },
+    "light-cone:21000": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/d79a50dce8a8a32014af7e319482bb3079514fada258b5852cf8bb83894bc64c.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/fd6ea9a3dfe87abe3afe38a723a5de593b09e43f6f0a880141876c61e0a89263.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/aaaf7af5d09b47854d09c9db623a7afc227dc1bc2f979cf0d8649817753ac759.webp"
+    },
+    "light-cone:21001": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/7525909f612521233278e107d4c5eab7f0b9f32982db4aeb2475a96f45e6cf91.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/5226b418d5536c05632e4713918bd1086f22a092df37d912f999c52b52e97281.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/6f21d7f189e3e1a35704a71bf3acdd71a2776ab5812986363a714e9e98344172.webp"
+    },
+    "light-cone:21002": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/543b0550a84fdf80db514b1601b05f0fb92aa6fdc63e6646c08cb2aa8dee293a.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/be30aad1b299864091e9452d22d946be5e6f39db650b87c321387972957e82e8.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/10ad09f7ac7e96a68d977f89d056a98aae5967135554a8f6127e8cf32cecf39b.webp"
+    },
+    "light-cone:21003": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/cd8f6a1a89a063d53829ceab0a713e9f1dcfc4da887c6e223252191477cf2ff5.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/506bb899c26f9eea00cce39438822927eaf191ec4dce31363ac2cffc12e773f2.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/4672cf023815e032a1941971aaa22584a21c90f39811c30a782a793dd528e427.webp"
+    },
+    "light-cone:21004": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/de7ff7c409071de0036d571b58d5a4b37bfcae56f142dc6e6dd8572f017efead.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/d8e3a88729d74de9a22aecb044a82a55234f60f1119fafa14673c4b673178a05.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/68d976c4edde5c0f61246e0603c2f526ba899613c6eb5420759fe9063f3ebc1e.webp"
+    },
+    "light-cone:21005": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/e170c81d6bfdc92e9f60f920880eb85cfdd55dbe263396c7ab57adfb255cf3d5.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/839e6235f8e990583e0901b90edc9826f16ad9c08c4de986ce0748e962d9407d.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/5f652892e6acabaf344a43ddf9d171083a35b3c469842dbbed709ab15c4c2924.webp"
+    },
+    "light-cone:21006": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/07b670e3c05386b97812fe23e808196b7b9d75f866f818fd0dbe821cf67010a0.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/093de55be6ddb9cad75e284ed586badec7872508d3b156904ba421e27ad336f9.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/e21c122974e846e0bb8b3a6dc3dcf388961c933e2227c357cefe05f312d70836.webp"
+    },
+    "light-cone:21007": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/0b00111bf4722b51ceaa5827df98309d4f9592c3049ca9f78e39904ac40e8779.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/31893df4a01c56a7d048ca789e30cf59e30ba81c094f23f3672da0528b2e08dc.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/59a2e9c9342b41f6536450f702f3d68d246a68e65ead95920f02ea56a55336a8.webp"
+    },
+    "light-cone:21008": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/8ba30575a978dc96f2df8f9af3b92a21ad7e5504f382c232ea8b02aeb6a4ebf3.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/a9950f12bb48c50a6501439ad9be51c36355453333a93a51ef037172e63318bd.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/89bab316413d6943e842fc9715fff8648f6ea8335f5cdb22bcbae2912b67e3c7.webp"
+    },
+    "light-cone:21009": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/8a98ef58135865858d05a3aacdcae51d041be1f91000aff9334e691411bcb89a.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/e6f29cd6da0610ca8cb01e2ed928ce0031ba2039a3b48787af8e030c77ef0ea4.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/324fee5e3bcab531ace55970687aa47ad459193fe27c7571273065f91ba7da48.webp"
+    },
+    "light-cone:21010": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/6001e6836113e84077693a87a6ac1910eb90fc35383b38bb8f1b1ae43561bee4.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/ed3989e572aa0e12be25c92192f549940dcffc1a1d94b1bb531a47e1daf4ef3d.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/9461c949319f3f951f2b7a858b3937c6f7a8aebc3d86bb915ba6f313c244da0e.webp"
+    },
+    "light-cone:21011": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/7edba393f8188a098c6dd3e0184351c75032116bf12af54272a2a718b2677c63.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/96c9138a1ab604de6ec3b149af534fb6a9a0d137ad0c03a0ed403faebeb18db1.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/99d2bf2f588c62b1d1935af5158b4d909b83f6d78c4f5af820bc73d467101d0c.webp"
+    },
+    "light-cone:21012": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/caa7a8b5eb12ae0291391ad55f99dfd426bd40682bdb66b69e4b1a4bb3994768.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/9dddb7448640ffcb899d97bfb9fe3f035736de477e41a0893d0a249ec6ff5f76.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/87036cff94d9d6e6aae14c2edad93ff4e390fe4e5542b79aba9df2fa56ed1fd2.webp"
+    },
+    "light-cone:21013": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/c3a7c6d86e77ee073c53058d6d19958feba7edd8c7be621050bfdc42c286a1ff.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/044ed45f2fa183c6134f0be13c0a0c04a9bbc7e02e78e16edae47c08976cf002.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/cde2bed9d6de272d83f3af8dd2b9aec9952e68f8b1ea65a93ad8739002aa57dd.webp"
+    },
+    "light-cone:21014": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/2f5d62f4e624e5f4952de2e92fe5e1e7f5691323bdf866855292fff95b89de14.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/6c8e3b3b95bcca6e7da18a68777113342afe39d99cc468f40a054f7c4b5b6bb3.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/b036761958c03bf2bb57b838eaf826a1a7cab38ac2ed91bc6d59900bc9f5006f.webp"
+    },
+    "light-cone:21015": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/88c7fcc3e3ddbe043bca4ccd5c7eee9d5b42c42d38ab1edb7ec89a3e52834c4d.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/a1fa53b5d2df656f91192d01b2c20a725e62572e24f92fde1a3ed92ab2030874.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/ba1a98d8f9d514484dc6d38188b0dea90b8f9482d2ec73ee6a50d0adccf14182.webp"
+    },
+    "light-cone:21016": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/d5daee715ed1f209aa983270dbb8ff284e1544bc8f40e36e5ad5f7307531ce4c.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/35d2a9be55d29615dd8601b7dd71aa1982f9340dca53027bf604ce20a8f056b3.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/dc811580b18dc12bc34d59e1809ed281ceb68007da0a704810f50b8c8a5e2964.webp"
+    },
+    "light-cone:21017": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/cfe900a90cbed1bebb5287efdb252deb5f96bc43cf8ab322908822918c7f5e6e.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/81a4e54e799907808130ac140ca7702e1f5150af50593fe105b244b76dd1265c.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/77f5d19911bbedfbd9758ca20a08f292d1c917ce0d27fe1734a4ced08948bb49.webp"
+    },
+    "light-cone:21018": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/ffa71f15f65ece24f5b3f1c329bc9ff38e78e1e5dd12b04205e7e42381ebd184.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/b9654fa19500bdffc9b900680e1af9e6d42d38df998da12774dcb41579088a7a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/087425039384a15a2cda15b544b6e44d59e978be0446dbfcac721638e8fd3566.webp"
+    },
+    "light-cone:21019": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/b39c569ddd308fad0834e6902f53dccb674bd596d167727bfc0ab79bac4ebc3b.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/f90fa8cf171db075e84235028d8c4fbdc4487d44484c69606d75ea295ea35184.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/2c55b5b5810e479c18d94b325e00206150c3431bfba300205c5ccacdc80f8a06.webp"
+    },
+    "light-cone:21020": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/13c10dedd8c423135ee9c05fe0527fa89830af618b264adbb03a4af5c4689132.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/9ab321b3af59470f14d3efd2057d5d52bb6b8ab4b20640b3a3b423fb4052ab55.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/35a77cd62cbce8505592a5a8e6b0a5c061bac70a5bf67f45b4f381a19db9ea25.webp"
+    },
+    "light-cone:21042": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/f29e4afc7f1c1d70542606b9a3b1cd909efc042b4d00caf688c2243fb0ea3479.webp",
+        "width": 902,
+        "height": 1258
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/dd1170e49fab80347a1088c9f792d69ba5bff68ee45849a6c8dd41261eaa9e7a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/d8634009cf67dc433f6e53beafb485987980a24e2ee771803c00aae92493d228.webp"
+    },
+    "light-cone:21043": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/db87d5a2813e54aa877df85742e27d9aaed8035f4ebce5e556ab7e6541b8daf9.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/99b707d0e59f50da40f89913f9c315bc50aaa6b8118dd517868c92c52080d89b.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/483035a1b4bff6a63f339d3b07c72bcda0e4a133c57b6f472a2fa3ba55ee48f2.webp"
+    },
+    "light-cone:21044": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/9efb6f6b156b150748cd6eec79c17da67421e22a3c5658a7a7be410b2e0210c6.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/c62c674fdc31f03a1b2a75fd83ae674c0653120bf7b71a7dd33d1e7b57fbbb65.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/3dd4717330283da4cde61b525a36c0c8a8ef87eb3a965866d597cfb899de45c0.webp"
+    },
+    "light-cone:21045": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/79faf200f5768305f2a169b3dc57ad3304cc9a3a761b254ce4ecaac21c43efd9.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/814a521752505d37f204dc6a4564a2c3b35af85266b38ccfcebdda7e557a45a9.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/d40e84d2f2df6ab3d57aea6a3ef942b2513a062e62606f5f740141067f2b3710.webp"
+    },
+    "light-cone:21046": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/c9ae9bcbfc8fc5521d67a21d1f511218cd26c5e0aba9af02ba82b9c8055982d7.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/eab023d9bad97e8b8b1e641d6064a737039a11b97461c6a7b8e0954b37dd5098.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/dfada6b194969e4e1d6dc431259e3530aa9a04874fefd0562ea52b55891dc8a7.webp"
+    },
+    "light-cone:21047": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/22a183b4e9d0a3647894977820c0a9dcfaf5093184b0842cea64e13d0c01824d.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/5fa80b7e86fbb56a2749b4dc19412437fbc1b7a21825a9b104d9e8d98ce8d229.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/735582440e5862b18fa08d9f5ac0d6641429cdf8529de0f503a8a3a987295e60.webp"
+    },
+    "light-cone:21048": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/86458c81065cece0d0ae7322a9d4e179047ef3372d766303b676cb713d991697.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/8b75eddf094a5295358b0e7b32721e1cff02f7356228d5c6eef8a638dc237a19.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/52920c634cbcbf0add0f914ad5ddac44e99a48d90495bfd99f8bb674e382c5b3.webp"
+    },
+    "light-cone:21051": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/f8aab22a5ca5feb894ad2692fb9ccbd1ea1fb518f3d69b68d871f2471a7b5132.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/dd2e7c3e1a7538482dbbcf1e1b15b7491b7b21a501f8ba41a99e8d0206fc1141.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/cf3a35ded568c92195e6748bac360a136c765aeb42dee6502ced9841a46142e6.webp"
+    },
+    "light-cone:21054": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/814df82cba6b751844937f0cb921867711cf93bb62e1737bfb488e4f8971ba45.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/d5dac0f850a5eac1c73886812c1485f1c68eda47bee277cc915256f7ca7ef73e.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/915a8ab506bda737935d43c467b793bb5d73b2863f1d2b56a25070ada9ad849e.webp"
+    },
+    "light-cone:21066": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/6a5de31d5728799a238f0728d0e58bcd926655372cc1e270155304d62c2cf032.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/257d5484b29ecb0582566afdeb31340566faa241302e0e3bde6bdd5e7821dc15.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/25d7548a83d9e3ef6256178b2f448e7efc2d46bbc4f6a8abc9e20c8fb5cf9b9a.webp"
+    },
+    "light-cone:23000": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/7070bd09fe5e1042a248efbfcf29ccf9114a670c299614a00aea03c3f56561c8.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/251335a66a4a324359fa1dad20227f44d31eae045ecaa054e94aa99ae31f0942.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/fabb3d8c3ffafa710da0fc0ba84fb1b1955080f6b9713e775403f113a566d174.webp"
+    },
+    "light-cone:23002": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/eb30a3221564c8ddcdff8d7e572292d3f233a70b01e1e15dbcba754c2d660417.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/1cf635d399568f77183a57e1005971a343dee05af375654d32a63fa29e6c4c89.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/60977c1bea5f36d5453ad129502b26338913b6fea01c2091b2bd3c5584db72e1.webp"
+    },
+    "light-cone:23003": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/cc23318acb3ef935114533d510b152aa211a8fb10c07da643bf29e3bb08c2e17.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/1ac5f98fbec0fdbbe29124c53f27e7b5f90545c2b329a39f6ca212327f866a7c.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/dd37fd67549b8c446fc7a790dc2b1a43098937fbc5bae11e47eb78862a603b07.webp"
+    },
+    "light-cone:23004": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/b98ae4d94ecd393360f0156e90b2ed9aab2ab16ac0e63fa5e6db3a8694aa7e4b.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/55d4383f4d827242cc87036262980919af7552dd23d7f3e5c006a8643bbb10c8.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/3b481c24a931bcbd6990339239ee62826dd0c2d18295eb580414705c0eca24fc.webp"
+    },
+    "light-cone:23005": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/b126dcbc58e3ada219c5cd995e9b0f329d3a5ec9b0367d10b6984e06ba3eda69.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/12660ed074334379298d84ef92096bea83d9610edf01b182b55d625141e6ae13.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/e22016de22956a7bf15702a74a3c60ff2166265ebee0ed01cd35c1061e4d356c.webp"
+    },
+    "light-cone:23012": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/31f2802624630e32c5c9f874bd06d143f9b071ef4b75c8a840e885c00512c528.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/13bf4ec9fa3071758a96e7c8c503491d8c86d6ca9f61aa35c6c3e99546b8d03c.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/7126e1ba96758b031ed979e10cb7d10bc6cc141f4a839122f1af137f0cd84198.webp"
+    },
+    "light-cone:23013": {
+      "path": "Priest",
+      "revealArtwork": {
+        "path": "game-assets/warp/fe72a4527c07ee2ed14cb694192099fa7136603e64ba260477940d5942f93999.webp",
+        "width": 902,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/e29261244ed03f48470c1f5c3a52ffc381932419e07a819fa9e2cf55ede3d9de.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/7eb90b7d9f750ec92e5ec3b93a6b854c2b1d9b63759df5fd721cc12c283a72a0.webp"
+    },
+    "light-cone:23023": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/24387dbdb6c399ce29842dc902049ff7eab31bca4924f784a87534746c9e4564.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/87bcce7fba447e5179b87be46504151deff301de0ddebccd9a54bb09127aea95.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/139797e3523348975c1e011d18feeaf5143fa8bf7c1b6906ae674343663435fc.webp"
+    },
+    "light-cone:23041": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/af5e9284050a208557d0b758e8c971f114d0da86423a36b5859b08277ac74799.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/9e9e5851b66e4ae6c25643ef7b21d02e35889b07453cf649c9d7712b33c9b051.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/b63f8cbdf2b6fe0c16a8074f79cce850baca42331e7902e3d4a34ee3740a9d4e.webp"
+    },
+    "light-cone:23042": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/bf2dde3c850f22b97c4959b2342612d6003feb843c79f9aaa242a28e258c7cbb.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/87fac8a99e9deb1ed9e722a8aaab7e04d89c5f0b6717d63aae40d948ca900f4a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/a6aecb426cf56a4db74c535af6c3b1184deeecc7e9f4ca30b8981958f429f722.webp"
+    },
+    "light-cone:23044": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/32a4ce8ac54d7002d51768c5a5523bb4c91fe1215899144dc9d71dc4cbec1416.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/b8f8004155a96a50d270db21e6d18fb49fd88fb12b9358a05cdb29a6d8e46be4.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/269af13d6ef27700aa6d5973912230dd58d1a7b538f9fc499c8c24fcea51c7e2.webp"
+    },
+    "light-cone:23045": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/23fb52843bdf27b074ea45f288126ae9f6929a5c93735ff45a9034992e5a6fcb.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/9475ee8ab6bf913034647285736e916ed3f903a823b02133dbcbbe659ec516a2.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/79b410aac4d82809a56d6c5a59c2ed2bca989f770f71ee06d1a54f4c888abce9.webp"
+    },
+    "light-cone:23046": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/36d1e7b4acbbc3083564b0d80ce38764f15be8b63d568125f5a68d9fca180d1a.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/a8473e58a45f32745ac5ea1c11879b82acb5bd4394bfeb8b44ce1f71a9022344.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/1b11f6f4b886bb802b650c7d791f0d6fcb6d4e3ffc9967fb84e8b10506ad5f2d.webp"
+    },
+    "light-cone:23048": {
+      "path": "Shaman",
+      "revealArtwork": {
+        "path": "game-assets/warp/1a4fac401295ca367b654200ae01a6b8b635939602bc13cfa9b9ae35a0eb570a.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/631f31674661b2ce41ec744fc65ee60bd59753ab586c60b261bae26102affbc5.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/7d2981dfeeae847119c59dcae6907befdd378561472d35c60182529929935ea1.webp"
+    },
+    "light-cone:23049": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/e2c8cfb626c52da570f865c5166b0f044f4246dfbb32d6945d4383bc7195a335.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/df11ff9a7c320b0775e173ffe17f9dfafaeeb74fa161394fdad0ce36a4286a94.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/6a8930455fd65980004364b8b9a7377e312fabef9e72c8fdc511016af5d2b06b.webp"
+    },
+    "light-cone:23051": {
+      "path": "Knight",
+      "revealArtwork": {
+        "path": "game-assets/warp/39196b8cfd7e46a104ee80892be5f5f3507b6f97cd9ce1217b847b2e0209a4e5.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/b14aa2ceb093d3cd7b66b99b677eabd3f962d95bfed68b17b93f728093af1d9a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/c8063d7d81e5f2a569a5dd2c383ac822a5c544b4fc981ea218bcc218d02002e7.webp"
+    },
+    "light-cone:23052": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/841764d37b1f5cbee05edf4ca6a115a52dfb89f4842910c4c35184e05326514d.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/bcdb9cc61a36e0f879f80ce899a554cf0ef521758415812564fdc0836c94281d.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/ee55bc26f7bbafa6e5721850afcb6647fc36e998d3921f4d80af9e2bb89f4a59.webp"
+    },
+    "light-cone:23053": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/10c1743301a4deb69545d6bf8afbd7083cb5b784fcd1f8d6d346dd37b9d3b870.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/cbe8771130088f6e0139f26cd1409b569c4c652fa7b316cc591fa877b5057d7f.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/e460423b8fcca14d843b9ea3b589e0284c727abbb0720a64f81acad0b3624a34.webp"
+    },
+    "light-cone:23055": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/fe171ac4e2340ca3e82b9dee446cca11fd08d79ce48f88c8fba11866c746367e.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/f87da120a340f70eb690afae00403d515be00d41769d49ee5e719d1b706c11dd.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/65a1430fcf0b8435a7b8342828e2e163034f2025d96023af65335240b5f1c117.webp"
+    },
+    "light-cone:23056": {
+      "path": "Rogue",
+      "revealArtwork": {
+        "path": "game-assets/warp/eb1897ef8680dca4ffd2f52c21c241396652b60d0a134d822ed2025537404b59.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/c0dd948403437d87a7d320b2d8c41bc4b6732324e16750496b9e9239f955608a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/8addde65cfd08f8abc73b447020872db67c782bcee560fecbf62fd37b59c7d01.webp"
+    },
+    "light-cone:23058": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/2832c6db39237929ff19df292fb92f9f21691f8155d7c30ed7ac43b3e701ec35.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/77a7a7103e1aa9e625dc19a24b0c361753568f1f882d96d1f0d9efde4926328a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/7dcbd3f592bf51caa9a9e2e9bb0e118275b1ffd3d6a5733f0cf57ea0dee9d62a.webp"
+    },
+    "light-cone:23059": {
+      "path": "Warlock",
+      "revealArtwork": {
+        "path": "game-assets/warp/8b1d9649af079622b36c20cfaf17843e6bd9795afb336a100ccda1de9f68a31d.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/6b223dd265d3671ee7858b5b328952a799bfe882a36bc322ebaa93dc8686d403.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/073a4a0356e59661740685605388d2f1131e33634ab850b0ef2ad90f570f738c.webp"
+    },
+    "light-cone:23060": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/27477843fbbaf67fe46623beb981231b036e3688f96abe6251f9edab91e5e0b6.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/02e1f7c7effa19dbbc02b3aeb4707132e0794c9a25dd2a51ae2bec48f93f1a4a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/a0d8c1f16a801bc2d37186f25ac8124d61adc5332dbffd64e36e6ee47b68240f.webp"
+    },
+    "light-cone:23061": {
+      "path": "Mage",
+      "revealArtwork": {
+        "path": "game-assets/warp/328fbae73628a235cd56dc4f98cfb6739201b8394879fb9f4388f21b099f2c17.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/5904f357dcb53bb036f2f499bc623e4261ebac8029f17c3582be8fe9dc7bf8dc.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/44627f7928f408b92d1e6c9b724faab8c9ff90aa8adf5f816d6f74cf93a194a4.webp"
+    },
+    "light-cone:23062": {
+      "path": "Warrior",
+      "revealArtwork": {
+        "path": "game-assets/warp/0d7427c4c395f7f65f6391115ba340c33af524afa7641a0167029e6919bf8c93.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/6f65ccd3a14697624de00ba6ccd35409ecfff4ffe6e4dbf9ab4be87a2e271f7a.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/15e4b91587fc0f192eb00f179629d65ac0c019a7acf2abab5bcd7f58bae6762e.webp"
+    },
+    "light-cone:23063": {
+      "path": "Memory",
+      "revealArtwork": {
+        "path": "game-assets/warp/131f5860c3fe077abf58d26cef092067ce3cc0facbd3a77a1b860171f07e14a7.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/43cb56ac3e29f4c71c3f3f1f783294fa219cb0c25eb44c9af4a71d02e2c6197b.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/475d8c9225c9133b8be0d61fa159f2b05df4a7052ec5faf8e82f17d33b23d2b6.webp"
+    },
+    "light-cone:23064": {
+      "path": "Elation",
+      "revealArtwork": {
+        "path": "game-assets/warp/ea893f6d5282eb81460a0247dcdd8f64e636d18c838ab6373add03499c3dec18.webp",
+        "width": 904,
+        "height": 1260
+      },
+      "lightConePreview": {
+        "path": "game-assets/warp/91be6d06cbd4826c8d79ef386e171625bab77f178a7dc04360d509d6ca48ede6.webp",
+        "width": 348,
+        "height": 408
+      },
+      "artworkPath": "game-assets/warp/a203779e0fe72d1fbc4b648175f0d6a975d0be05cfe74fba388b9ef908bb5c52.webp"
+    }
+  },
+  "paths": {
+    "Knight": {
+      "names": {
+        "zh-CN": "存护",
+        "en": "Preservation"
+      },
+      "iconPath": "game-assets/warp/cc49425ba565afefe18c48dedb6856b280f3f904c88e42e6869dbc093d5aa978.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/41428b76eb3179d22ce0a47ffe5dbebd7a8821ff052d4183e981eb5e26bb186b.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Rogue": {
+      "names": {
+        "zh-CN": "巡猎",
+        "en": "The Hunt"
+      },
+      "iconPath": "game-assets/warp/22fee36b382b179539507229b3d87ca4a53f9c1a7cab83f8f7da5c77140ef0a7.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/31cba801502dcc11247f9780f6b923cede4f73521aea25e79c045f73b21c320d.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Mage": {
+      "names": {
+        "zh-CN": "智识",
+        "en": "Erudition"
+      },
+      "iconPath": "game-assets/warp/362a6e0a68292746b0434604d0a6ef60c0348abf2fc4ec00e5d5f2f6ba4c69e4.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/53a4754194b2a9405abe0cad66b4b679ef2ec7d59116dedeebcc60e9e10b3953.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Warlock": {
+      "names": {
+        "zh-CN": "虚无",
+        "en": "Nihility"
+      },
+      "iconPath": "game-assets/warp/e1d4e659eee5d18388bdc8c8d735f968a126d81eba3c69e393d7895a09527a3c.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/5c5c97764c4813dbe9068cb3f9ed11e7eb908e373dc5fb80d1b3762c0be8220c.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Warrior": {
+      "names": {
+        "zh-CN": "毁灭",
+        "en": "Destruction"
+      },
+      "iconPath": "game-assets/warp/f4ac34b556d74f2a1b66ea9411e353f31fd24e40a6fd613ea406a2c86051e6e3.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/71501b213eb181bb3d8c755c896e345dd2359b60fc0080cff4114efaa8405092.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Shaman": {
+      "names": {
+        "zh-CN": "同谐",
+        "en": "Harmony"
+      },
+      "iconPath": "game-assets/warp/6049999f673a4abe826d1ac07c5df97acf21e2221e1702c5a0e9b753c05cb2bd.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/d816a1969800911d9e421a06a21225e24181e35c97ea8b4dab6756a9d355730b.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Priest": {
+      "names": {
+        "zh-CN": "丰饶",
+        "en": "Abundance"
+      },
+      "iconPath": "game-assets/warp/b166ca94a5bf279269fa67b48b40f78ada12abd233423fc5d0139d85aca45073.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/e2d7ed1b69579e9d4142ee315384d55b11630893c8d956a9c6b48986cdcbd533.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Memory": {
+      "names": {
+        "zh-CN": "记忆",
+        "en": "Remembrance"
+      },
+      "iconPath": "game-assets/warp/db7af528a5a23561cd570de127cb7c4bbea7ed04ffb1d73719f4aa46f22f7d68.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/c4807f0bab10778eccedb47425d6075306f92a8c372133d0df83482c3974603b.webp",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "Elation": {
+      "names": {
+        "zh-CN": "欢愉",
+        "en": "Elation"
+      },
+      "iconPath": "game-assets/warp/b99b8ee1834efad04cf59e7fca939592ec65f5f449756cceb7ac4145dcdcfeb2.webp",
+      "revealIcon": {
+        "path": "game-assets/warp/77e902f07d27dfdd63d907fc6c4104a8c579692b719bf47ccdd490e8225cf42f.webp",
+        "width": 512,
+        "height": 512
+      }
+    }
+  },
+  "elements": {
+    "Ice": {
+      "names": {
+        "zh-CN": "冰",
+        "en": "Ice"
+      },
+      "iconPath": "game-assets/warp/9089f9c5d1c56416597699783a7c40bf2d38b90c3bd183374ab0c7b086631dff.webp",
+      "color": "#47C7FD"
+    },
+    "Wind": {
+      "names": {
+        "zh-CN": "风",
+        "en": "Wind"
+      },
+      "iconPath": "game-assets/warp/63fd75eeb534a387cea2bb4ad5301d5bfe330b45cf2cf394530b26ed48f09b29.webp",
+      "color": "#00FF9C"
+    },
+    "Fire": {
+      "names": {
+        "zh-CN": "火",
+        "en": "Fire"
+      },
+      "iconPath": "game-assets/warp/9f92c0ab0eeac19073556734f720300a0683c4cc8633df72728e20355c5a145f.webp",
+      "color": "#F84F36"
+    },
+    "Imaginary": {
+      "names": {
+        "zh-CN": "虚数",
+        "en": "Imaginary"
+      },
+      "iconPath": "game-assets/warp/05536669b2302a530832fdd3e75c01950426ea2ec59e59cc4c91df0273cfecaa.webp",
+      "color": "#F4D258"
+    },
+    "Quantum": {
+      "names": {
+        "zh-CN": "量子",
+        "en": "Quantum"
+      },
+      "iconPath": "game-assets/warp/cf51557949195b5c3a51c7477e3bc3a0842c277ab66a7de71e5ff09ca5963e39.webp",
+      "color": "#1C29BA"
+    },
+    "Thunder": {
+      "names": {
+        "zh-CN": "雷",
+        "en": "Lightning"
+      },
+      "iconPath": "game-assets/warp/9d1c3e01f7a27d31e2bd0b4837703c30e4dcd26182a60220f539b271c487abf4.webp",
+      "color": "#8872F1"
+    },
+    "Physical": {
+      "names": {
+        "zh-CN": "物理",
+        "en": "Physical"
+      },
+      "iconPath": "game-assets/warp/da3a7d3ec3281b0553bcca364dfcace20b5b4bbee6ebcee81430b221f431688a.webp",
+      "color": "#FFFFFF"
+    }
+  },
+  "stars": {
+    "3": "game-assets/warp/66ee90ff687d9d22d18d2343c17ea5f639f41dc793f4e08f8d44326c71e8d351.webp",
+    "4": "game-assets/warp/58cb252e5dc3f01e8096ba4407451b1112d0b7f1ad193eab6acde9b7ab89dbbb.webp",
+    "5": "game-assets/warp/634aeba4672c3bb2170a60dea4e8d87114633b056e20b06c8339c3a26dd3721c.webp"
+  },
+  "revealStars": {
+    "5": {
+      "path": "game-assets/warp/3c6b9614b3914604c832f93f8c04c13a5ce077769f95bfde2504a370d1e5ae04.webp",
+      "width": 640,
+      "height": 128
+    }
+  },
+  "revealStarBig": {
+    "path": "game-assets/warp/3a5329b94d8adabdf7679cfe44bc87f761c8bcac3b32f3b956c144fc476c1b44.webp",
+    "width": 279,
+    "height": 279
+  },
+  "cardStars": {
+    "3": {
+      "path": "game-assets/warp/0d354ddfa4fb8352c9b6950cd41d4bd8e97327b1552b28ea0bc3affb32b94b57.webp",
+      "width": 196,
+      "height": 68
+    },
+    "4": {
+      "path": "game-assets/warp/57536f2d0e4d3ddfbf31112d424dd7c959b285cd7b3bf72b553e67d463340b14.webp",
+      "width": 260,
+      "height": 68
+    },
+    "5": {
+      "path": "game-assets/warp/6a1a59f907c8e28fba419cb25e3991b0a8456f1a1f4cf4fbd6ca0d2b2a7137f6.webp",
+      "width": 324,
+      "height": 68
+    }
+  }
+}
