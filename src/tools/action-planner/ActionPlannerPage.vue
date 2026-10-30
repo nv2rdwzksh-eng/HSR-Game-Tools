@@ -11,6 +11,8 @@ import SplitterPanel from 'primevue/splitterpanel'
 import Button from 'primevue/button'
 import { SlidersHorizontal, ListOrdered, RotateCcw } from '@lucide/vue'
 import BattleSetup from './components/BattleSetup.vue'
+import SkillPointLedger from './components/SkillPointLedger.vue'
+import BatchSkillDialog from './components/BatchSkillDialog.vue'
 import ActionNavigator from './components/ActionNavigator.vue'
 import ActionInspector from './components/ActionInspector.vue'
 import { usePlannerSession } from './composables/usePlannerSession'
@@ -23,6 +25,7 @@ const { t, locale } = useI18n()
 const { planner, persistence, saveStatus } = usePlannerSession()
 const planManagement = ref<InstanceType<typeof PlanManagement>>()
 const setupDirty = ref(false)
+const batchSkillsVisible = ref(false)
 const {
   document,
   plan,
@@ -160,6 +163,12 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <div class="planner-page">
+    <BatchSkillDialog
+      v-model="batchSkillsVisible"
+      :planner="planner"
+      :label="label"
+      :anchor-label="anchorLabel"
+    />
     <div class="page-intro functional-intro">
       <h1>{{ t('planner.title') }}</h1>
       <Button
@@ -197,6 +206,11 @@ onBeforeUnmount(() => {
             :next-id="nextId"
             @apply="apply" /></TabPanel
         ><TabPanel value="planning">
+          <Button
+            :label="t('planner.batch.title')"
+            size="small"
+            @click="batchSkillsVisible = true"
+          />
           <p v-if="documentError" class="field-error" role="alert">
             {{ t(`planner.files.error.${documentError}`) }}
           </p>
@@ -253,6 +267,12 @@ onBeforeUnmount(() => {
             </p>
             <p class="fine-print">{{ t('planner.sp.summaryScope') }}</p>
           </section>
+          <SkillPointLedger
+            :result="result"
+            :cycle-mode="plan.cycleMode"
+            :anchor-label="anchorLabel"
+            @select="select"
+          />
           <details
             v-if="result.diagnostics.length"
             class="diagnostics"

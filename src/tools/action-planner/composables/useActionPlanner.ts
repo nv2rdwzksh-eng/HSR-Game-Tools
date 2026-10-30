@@ -1,3 +1,9 @@
+import {
+  previewBatchSkills,
+  applyBatchSkillPreview,
+  type BatchSkillFilter,
+  type BatchSkillPreview,
+} from '../model/batch-skills'
 import { resolveElationContributors } from '../model/aha-config'
 import { computed, ref, shallowReadonly, shallowRef, watch } from 'vue'
 import { simulatePlan, previewOperationState } from '../engine/engine'
@@ -85,6 +91,36 @@ export function useActionPlanner(
   const migrationNotice = shallowRef<MigrationNotice>()
   const resourceIssues = shallowRef<ResourceIssue[]>([])
   const setupRevision = ref(0)
+  const batchSkillPreview = shallowRef<BatchSkillPreview>()
+  const batchSkillError = ref<'stale' | 'commit'>()
+  function cancelBatchSkills() {
+    batchSkillPreview.value = undefined
+    batchSkillError.value = undefined
+  }
+  function reviewBatchSkills(filter: BatchSkillFilter, skill: ActionSkill) {
+    batchSkillError.value = undefined
+    batchSkillPreview.value = previewBatchSkills(document.value, result.value, filter, skill)
+    return batchSkillPreview.value
+  }
+  function confirmBatchSkills(expected?: BatchSkillPreview) {
+    if (
+      !expected ||
+      expected !== batchSkillPreview.value ||
+      expected.document !== document.value ||
+      expected.result !== result.value
+    ) {
+      batchSkillPreview.value = undefined
+      batchSkillError.value = 'stale'
+      return false
+    }
+    if (expected.invalid || !expected.changes.length) return false
+    if (!replacePlan(applyBatchSkillPreview(expected))) {
+      batchSkillError.value = 'commit'
+      return false
+    }
+    cancelBatchSkills()
+    return true
+  }
   let reservedIds = referencedIds(initialPlan)
   const allocatedIds = new Set<string>()
   let serial = 0
@@ -484,6 +520,11 @@ export function useActionPlanner(
   return {
     document: shallowReadonly(document),
     documentError,
+    batchSkillPreview,
+    batchSkillError,
+    reviewBatchSkills,
+    confirmBatchSkills,
+    cancelBatchSkills,
     resourceIssues,
     migrationNotice,
     setupRevision,

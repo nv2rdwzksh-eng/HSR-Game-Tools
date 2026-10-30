@@ -289,6 +289,51 @@
       },
       "procResult": "Proc (available again from turn {turn})",
       "conditionalHint": "Only after this unit uses Skill. The selected outcome decides the result; chance is never sampled. A 1-turn cooldown skips the next own turn and becomes available on the following one."
+    },
+    "ledger": {
+      "title": "Skill Point ledger by cycle",
+      "scope": "Cycle 0 includes opening operations; boundary operations belong to the new cycle. Skill restoration, external refunds and turn-end refills are separate. Storage deposits are not counted twice. Only committed results count; unknown cycles have no complete totals. The final cycle may be partial.",
+      "cycle": "Cycle",
+      "opening": "Opening balance",
+      "cost": "Total spent",
+      "skillRecovery": "Skill restoration",
+      "external": "External restoration",
+      "refill": "Turn-end refill",
+      "ending": "Ending balance",
+      "stored": "Stored balance",
+      "max": "Cap changes",
+      "loss": "Clamp loss",
+      "first": "First shortage in cycle",
+      "status": "Status",
+      "all": "Whole run",
+      "cycleLabel": "Cycle {cycle}",
+      "stopped": "Insufficient; stopped",
+      "known": "Known"
+    },
+    "batch": {
+      "title": "Set skills in bulk",
+      "scope": "Scope",
+      "all": "All",
+      "after": "After current",
+      "participant": "Selected unit",
+      "afterLabel": "After \"{anchor}\" (excluding that node)",
+      "scopeHint": "Only allied actions displayed in the current simulation are eligible, including the blocked action. The simulation budget is not expanded. After current uses the Inspector selection.",
+      "customSummary": "Cost {cost} · Restoration {recovery}",
+      "counts": "{selected} nodes matched; {changed} will change.",
+      "overwrite": "Existing skill annotations on {count} nodes will be overwritten.",
+      "confirmHint": "Confirm to commit all annotations at once. Replay may make some nodes unreachable; their original anchors retain the annotations.",
+      "noChanges": "No nodes need changes.",
+      "back": "Back to settings",
+      "review": "Review changes",
+      "confirm": "Confirm and apply",
+      "invalid": {
+        "skill": "Custom cost and restoration must be non-negative integers.",
+        "conditionalSkill": "The scope contains conditional refunds that require Skill annotations. Adjust the scope or edit those operations first."
+      },
+      "error": {
+        "stale": "The plan or simulation has changed. Review the batch again.",
+        "commit": "The batch could not be committed. The plan is unchanged; check its errors."
+      }
     }
   },
   "ui": {
