@@ -24,6 +24,7 @@ import OperationEditor from './OperationEditor.vue'
 import OperationTargets from './OperationTargets.vue'
 import { effectiveSpeed } from '../engine/queue'
 import { phaseOperations } from '../engine/effect-config'
+import { usesSkillPoints } from '../engine/skill-points'
 import type {
   ParticipantInfo,
   ActionSkill,
@@ -74,6 +75,18 @@ const emit = defineEmits<{
   robin: [input: RobinPresetInput]
 }>()
 const { t, locale } = useI18n()
+const skillParticipant = computed(() => {
+  const anchor = props.anchor
+  return anchor.kind === 'action'
+    ? props.context?.participants.find((p) => p.id === anchor.participantId)
+    : undefined
+})
+const skillExcluded = computed(
+  () =>
+    skillParticipant.value?.kind === 'actor' &&
+    skillParticipant.value.camp === 'ally' &&
+    !usesSkillPoints(skillParticipant.value),
+)
 const groups = computed(() =>
   props.anchor.kind === 'action'
     ? ['preAction', 'postAction'].map((phase) => ({
@@ -158,12 +171,15 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
       <h2>{{ t('ui.inspector') }}</h2>
     </div>
     <SkillPointsEditor
-      v-if="spEnabled && anchor.kind === 'action'"
+      v-if="spEnabled && anchor.kind === 'action' && !skillExcluded"
       :key="JSON.stringify(anchor)"
       :skill="skill"
       :record="spRecord?.kind !== 'cycleBoundary' ? spRecord?.skillPoints : undefined"
       @save="emit('skill', $event)"
     />
+    <p v-if="spEnabled && skillExcluded" class="fine-print">
+      {{ t('planner.sp.notParticipating') }}
+    </p>
     <p v-if="spRecord?.refill" class="fine-print">
       {{
         t('planner.sp.refillDetail', {
@@ -203,6 +219,7 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
       :preview="preview"
       :invalid="invalid"
       :skill="skill"
+      :skill-excluded="skillExcluded"
       :robin-preset-issue="robinPresetIssue"
       :label="label"
       :image="image"
@@ -383,10 +400,10 @@ const fieldIcon = (field: MetadataField, operation: EffectOperation) =>
               ·
               {{
                 t('planner.sp.eventResult', {
-                  restored: entry.restored,
-                  overflow: entry.overflow,
-                  stored: entry.stored,
-                  wasted: entry.wasted,
+                  restored: entry.restored ?? t('planner.sp.unknownValue'),
+                  overflow: entry.overflow ?? t('planner.sp.unknownValue'),
+                  stored: entry.stored ?? t('planner.sp.unknownValue'),
+                  wasted: entry.wasted ?? t('planner.sp.unknownValue'),
                   storedAfter: entry.storedAfter ?? t('planner.sp.unknownValue'),
                 })
               }}

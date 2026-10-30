@@ -71,7 +71,14 @@ export function applyOperations(
   maxChanges?: SkillPointMaxChange[]
   conditionalRestores?: ConditionalRestoreRecord[]
 } {
-  const errors = validateOperations(operations, anchor, context?.skill)
+  const errors = validateOperations(
+    operations,
+    anchor,
+    context?.skill,
+    anchor.kind === 'action'
+      ? input.participants.find((p) => p.id === anchor.participantId)
+      : undefined,
+  )
   if (errors.length) throw new SimulationError(errors[0])
   let state = cloneState(input)
   const diagnostics: Diagnostic[] = []

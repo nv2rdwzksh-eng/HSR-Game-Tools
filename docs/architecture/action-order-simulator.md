@@ -180,7 +180,9 @@ Version 1 严格迁移时补 `cycleMode: none`；Version 1/2 均补冲突安全�
 ## 战技点最小校验
 
 Version 4 增加可选的 `plan.skillPoints: { enabled?, initial?, max? }`，缺省关闭；启用时初始值默认 3、上限默认 5。初始值和上限必须是非负安全整数，且初始值不超过初始有效上限。基础 max 固定，有效上限按下文在场修正派生。
-自然行动的 PlanEvent 可保存 `skill`：`{ kind: 'basic' }`（恢复 1）、`{ kind: 'skill' }`（消耗 1）或 `{ kind: 'custom', cost, recovery }`（两项均为非负安全整数）。标注与原行动 Anchor 绑定，独立于 operations；删除最后一条操作仍保留技能标注。未标注代表未知。
+自然行动的 PlanEvent 可保存 `skill`：`{ kind: 'basic' }`（恢复 1）、`{ kind: 'skill' }`（消耗 1）或 `{ kind: 'custom', cost, recovery }`（两项均为非负安全整数）。标注与原行动 Anchor 绑定，独立于 operations；删除最后一条操作仍保留技能标注。参与战技点的单位未标注代表未知。
+
+自动参与规则统一由 `usesSkillPoints(actor)` 定义：kind=actor、camp=ally，且 category 不是 summon / memosprite；undefined / custom 类别保持参与。执行支付、操作预览支付、回合结束补充共用该谓词。召唤物／忆灵既不因缺少标注污染余额，也不支付、自动恢复或触发 refill；旧文件中的合法 skill 保留但忽略，不拒绝导入。Inspector 隐藏其技能标注并提示“不参与战技点”，单节点及批量标注均不能修改它们。显式 restoreSkillPoints / conditionalRestore 仍可手动配置在其 action 上，不自动推断技能、目标、消失效果或角色专属触发条件。
 
 共享余额仅由我方 Actor 的 action 节点结算，包括按普通 action 调度的召唤物和忆灵；不自动推断它们的资源规则，需要用户显式标注。敌方、Aha、Scheduled Event 和轮次边界不影响队伍余额。动态我方 Actor 使用相同规则。
 
@@ -289,17 +291,17 @@ Version 8 文件严格接受 maxModifiers；Version 1–7 迁移不添加修正�
 
 `conditionalRestore` 是队伍级无目标操作，字段为 amount（正安全整数）、chance（0–1 有限数）、cooldownTurns（非负安全整数）、outcome（proc / no-proc）、sourceParticipantId、source，以及普通 id / phase。chance 只用于展示与记录；不抽随机数、不计算期望值，也不据此覆盖用户所选 outcome。
 
-仅接受我方 Actor 的 action.postAction，sourceParticipantId 必须等于该 Anchor 的 participantId，且该 PlanEvent 的 skill.kind 必须为 skill。开始、preAction、事件／轮次、敌方、普攻、自定义和未标注行动均拒绝。动态创建的我方 Actor 沿用相同规则。为维持本轮单一条件返还范围，同一行动最多一条，不能用多个操作叠加触发。
+仅接受我方 Actor 的 action.postAction，sourceParticipantId 必须等于该 Anchor 的 participantId。参与战技点的 Actor 要求该 PlanEvent 的 skill.kind 为 skill；召唤物／忆灵不使用技能标注判断，允许用户按实际效果手动配置。开始、preAction、事件／轮次、敌方，以及参与战技点 Actor 的普攻、自定义和未标注行动均拒绝。动态创建的我方 Actor 沿用相同规则。为维持单一条件返还范围，同一行动最多一条，不能用多个操作叠加触发。
 
 冷却运行状态为 `skillPoints.conditionalCooldowns: Map<sourceParticipantId, availableFromTurn>`，初始为空，状态克隆独立复制；不按 operationId 分开计时。行动先完成技能支付、技能恢复，再依 postAction 列表顺序执行条件返还和其他操作，最后执行回合结束补充、到期与退出。进入 postAction 时，source.turns 已递增为当前自身回合数。
 
-判定顺序为：当前余额未知 → unknown，跳过返还且保留原冷却；否则当前自身回合小于 availableFromTurn → cooldown，跳过且不重置；否则 outcome 为 no-proc → 不返还、不新建冷却；否则 proc → 恢复 min(amount, max-current)，记录 overflow / wasted，并设置 availableFromTurn = source.turns + cooldownTurns + 1。即使实际恢复为 0、全部溢出，成功触发也进入冷却。条件返还不支持溢出存储字段。
+判定顺序为：当前自身回合小于 availableFromTurn → cooldown，跳过且不重置；否则 outcome 为 no-proc → 不返还、不新建冷却；否则 proc → 设置 availableFromTurn = source.turns + cooldownTurns + 1，再处理余额。余额已知时恢复 min(amount, max-current)，记录 overflow / wasted；余额未知时仍记 proc 并进入冷却，before / after / restored / overflow / stored / wasted 均为 null，current 仍未知，存储余额保持原值。即使实际恢复为 0、全部溢出，成功触发也进入冷却。条件返还不支持溢出存储字段。
 
 1 回合冷却的明确口径：第 1 次自身行动触发，availableFromTurn=3；第 2 次自身行动不可触发，第 3 次恢复。cooldownTurns=0 时下一个自身行动即可再次触发。队友、敌方、单次事件和轮次不会推进该计数，离场不产生自身回合，也不重置冷却。来源已经在当前自然行动中离场不取消其已执行战技的 postAction 结算。
 
-stop 支付失败时不执行条件返还，也不进入冷却。mark 按反事实负余额继续结算，返还与冷却照常记录，但 insufficient / unverified 标记不解除。未知优先于冷却／用户结果；先遇到未知时不利用后续 proc 恢复已知余额。
+stop 支付失败时不执行条件返还，也不进入冷却。mark 按反事实负余额继续结算，返还与冷却照常记录，但 insufficient / unverified 标记不解除。余额未知不覆盖 cooldown / no-proc / proc 状态，也不会因后续 proc 恢复为已知。blockedAction 的 Anchor 记为已到达，仅其后的真正未到达事件产生 unreached-anchor；不足仍由 sp-insufficient 与可编辑的 blockedAction 表达。
 
-`NodeRecord.conditionalRestores` 保存来源 ID、标签、amount、chance、cooldownTurns、用户结果、实际 status、before / after、restored、overflow、wasted 及可选 availableFromTurn。unknown 是明确跳过，因此实际恢复／溢出为 0，余额仍为 null。节点存储汇总与摘要总恢复包含条件返还的实际量；不会重复计数，也不会把溢出算作恢复。运行时冷却、记录及摘要不写入方案文件。
+`NodeRecord.conditionalRestores` 保存来源 ID、标签、amount、chance、cooldownTurns、用户结果、实际 status、before / after、restored、overflow、stored、wasted 及可选 availableFromTurn。cooldown / no-proc 明确未返还，数值为 0，即使余额未知也保持该状态；未知 proc 的返还数值为 null，不冒充 0。节点存储汇总与摘要总恢复包含条件返还的实际量；不会重复计数，也不会把溢出算作恢复。运行时冷却、记录及摘要不写入方案文件。
 
 编辑器提供数量、展示概率、冷却、自选本次结果和来源标签；来源行动单位只读，自动采用当前 Anchor 身份。详情显示触发并注明再次可用的自身回合、未触发、冷却中或未知。余额不足的 stop 节点中该操作标为未提交。普通目标预览继续使用相同执行函数并接收当前技能上下文，避免预览重置或绕过冷却。
 
@@ -319,7 +321,7 @@ Version 9 文件／存档／模板接受新操作；Version 1–8 迁移不添�
 
 未知轮次的完整消耗、技能恢复、外部恢复、refill 和截断损失总量显示未知；此前完整已知的轮次保留数值。未知和未验证可同时标注，后续 mark 轮次不会因余额恢复而自动变成已验证。存储余额沿用独立已知／未知状态。账本位于现有摘要下方，原生 details 折叠；宽表在窄屏横向滚动，键盘可聚焦滚动区。
 
-“批量设置技能”只筛选当前 result.records 和已显示 blockedAction 中 kind=actor、camp=ally、anchor.kind=action 的节点，包括动态我方 Actor；排除敌方、Aha、事件和轮次。不扩展 maxNodes / maxAV，不生成尚未显示的未来节点。“当前之后”以 Inspector 选中的 Anchor 为界且不包含它，按真实记录顺序筛选，非累计 AV；开始位置等同全部，孤立的不可达选择无匹配节点。“指定角色”使用稳定 Participant ID，不按槽位或数组下标重绑。
+“批量设置技能”只筛选当前 result.records 和已显示 blockedAction 中 usesSkillPoints(actor) 为真、anchor.kind=action 的节点，包括动态我方角色；排除召唤物、忆灵、敌方、Aha、事件和轮次。不扩展 maxNodes / maxAV，不生成尚未显示的未来节点。“当前之后”以 Inspector 选中的 Anchor 为界且不包含它，按真实记录顺序筛选，非累计 AV；开始位置等同全部，孤立的不可达选择无匹配节点。“指定角色”使用稳定 Participant ID，不按槽位或数组下标重绑。
 
 批量对话框先预览范围内节点数、实际改变数、覆盖已有标注数和目标技能，再要求用户点击确认。相同技能不算修改。预览快照固定 Anchor 清单、技能值及来源文档／结果引用；确认令牌必须仍匹配当前文档和结果，过期则重新预览。取消、返回、关闭／Escape 均不提交、不触发存档。
 

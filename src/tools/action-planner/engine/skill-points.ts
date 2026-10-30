@@ -1,4 +1,5 @@
 import type {
+  ActorDefinition,
   ActionSkill,
   SkillPointsConfig,
   SkillPointsRecord,
@@ -7,6 +8,21 @@ import type {
   SkillPointStorageRecord,
   SkillPointEventRecord,
 } from './types'
+
+export interface SkillPointParticipant {
+  kind: string
+  camp?: string
+  category?: ActorDefinition['category']
+}
+/** Automatic skill settlement and turn-end refill belong only to allied non-summon actors. */
+export function usesSkillPoints(actor: SkillPointParticipant | undefined): boolean {
+  return (
+    actor?.kind === 'actor' &&
+    actor.camp === 'ally' &&
+    actor.category !== 'summon' &&
+    actor.category !== 'memosprite'
+  )
+}
 
 const object = (v: unknown): v is Record<string, unknown> =>
   v !== null && typeof v === 'object' && !Array.isArray(v)

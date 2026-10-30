@@ -1,4 +1,9 @@
-import { validActionSkill, validSkillPoints } from './skill-points'
+import {
+  validActionSkill,
+  validSkillPoints,
+  usesSkillPoints,
+  type SkillPointParticipant,
+} from './skill-points'
 import { anchorKey, countdownParticipantId, HARD_LIMITS, spawnedParticipantId } from './queue'
 import { targetIds, validTargetSelection, validSpeedDurationForTargets } from './targeting'
 import type {
@@ -58,6 +63,7 @@ export function validateOperations(
   operations: readonly EffectOperation[],
   anchor: EventAnchor,
   skill?: ActionSkill,
+  source?: SkillPointParticipant,
 ): Diagnostic[] {
   const invalid = (operationId?: string): Diagnostic[] => [
     { code: 'invalid-input', severity: 'error', anchor, operationId },
@@ -79,7 +85,8 @@ export function validateOperations(
         conditionalSeen ||
         anchor.kind !== 'action' ||
         op.phase !== 'postAction' ||
-        skill?.kind !== 'skill' ||
+        (skill?.kind !== 'skill' &&
+          !(source?.kind === 'actor' && source.camp === 'ally' && !usesSkillPoints(source))) ||
         !identity(op.sourceParticipantId) ||
         op.sourceParticipantId !== anchor.participantId ||
         !count(op.amount) ||
@@ -183,7 +190,9 @@ export function participantCatalog(plan: SimulationPlan): ParticipantInfo[] {
     kind: definition.kind,
     name: definition.name,
     iconUrl: definition.iconUrl,
-    ...(definition.kind === 'actor' ? { camp: definition.camp } : {}),
+    ...(definition.kind === 'actor'
+      ? { camp: definition.camp, ...(definition.category ? { category: definition.category } : {}) }
+      : {}),
   })
   return [
     { id: plan.aha.id, kind: 'aha', name: 'Aha Instant', camp: 'neutral' },
@@ -265,7 +274,8 @@ export function validatePlan(plan: SimulationPlan): Diagnostic[] {
     )
       return invalid()
     anchors.add(anchorKey(event.anchor))
-    const errors = validateOperations(event.operations, event.anchor, event.skill)
+    // Check structure before catalog construction; source/skill eligibility follows below.
+    const errors = validateOperations(event.operations, event.anchor, { kind: 'skill' })
     if (errors.length) return errors
     for (const op of event.operations) {
       if (operationIds.has(op.id)) return invalid()
@@ -281,6 +291,13 @@ export function validatePlan(plan: SimulationPlan): Diagnostic[] {
     participants.set(participant.id, participant)
   }
   for (const event of plan.events) {
+    const errors = validateOperations(
+      event.operations,
+      event.anchor,
+      event.skill,
+      event.anchor.kind === 'action' ? participants.get(event.anchor.participantId) : undefined,
+    )
+    if (errors.length) return errors
     if (event.anchor.kind === 'action' || event.anchor.kind === 'trigger') {
       const source = participants.get(event.anchor.participantId)
       if (source && (source.kind !== 'scheduledEvent') !== (event.anchor.kind === 'action'))

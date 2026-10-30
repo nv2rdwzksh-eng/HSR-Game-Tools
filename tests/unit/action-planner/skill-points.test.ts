@@ -3,7 +3,9 @@ import {
   createInitialState,
   simulatePlan,
   stepSimulation,
+  previewOperationState,
 } from '../../../src/tools/action-planner/engine/engine'
+import { usesSkillPoints } from '../../../src/tools/action-planner/engine/skill-points'
 import {
   emptyDocument,
   PLANNER_FORMAT,
@@ -14,6 +16,7 @@ import {
 import { useActionPlanner } from '../../../src/tools/action-planner/composables/useActionPlanner'
 import type {
   ActionSkill,
+  ActorConfig,
   ParticipantNodeRecord,
 } from '../../../src/tools/action-planner/engine/types'
 
@@ -42,6 +45,107 @@ function document(initial = 3, max = 5, skills: (ActionSkill | undefined)[] = []
 const sp = (result: ReturnType<typeof simulatePlan>, index = 0) =>
   (result.records[index] as ParticipantNodeRecord).skillPoints
 describe('shared Skill Point validation', () => {
+  it.each(['summon', 'memosprite'] as const)(
+    'ignores missing and legacy skills on %s actions in execution, preview and editing',
+    (category) => {
+      for (const skill of [
+        undefined,
+        { kind: 'skill' },
+        { kind: 'basic' },
+        { kind: 'custom', cost: 99, recovery: 99 },
+      ] as (ActionSkill | undefined)[]) {
+        const doc = document(0, 5, [skill])
+        doc.plan.actors[0]!.category = category
+        doc.plan.maxNodes = 1
+        expect(parsePlannerDocument(serializePlannerDocument(doc)).document).toEqual(doc)
+        const result = simulatePlan(doc.plan)
+        expect(result.blockedAction).toBeUndefined()
+        expect(result.records).toHaveLength(1)
+        expect(sp(result)).toBeUndefined()
+        expect(result.records[0]!.spValidation).toBe('known')
+        expect(result.skillPointsSummary).toMatchObject({
+          endingBalance: 0,
+          totalCost: 0,
+          totalRecovery: 0,
+        })
+        expect(
+          result.diagnostics.some((d) =>
+            ['sp-unknown', 'sp-insufficient', 'sp-marked'].includes(d.code),
+          ),
+        ).toBe(false)
+        for (const phase of ['preAction', 'postAction'] as const) {
+          const preview = previewOperationState(
+            result.records[0]!.beforeEffects,
+            [],
+            result.records[0]!.anchor,
+            phase,
+            undefined,
+            skill,
+          )
+          expect(preview?.skillPoints?.current).toBe(0)
+        }
+        const planner = useActionPlanner(doc.plan)
+        planner.select(result.records[0]!.anchor)
+        expect(planner.setSkill({ kind: 'basic' })).toBe(false)
+        expect(planner.plan.value.events).toEqual(doc.plan.events)
+      }
+    },
+  )
+  it.each(['summon', 'memosprite'] as const)(
+    'allows manual recovery without annotations on %s',
+    (category) => {
+      const doc = document(0, 5, [undefined])
+      doc.plan.actors[0]!.category = category
+      doc.plan.maxNodes = 1
+      doc.plan.events[0]!.operations = [
+        {
+          id: 'manual',
+          type: 'restoreSkillPoints',
+          phase: 'postAction',
+          amount: 1,
+          source: 'Synthetic recovery',
+        },
+      ]
+      const result = simulatePlan(doc.plan)
+      expect(result.records[0]!.skillPointEvents?.[0]).toMatchObject({
+        before: 0,
+        after: 1,
+        restored: 1,
+      })
+      expect(result.skillPointsSummary?.endingBalance).toBe(1)
+      expect(sp(result)).toBeUndefined()
+    },
+  )
+  it.each([undefined, 'custom', 'character'] as const)(
+    'keeps normal payment and unknown propagation for category %s',
+    (category) => {
+      const doc = document(1, 5, [{ kind: 'skill' }])
+      doc.plan.actors[0]!.category = category
+      expect(usesSkillPoints(doc.plan.actors[0])).toBe(true)
+      expect(sp(simulatePlan(doc.plan))).toMatchObject({ before: 1, after: 0, paid: 1 })
+      delete doc.plan.events[0]!.skill
+      expect(sp(simulatePlan(doc.plan))?.status).toBe('unknown')
+      expect(usesSkillPoints({ ...doc.plan.actors[0]!, camp: 'enemy' } as ActorConfig)).toBe(false)
+      expect(usesSkillPoints(undefined)).toBe(false)
+    },
+  )
+  it('marks a blocked anchor as reached while retaining later unreachable diagnostics', () => {
+    const doc = document(0, 5, [{ kind: 'skill' }, { kind: 'skill' }])
+    for (let i = 0; i < 2; i++)
+      doc.plan.events[i]!.operations.push({
+        id: `later-${i}`,
+        type: 'restoreSkillPoints',
+        phase: 'postAction',
+        amount: 1,
+        source: 'Synthetic recovery',
+      })
+    const result = simulatePlan(doc.plan)
+    expect(result.blockedAction?.anchor).toEqual(doc.plan.events[0]!.anchor)
+    expect(
+      result.diagnostics.filter((d) => d.code === 'unreached-anchor').map((d) => d.anchor),
+    ).toEqual([doc.plan.events[1]!.anchor])
+    expect(result.diagnostics.some((d) => d.code === 'sp-insufficient')).toBe(true)
+  })
   it('blocks payment at zero before effects, even when the skill would restore points', () => {
     const doc = document(0, 5, [{ kind: 'custom', cost: 1, recovery: 1 }])
     doc.plan.events[0]!.operations.push({

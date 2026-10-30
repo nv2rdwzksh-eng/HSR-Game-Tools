@@ -40,6 +40,7 @@ const props = defineProps<{
   invalid: string[]
   resourceAllowed?: boolean
   skill?: ActionSkill
+  skillExcluded?: boolean
   robinPresetIssue?: RobinPresetIssue
   label: (id: string) => string
   image: (id: string) => string | undefined
@@ -67,7 +68,7 @@ const types = computed(() =>
       : []),
     ...((props.resourceAllowed &&
       props.anchor.kind === 'action' &&
-      props.skill?.kind === 'skill') ||
+      (props.skill?.kind === 'skill' || props.skillExcluded)) ||
     draft.value.original?.type === 'conditionalRestore'
       ? ['conditionalRestore']
       : []),

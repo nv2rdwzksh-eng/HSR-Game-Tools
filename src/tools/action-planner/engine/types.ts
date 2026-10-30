@@ -205,6 +205,7 @@ export function isNaturalParticipant(p: ParticipantState): p is NaturalParticipa
   return p.kind === 'actor' || p.kind === 'aha'
 }
 export interface ParticipantInfo {
+  category?: ActorDefinition['category']
   id: string
   kind: ParticipantState['kind']
   name: string

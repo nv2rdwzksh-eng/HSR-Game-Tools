@@ -1,3 +1,4 @@
+import { usesSkillPoints } from '../engine/skill-points'
 import {
   previewBatchSkills,
   applyBatchSkillPreview,
@@ -313,6 +314,9 @@ export function useActionPlanner(
   }
   function setSkill(skill?: ActionSkill) {
     if (selected.value.kind !== 'action') return false
+    const participantId = selected.value.participantId
+    if (!usesSkillPoints(context.value?.participants.find((p) => p.id === participantId)))
+      return false
     const key = anchorKey(selected.value)
     const old = plan.value.events.find((e) => anchorKey(e.anchor) === key)
     const events = plan.value.events.filter((e) => anchorKey(e.anchor) !== key)

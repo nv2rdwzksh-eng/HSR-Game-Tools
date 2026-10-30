@@ -221,6 +221,7 @@
       "max": "Skill Point cap",
       "invalid": "Enter non-negative integers; initial points cannot exceed the initial effective cap.",
       "skillLabel": "Action skill",
+      "notParticipating": "Does not use Skill Points. Add restoration operations manually for actual refunds.",
       "unknown": "SP unknown",
       "insufficient": "Insufficient SP",
       "basic": "Basic ATK (restore 1)",
@@ -285,10 +286,10 @@
       "conditionalStatus": {
         "no-proc": "No proc",
         "cooldown": "On cooldown",
-        "unknown": "Unknown: no refund; cooldown unchanged"
+        "unknown": "Balance unknown"
       },
       "procResult": "Proc (available again from turn {turn})",
-      "conditionalHint": "Only after this unit uses Skill. The selected outcome decides the result; chance is never sampled. A 1-turn cooldown skips the next own turn and becomes available on the following one."
+      "conditionalHint": "After this unit uses Skill; configure summons and memosprites manually for actual effects. Cooldown is checked before the selected outcome; no random sampling. A 1-turn cooldown skips the next own turn. A proc with an unknown balance still starts cooldown; its refund amount is unknown."
     },
     "ledger": {
       "title": "Skill Point ledger by cycle",

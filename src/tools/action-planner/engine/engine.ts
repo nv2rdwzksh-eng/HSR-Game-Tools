@@ -6,6 +6,7 @@ import {
   validActionSkill,
   refillSkillPoints,
   skillPointStorageRecord,
+  usesSkillPoints,
 } from './skill-points'
 import type { ActionSkill, ParticipantNodeRecord } from './types'
 import { isNaturalParticipant } from './types'
@@ -193,7 +194,12 @@ export function stepSimulation(
   const anchor = event.anchor
   if (skill !== undefined && (anchor.kind !== 'action' || !validActionSkill(skill)))
     fail('invalid-input')
-  const errors = validateOperations(operations, anchor, skill)
+  const errors = validateOperations(
+    operations,
+    anchor,
+    skill,
+    event.kind === 'participant' ? event.participant : undefined,
+  )
   if (errors.length) throw new SimulationError(errors[0])
   if (event.kind === 'cycleBoundary') {
     try {
@@ -274,7 +280,7 @@ export function stepSimulation(
     )
     state = preResources.state
     if (preResources.skillPointEvents) record.skillPointEvents = [...preResources.skillPointEvents]
-    if (state.skillPoints && active.kind === 'actor' && active.camp === 'ally') {
+    if (state.skillPoints && usesSkillPoints(active)) {
       record.skillPoints = paySkillPoints(state.skillPoints, skill)
       record.spValidation = record.skillPoints.status
       if (
@@ -319,13 +325,7 @@ export function stepSimulation(
       })
       state = after.state
       if (after.conditionalRestores) record.conditionalRestores = after.conditionalRestores
-      if (
-        state.skillPoints &&
-        active.kind === 'actor' &&
-        active.camp === 'ally' &&
-        active.category !== 'summon' &&
-        active.category !== 'memosprite'
-      ) {
+      if (state.skillPoints && usesSkillPoints(active)) {
         const refill = refillSkillPoints(state.skillPoints)
         if (refill) record.refill = refill
       }
@@ -420,6 +420,7 @@ export function simulatePlan(plan: SimulationPlan): SimulationResult {
         plan.events.find((e) => anchorKey(e.anchor) === anchorKey(anchor))?.skill,
       )
       if (step.blocked) {
+        reached.add(anchorKey(anchor))
         result.blockedAction = step.record as ParticipantNodeRecord
         result.diagnostics.push(...step.diagnostics)
         result.stopReason = 'error'
@@ -484,7 +485,7 @@ export function previewOperationState(
       state = applyOperations(state, resources, anchor).state
       const active = state.participants.find((p) => p.id === anchor.participantId)
       const payment =
-        state.skillPoints && active?.kind === 'actor' && active.camp === 'ally'
+        state.skillPoints && usesSkillPoints(active)
           ? paySkillPoints(state.skillPoints, skill)
           : undefined
       if (payment?.status === 'insufficient' && state.skillPoints?.onInsufficient !== 'mark')

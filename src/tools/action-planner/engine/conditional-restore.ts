@@ -30,22 +30,27 @@ export function conditionalRestore(
     storedAfter: state.stored,
     ...(available === undefined ? {} : { availableFromTurn: available }),
   }
-  if (state.current === null) record.status = 'unknown'
-  else if (available !== undefined && turn < available) record.status = 'cooldown'
-  else if (operation.outcome === 'proc') {
-    const availableFromTurn = turn + operation.cooldownTurns + 1
-    if (!Number.isSafeInteger(availableFromTurn)) fail('invalid-input')
-    const restored = Math.min(operation.amount, state.max - state.current)
-    state.current += restored
-    state.conditionalCooldowns.set(operation.sourceParticipantId, availableFromTurn)
-    Object.assign(record, {
-      status: 'proc',
-      after: state.current,
-      restored,
-      overflow: operation.amount - restored,
-      wasted: operation.amount - restored,
-      availableFromTurn,
-    })
+  if (available !== undefined && turn < available) {
+    record.status = 'cooldown'
+    return record
   }
+  if (operation.outcome === 'no-proc') return record
+  const availableFromTurn = turn + operation.cooldownTurns + 1
+  if (!Number.isSafeInteger(availableFromTurn)) fail('invalid-input')
+  state.conditionalCooldowns.set(operation.sourceParticipantId, availableFromTurn)
+  record.status = 'proc'
+  record.availableFromTurn = availableFromTurn
+  if (state.current === null) {
+    Object.assign(record, { restored: null, overflow: null, stored: null, wasted: null })
+    return record
+  }
+  const restored = Math.min(operation.amount, state.max - state.current)
+  state.current += restored
+  Object.assign(record, {
+    after: state.current,
+    restored,
+    overflow: operation.amount - restored,
+    wasted: operation.amount - restored,
+  })
   return record
 }

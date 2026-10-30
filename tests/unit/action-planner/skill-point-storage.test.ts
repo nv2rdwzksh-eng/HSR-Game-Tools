@@ -161,9 +161,13 @@ describe('generic Skill Point overflow storage and turn-end refill', () => {
     else doc.plan.actors[0]!.category = category as ActorConfig['category']
     const state = createInitialState(doc.plan)
     state.skillPoints!.stored = 4
-    const step = stepSimulation(state, [], { kind: 'custom', cost: 0, recovery: 0 })
-    expect(step.record.refill).toBeUndefined()
-    expect(step.state.skillPoints).toMatchObject({ current: 3, stored: 4 })
+    for (const skill of [undefined, { kind: 'custom' as const, cost: 99, recovery: 99 }]) {
+      const step = stepSimulation(state, [], skill)
+      expect(step.blocked).toBeUndefined()
+      expect(step.record.refill).toBeUndefined()
+      expect(step.record.kind !== 'cycleBoundary' && step.record.skillPoints).toBeUndefined()
+      expect(step.state.skillPoints).toMatchObject({ current: 3, stored: 4 })
+    }
   })
   it('does not refill a scheduled event', () => {
     const doc = document(3)

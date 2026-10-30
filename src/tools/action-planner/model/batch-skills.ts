@@ -1,5 +1,5 @@
 import { anchorKey } from '../engine/queue'
-import { validActionSkill } from '../engine/skill-points'
+import { usesSkillPoints, validActionSkill } from '../engine/skill-points'
 import type {
   ActionSkill,
   EventAnchor,
@@ -36,6 +36,8 @@ export function batchSkillCandidates(
   const seen = new Set<string>()
   return records.filter((record, index): record is ParticipantNodeRecord => {
     if (record.kind !== 'actor' || record.camp !== 'ally' || record.anchor.kind !== 'action')
+      return false
+    if (!usesSkillPoints(record.beforeEffects.participants.find((p) => p.id === record.id)))
       return false
     if (filter.scope === 'after' && index <= after) return false
     if (filter.scope === 'participant' && record.id !== filter.participantId) return false

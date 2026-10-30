@@ -2,7 +2,10 @@ import { describe, expect, it } from 'vitest'
 import {
   simulatePlan,
   previewOperationState,
+  createInitialState,
 } from '../../../src/tools/action-planner/engine/engine'
+import { conditionalRestore } from '../../../src/tools/action-planner/engine/conditional-restore'
+import { spawnedParticipantId } from '../../../src/tools/action-planner/engine/queue'
 import {
   emptyDocument,
   PLANNER_FORMAT,
@@ -11,7 +14,10 @@ import {
   validatePlannerFile,
 } from '../../../src/tools/action-planner/model/document-file'
 import { useActionPlanner } from '../../../src/tools/action-planner/composables/useActionPlanner'
-import type { ConditionalRestoreOperation } from '../../../src/tools/action-planner/engine/types'
+import type {
+  ConditionalRestoreOperation,
+  ParticipantNodeRecord,
+} from '../../../src/tools/action-planner/engine/types'
 
 const refund = (
   turn: number,
@@ -144,19 +150,132 @@ describe('selected conditional Skill Point refunds', () => {
         .map((r) => r.conditionalRestores?.[0]?.status),
     ).toEqual(['proc', 'cooldown', 'proc'])
   })
-  it('records unknown without refund or a new cooldown', () => {
+  it('records proc and starts cooldown even when the balance is unknown', () => {
     const doc = document()
     delete doc.plan.events[0]!.skill
     doc.plan.events[0]!.operations = []
     const result = simulatePlan(doc.plan)
     expect(result.records[1]!.conditionalRestores?.[0]).toMatchObject({
-      status: 'unknown',
+      status: 'proc',
       before: null,
       after: null,
-      restored: 0,
+      restored: null,
+      overflow: null,
+      stored: null,
+      wasted: null,
+      availableFromTurn: 4,
     })
-    expect(result.records[2]!.beforeEffects.skillPoints?.conditionalCooldowns.size).toBe(0)
+    expect(result.records[2]!.beforeEffects.skillPoints?.conditionalCooldowns.get('a')).toBe(4)
+    expect(result.records[2]!.conditionalRestores?.[0]?.status).toBe('cooldown')
+    expect(result.skillPointsSummary?.endingBalance).toBeNull()
   })
+  it.each([
+    { available: undefined, outcome: 'no-proc' as const, status: 'no-proc', next: undefined },
+    { available: 3, outcome: 'proc' as const, status: 'cooldown', next: 3 },
+    { available: 3, outcome: 'no-proc' as const, status: 'cooldown', next: 3 },
+  ])(
+    'resolves unknown balances after cooldown and outcome: %j',
+    ({ available, outcome, status, next }) => {
+      const state = createInitialState(document().plan).skillPoints!
+      state.current = null
+      if (available !== undefined) state.conditionalCooldowns.set('a', available)
+      const record = conditionalRestore(state, refund(1, 1, outcome), 1)
+      expect(record).toMatchObject({
+        status,
+        before: null,
+        after: null,
+        restored: 0,
+        overflow: 0,
+        stored: 0,
+        wasted: 0,
+      })
+      expect(state.conditionalCooldowns.get('a')).toBe(next)
+    },
+  )
+  it('allows consecutive unknown procs at cooldown zero without restoring a known balance', () => {
+    const state = createInitialState(document().plan).skillPoints!
+    state.current = null
+    state.stored = 2
+    for (const turn of [1, 2, 3]) {
+      expect(conditionalRestore(state, refund(turn, 0), turn)).toMatchObject({
+        status: 'proc',
+        restored: null,
+        availableFromTurn: turn + 1,
+        storedAfter: 2,
+      })
+      expect(state.conditionalCooldowns.get('a')).toBe(turn + 1)
+      expect(state.current).toBeNull()
+      expect(state.stored).toBe(2)
+    }
+  })
+  it.each(['summon', 'memosprite'] as const)(
+    'accepts manually selected refunds on unannotated %s actions',
+    (category) => {
+      const doc = document(4, 0, 2)
+      doc.plan.actors[0]!.category = category
+      doc.plan.events.forEach((event) => delete event.skill)
+      const result = simulatePlan(doc.plan)
+      expect(result.records.map((r) => r.conditionalRestores?.[0]?.status)).toEqual([
+        'proc',
+        'proc',
+      ])
+      expect(result.records[0]!.conditionalRestores?.[0]).toMatchObject({
+        before: 4,
+        after: 5,
+        restored: 1,
+      })
+      expect(result.records.every((r) => r.kind === 'actor' && !r.skillPoints && !r.refill)).toBe(
+        true,
+      )
+      expect(parsePlannerDocument(serializePlannerDocument(doc)).document).toEqual(doc)
+      const planner = useActionPlanner(doc.plan)
+      planner.select(doc.plan.events[0]!.anchor)
+      planner.edit(doc.plan.events[0]!.operations[0])
+      expect(planner.submit()).toBe(true)
+      expect(planner.result.value.diagnostics.some((d) => d.severity === 'error')).toBe(false)
+    },
+  )
+  it.each(['summon', 'memosprite'] as const)(
+    'validates manual refunds on dynamically created %s actions',
+    (category) => {
+      const doc = document(4, 0, 1)
+      const id = spawnedParticipantId('manual-source')
+      doc.plan.events = [
+        {
+          anchor: { kind: 'start' },
+          operations: [
+            {
+              id: 'manual-source',
+              type: 'spawnParticipant',
+              participant: {
+                kind: 'actor',
+                camp: 'ally',
+                category,
+                name: 'Synthetic source',
+                baseSpeed: 100,
+                panelSpeed: 100,
+                initialAG: 0,
+              },
+            },
+          ],
+        },
+        {
+          anchor: { kind: 'action', participantId: id, turn: 1 },
+          operations: [{ ...refund(1, 0), sourceParticipantId: id }],
+        },
+      ]
+      expect(parsePlannerDocument(serializePlannerDocument(doc)).document).toEqual(doc)
+      const result = simulatePlan(doc.plan)
+      expect(result.records[0]!.conditionalRestores?.[0]).toMatchObject({
+        status: 'proc',
+        before: 4,
+        after: 5,
+        restored: 1,
+      })
+      expect((result.records[0] as ParticipantNodeRecord).skillPoints).toBeUndefined()
+      expect(result.skillPointsSummary?.endingBalance).toBe(5)
+    },
+  )
   it('does not reach conditional operations when stop blocks payment', () => {
     const result = simulatePlan(document(0).plan)
     expect(result.records).toHaveLength(0)

@@ -85,6 +85,22 @@ function document() {
   return doc
 }
 describe('bounded batch skill annotations', () => {
+  it.each(['summon', 'memosprite'] as const)(
+    'excludes %s actions from all batch scopes',
+    (category) => {
+      const doc = document()
+      doc.plan.actors[0]!.category = category
+      const result = simulatePlan(doc.plan)
+      expect(result.records.some((r) => r.kind === 'actor' && r.id === 'a')).toBe(true)
+      expect(batchSkillCandidates(result, { scope: 'all' }).some((r) => r.id === 'a')).toBe(false)
+      expect(batchSkillCandidates(result, { scope: 'participant', participantId: 'a' })).toEqual([])
+      expect(
+        batchSkillCandidates(result, { scope: 'after', anchor: { kind: 'start' } }).some(
+          (r) => r.id === 'a',
+        ),
+      ).toBe(false)
+    },
+  )
   it('filters allied actions and respects record order after the selected anchor, including equal AV', () => {
     const doc = document()
     const result = simulatePlan(doc.plan)

@@ -262,7 +262,12 @@ export function buildOperation(
       invalid.push('cooldownTurns')
     if (!draft.source.trim() || draft.source.length > 256) invalid.push('spSource')
     if (
-      validateOperations([operation], anchor, skill).length ||
+      validateOperations(
+        [operation],
+        anchor,
+        skill,
+        preview.participants.find((p) => p.id === operation.sourceParticipantId),
+      ).length ||
       !preview.participants.some(
         (p) => p.id === operation.sourceParticipantId && p.kind === 'actor' && p.camp === 'ally',
       )
