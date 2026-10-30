@@ -123,6 +123,17 @@ describe('selected conditional Skill Point refunds', () => {
     expect(result.records[0]!.conditionalRestores?.[0]?.availableFromTurn).toBeUndefined()
     expect(result.records[2]!.conditionalRestores?.[0]?.availableFromTurn).toBe(4)
   })
+  it('omits expired cooldown from a no-proc record without resetting cooldown state', () => {
+    const doc = document(5, 1, 4)
+    doc.plan.events[2]!.operations = [refund(3, 1, 'no-proc')]
+    const result = simulatePlan(doc.plan)
+    const records = result.records.map((r) => r.conditionalRestores?.[0])
+    expect(records.map((r) => r?.status)).toEqual(['proc', 'cooldown', 'no-proc', 'proc'])
+    expect(records.map((r) => r?.availableFromTurn)).toEqual([3, 3, undefined, 6])
+    expect(records[2]).not.toHaveProperty('availableFromTurn')
+    expect(records[2]).toMatchObject({ restored: 0, overflow: 0 })
+    expect(result.records[3]!.beforeEffects.skillPoints?.conditionalCooldowns.get('a')).toBe(3)
+  })
   it('allows consecutive procs with cooldown zero, independently of the displayed chance', () => {
     const doc = document(5, 0)
     for (const event of doc.plan.events)

@@ -301,7 +301,7 @@ Version 8 文件严格接受 maxModifiers；Version 1–7 迁移不添加修正�
 
 stop 支付失败时不执行条件返还，也不进入冷却。mark 按反事实负余额继续结算，返还与冷却照常记录，但 insufficient / unverified 标记不解除。余额未知不覆盖 cooldown / no-proc / proc 状态，也不会因后续 proc 恢复为已知。blockedAction 的 Anchor 记为已到达，仅其后的真正未到达事件产生 unreached-anchor；不足仍由 sp-insufficient 与可编辑的 blockedAction 表达。
 
-`NodeRecord.conditionalRestores` 保存来源 ID、标签、amount、chance、cooldownTurns、用户结果、实际 status、before / after、restored、overflow、stored、wasted 及可选 availableFromTurn。cooldown / no-proc 明确未返还，数值为 0，即使余额未知也保持该状态；未知 proc 的返还数值为 null，不冒充 0。节点存储汇总与摘要总恢复包含条件返还的实际量；不会重复计数，也不会把溢出算作恢复。运行时冷却、记录及摘要不写入方案文件。
+`NodeRecord.conditionalRestores` 保存来源 ID、标签、amount、chance、cooldownTurns、用户结果、实际 status、before / after、restored、overflow、stored、wasted 及可选 availableFromTurn。availableFromTurn 仅由 cooldown / proc 分支写入，no-proc 不附带 Map 中已过期的冷却值，也不清除或重置运行时冷却。cooldown / no-proc 明确未返还，数值为 0，即使余额未知也保持该状态；未知 proc 的返还数值为 null，不冒充 0。节点存储汇总与摘要总恢复包含条件返还的实际量；不会重复计数，也不会把溢出算作恢复。运行时冷却、记录及摘要不写入方案文件。
 
 编辑器提供数量、展示概率、冷却、自选本次结果和来源标签；来源行动单位只读，自动采用当前 Anchor 身份。详情显示触发并注明再次可用的自身回合、未触发、冷却中或未知。余额不足的 stop 节点中该操作标为未提交。普通目标预览继续使用相同执行函数并接收当前技能上下文，避免预览重置或绕过冷却。
 

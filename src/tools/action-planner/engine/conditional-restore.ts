@@ -28,10 +28,10 @@ export function conditionalRestore(
     stored: 0,
     wasted: 0,
     storedAfter: state.stored,
-    ...(available === undefined ? {} : { availableFromTurn: available }),
   }
   if (available !== undefined && turn < available) {
     record.status = 'cooldown'
+    record.availableFromTurn = available
     return record
   }
   if (operation.outcome === 'no-proc') return record
